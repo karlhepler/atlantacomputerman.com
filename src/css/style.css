@@ -29,6 +29,10 @@ body {
 	margin-bottom: 0;
 }
 
+.fb-like {
+	margin-bottom: 1em;
+}
+
 .click-to-call {
 	text-align: center;
 	background: #666;
