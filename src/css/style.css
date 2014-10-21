@@ -1,0 +1,123 @@
+html { 
+  background: url(../img/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+	background: none;
+}
+
+.container > .row:first-of-type {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.atlanta-computerman {
+	display: none;
+}
+
+.phone {
+	font-weight: bolder;
+	text-align: center;
+	background: #333;
+	padding: 1em;
+	margin-top: 0;
+	font-size: 3em;
+	margin-bottom: 0;
+}
+
+.click-to-call {
+	text-align: center;
+	background: #666;
+	padding: 1em;
+}
+
+.web-form {
+	background: #fff;
+	padding: 1em;
+	
+	-webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+}
+
+.logo {
+	width: 2em;
+}
+.remote-support-link-text {
+	font-weight: bolder;
+	text-transform: uppercase;
+	color: white;
+}
+a.remote-support-link {
+	padding: 1em;
+	background: #0066CC;
+	display: block;
+	text-align: center;
+	margin-top: 1em;
+
+	-webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+
+	transition: all 0.2s ease;
+}
+a.remote-support-link:hover {
+	text-decoration: none;
+
+	-webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,1);
+	-moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,1);
+	box-shadow: 0px 0px 30px 0px rgba(0,0,0,1);
+}
+
+.laptop {
+	padding: 2em;
+	width: 100%;
+	background: url(../img/logo.png) no-repeat top right;
+}
+
+
+.content {
+	background: #003366;
+	padding: 1em;
+
+	-webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+}
+
+blockquote {
+	margin-top: 1em;
+	background: #333;
+}
+
+
+/* Small */
+@media(min-width:768px) and (max-width:991px) {
+	.phone {
+		font-size: 1.5em;
+	}
+	.logo {
+		width: 2em;
+	}
+	.remote-support-link-text {
+		font-size: 1.8em;
+	}
+}
+
+/* Medium */
+@media(min-width:992px) and (max-width:1199px) {
+	.phone {
+		font-size: 2em;
+	}
+}
+
+/* Large */
+@media(min-width:1200px) {
+	.phone {
+		font-size: 2.5em;
+	}
+}
