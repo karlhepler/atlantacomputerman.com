@@ -11,4 +11,4 @@ lessc ../src/less/dev.less > ../../dist.css -x
 java -jar htmlcompressor.jar --type html -o ../../index.html ../index.html
 
 # Copy the bootstrap font files
-#cp -r -f ../src/vendor/bootstrap/fonts ../../
+cp -r -f ../src/vendor/bootstrap/fonts ../../
