@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:fb="http://ogp.me/ns/fb#">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="./img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
     <title>Atlanta Computerman! Your Family's Friendly Neighborhood I.T. & Computer Support Guardian.</title>
 
     <!-- Styles -->
@@ -24,102 +27,216 @@
     <![endif]-->
   </head>
   <body>
-    
-    <div class="container">
-      <!-- HEADER START -->
-      <header class="row">
-        <div class="col-xs-12">
-          <!-- UPPER HEADER -->
-          <div class="row">
-            <!-- LOGO BLOCK -->
-            <div class="col-sm-8">
-              <h1>Atlanta Computerman!<small>Your family's friendly neighborhood I.T. & computer support guardian.</small></h1>
-            </div>
-            <!-- QUICK CONTACT BLOCK -->
-            <div class="col-sm-4">
-              <div class="panel panel-default">
-                <div class="panel-heading">Quick Contact</div>
-                <div class="panel-body">
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      Phone Number
-                    </li>
-                    <li class="list-group-item">
-                      Email Address
-                    </li>
-                    <li class="list-group-item">
-                      Hours of Operation
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>    
+    <!-- FACEBOOK -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=296712177088798&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="./img/logo.png" width="32px" height="32px" alt="Atlanta Computerman"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="./">Home</a></li>
+            
+            <p class="navbar-text">Services for</p>
+
+            <li><a href="./services/families/">Families</a></li>
+            <li><a href="./services/students/">Students</a></li>
+            <li><a href="./services/seniors/">Seniors</a></li>
+          </ul>
+          
+          <!-- NAVBAR RIGHT -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="./contact-us/">Contact Us</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="page">
+
+      <img class="logo-computerman" src="./img/computerman.png" alt="Computerman" width="596px" height="129px">
+
+      <div id="main" class="container">        
+
+        <header>
+          <div class="col-sm-8">
+            <span class="tagline">Your Family’s Friendly Neighborhood I.T. & Computer Support Guardian</span>
           </div>
-          <!-- LOWER HEADER / NAV AREA -->
-          <div class="row">
-            <div class="col-xs-12">
-              <!-- NAVBAR -->
-              <div class="navbar navbar-inverse">
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand" href="#">Atlanta Computerman!</a>
-                </div>
-                <div class="navbar-collapse collapse navbar-inverse-collapse">
-                  <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Active</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li class="dropdown-header">Dropdown header</li>
-                        <li><a href="#">Separated link</a></li>
-                        <li><a href="#">One more separated link</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+          <div class="col-sm-4">
+            <div class="quick-support-contact-box">
+              <h2>Quick Support Contact!</h2>
+              <ul>
+                <li><a href="tel:+17705746200"><span class="glyphicon glyphicon-earphone"></span><span class="phone-number">(770) 574-6200</span></a></li>
+                <li><a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#58;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#116;&#64;&#x61;&#x74;&#x6c;&#97;&#x6e;&#116;&#97;&#99;&#x6f;&#109;&#112;&#x75;&#116;&#101;&#x72;&#x6d;&#97;&#x6e;&#46;&#99;&#111;&#x6d;"><span class="glyphicon glyphicon-envelope"></span><span class="email">support<small>@atlantacomputerman.com</small></span></a></li>
+                <li><a href="./services/"><span class="glyphicon glyphicon-time"></span><span class="hours">Mon - Fri / 9am - 6pm<small>24x7 Support Coming Soon!</small></span></a></li>
+              </ul>
             </div>
           </div>
-        </div>        
-      </header>
-  
-      <!-- CONTENT START -->
-      <div id="content" class="row">
+        </header>
         
-      </div>
-      
-      <!-- FOOTER START -->
-      <footer class="row">
-        <!-- FOOTER LEFT -->
-        <div class="col-sm-3"></div>
-        <!-- FOOTER CENTER -->
-        <div class="col-sm-3"></div>
-        <!-- FOOTER RIGHT -->
-        <div class="col-sm-6"></div>
-      </footer>
+        <!-- CONTENT -->
+        <div id="content">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-sm-5">                
+                <img class="img-responsive" src="./img/karl.png" alt="Karl Hepler, Owner">
+                <div class="owner-name">Karl Hepler<small>Owner</small></div>
+              </div>
+              <div class="col-sm-7">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="bubble">
+                      <!-- Facebook Link -->
+                      <a class="facebook-link" alt="Atlanta Computerman on Facebook" href="https://www.facebook.com/AtlantaComputerman" target="_blank"><span class="social-icon facebook"></span></a>
+                      <!-- Facebook Like Box -->
+                      <fb:like href="https://www.facebook.com/AtlantaComputerman" width="50" layout="box_count" action="like" show_faces="false" share="true"></fb:like>
+                      <!-- Call to Action -->
+                      <p>Stop paying hundreds of dollars every time you need your computer fixed!</p>                  
+                      <div class="pointer">
+                      </div>
+                      <div class="pointerBorder">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">
+                    
+                    <!-- START PRODUCT BOX -->
+                    <div class="product-box">
+                      <div class="title"><span class="slabtext">PC Guardian</span></div>
+                      <div class="content">
+                        <div class="left">
+                          <div class="features">
+                            <span class="slabtext">Unlimited</span>
+                            <span class="slabtext">Computer</span>
+                            <span class="slabtext">Support</span>
+                            <span class="slabtext"><span class="amp">&</span> Maintenance</span>
+                          </div>
+                        </div>
+                        <div class="right">
+                          <div class="price-area">
+                            <div class="price">
+                              <span class="slabtext">$29</span>
+                            </div>
+                            <div class="terms-box">
+                              <div class="slash-area">
+                                <span class="slabtext slash">/</span>
+                              </div>
+                              <div class="terms-area">
+                                <span class="slabtext terms">month</span>
+                                <span class="slabtext terms">computer</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="button-area">
+                            <a href="./services/" class="learn-more"><span class="slabtext">Learn more</span></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pow">
+                        <img src="./img/pow.png" alt="">
+                        <div class="deal">
+                          <span class="slabtext">10% discount for</span>
+                          <span class="slabtext">students,</span>
+                          <span class="slabtext">seniors,</span>
+                          <span class="slabtext"><span class="amp">&</span> veterans!</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- END PRODUCT BOX -->
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-7">
+                <!-- START PRODUCT BOX -->
+                <div class="product-box">
+                  <div class="title"><span class="slabtext">Family Guardian</span></div>
+                  <div class="content">
+                    <div class="left">
+                      <div class="features">
+                        <span class="slabtext">Unlimited</span>
+                        <span class="slabtext">Computer</span>
+                        <span class="slabtext">Support</span>
+                        <span class="slabtext"><span class="amp">&</span> Maintenance</span>
+                      </div>
+                    </div>
+                    <div class="right">
+                      <div class="price-area">
+                        <div class="price">
+                          <span class="slabtext">$99</span>
+                        </div>
+                        <div class="terms-box">
+                          <div class="slash-area">
+                            <span class="slabtext slash">/</span>
+                          </div>
+                          <div class="terms-area">
+                            <span class="slabtext terms">month</span>
+                            <span class="slabtext terms">4 computers</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="button-area">
+                        <a href="./services/families/" class="learn-more"><span class="slabtext">Learn more</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pow">
+                    <img src="./img/pow.png" alt="">
+                    <div class="deal">
+                      <span class="slabtext">The best value</span>
+                      <span class="slabtext">for families!</span>
+                      <hr>
+                      <span class="slabtext">support up to</span>
+                      <span class="slabtext">4 computers!</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- END PRODUCT BOX -->
+              </div>
+              <div class="col-sm-5"></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6"></div>
+              <div class="col-sm-6"></div>
+            </div>
+          </div>          
+        </div>
+        
+        <!-- FOOTER -->
+        <footer>
+          <div class="col-xs-12">
+            
+          </div>
+        </footer>
+
+      </div>      
     </div>
+    <div class="masthead">
+      <img class="logo-atlanta" src="./img/atlanta.png" alt="Atlanta" width="596px" height="126px">
+    </div>    
 
     <!-- Javascript Include -->
     <!-- <script src="./dist.js"></script> -->
@@ -127,6 +244,7 @@
     <!-- DEVELOPER - DELETE THIS BEFORE DIST!!!! -->
     <script type="text/javascript" src="./dev/src/vendor/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="./dev/src/vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="./dev/src/vendor/slabText/js/jquery.slabtext.js"></script>
     <script type="text/javascript" src="./dev/src/js/dev.js"></script>
   </body>
 </html>

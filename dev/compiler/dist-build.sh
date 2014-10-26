@@ -5,7 +5,7 @@ bower install
 lessc ../src/less/dev.less > ../../dist.css -x
 
 # Run the javascript compiler and output to main.js
-/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java -jar compiler.jar -W QUIET --js ../src/vendor/jquery/dist/jquery.js ../src/vendor/bootstrap/dist/js/bootstrap.js ../src/js/dev.js --js_output_file ../../dist.js
+/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java -jar compiler.jar -W QUIET --js ../src/vendor/jquery/dist/jquery.js ../src/vendor/bootstrap/dist/js/bootstrap.js ../src/vendor/slabText/js/jquery.slabtext.js ../src/js/dev.js --js_output_file ../../dist.js
 
 # Compress the html and put it in root
 java -jar htmlcompressor.jar --type html -o ../../index.html ../index.html

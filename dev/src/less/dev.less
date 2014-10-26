@@ -1,6 +1,435 @@
 // IMPORTS --------------------------------------
-@import "../vendor/bootstrap/less/bootstrap";
-@import (less) "../vendor/bootswatch/superhero/bootstrap.css";
-@import "../vendor/bootswatch/superhero/bootswatch";
-@import "../vendor/bootswatch/superhero/variables";
+@import url(http://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo);
+@import url(http://fonts.googleapis.com/css?family=Bangers);
+@import url(http://fonts.googleapis.com/css?family=Oswald:700);
+@import url(http://fonts.googleapis.com/css?family=Voltaire);
 
+@import "../vendor/bootstrap/less/bootstrap";
+@import (less) "../vendor/slabText/css/slabtext.css";
+
+// SET FONT
+.font-handwritten { font-family: 'Swanky and Moo Moo', cursive };
+.font-comic { font-family: 'Bangers', cursive };
+.font-impact { font-family: 'Oswald', sans-serif; };
+.font-price { font-family: 'Voltaire', sans-serif; };
+
+// COLORS!!
+@dark-grey: #222;
+@medium-grey: #39434F;
+@light-grey: #3F4B58;
+@lightest-grey: #ccc;
+@yellow: #FFCC00;
+@red: #990000;
+@blue: #3C72CE;
+
+// Make rows!
+#content, footer {
+	.make-row();
+}
+
+// HEADER!
+header {
+	position: absolute;
+	top: -230px;
+	height: 230px;
+	overflow: hidden;
+	width: 100%;
+
+	span.tagline {
+		display: block;
+		text-align: right;
+		color: white;
+		margin-top: 200px;
+	}
+
+	.quick-support-contact-box {
+		margin-top: 7px;
+
+		h2 {
+			padding: 20px;
+			background: @medium-grey;
+			color: @yellow;
+			text-transform: uppercase;
+			font-size: 1.2em;
+			font-style: italic;
+			font-weight: normal;
+			margin-bottom: 0;
+			margin-top: 0;
+		}
+		ul {
+			list-style: none;
+			font-size: 1.5em;
+			background: @light-grey;
+			padding: 10px 20px;
+
+			li {
+				margin-bottom: 10px;
+
+				a {
+					.glyphicon {
+						margin-right: 0.8em;
+						top: 0.3em;
+					}
+					span.email,
+					span.phone-number,
+					span.hours {
+
+						small {
+							font-size: 60%;
+							display: block;
+							margin-left: 3em;
+							line-height: 0.5;
+						}
+					}			
+
+					color: @lightest-grey;
+					.transition(color 0.2s ease-out);
+					font-weight: 200;
+					font-style: italic;
+				}
+				a:hover {
+					text-decoration: none;
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+.navbar {
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+	top: 229px;
+	border: none;
+	border-radius: 0;
+	background-color: @yellow;
+	font-size: 1.2em;
+	line-height: 1.2;
+	text-transform: uppercase;
+	font-style: italic;
+	font-weight: 600;
+	
+	.navbar-brand {
+		padding-top: 10px;
+	}
+
+	ul.nav.navbar-nav {
+		p.navbar-text {
+			color: @red;
+			font-size: 1.8em;
+			line-height: 0.7;
+			font-weight: normal;
+		}
+		li {
+			& a {
+				color: @red;
+				.transition(color 0.2s ease-out);
+				.transition(background-color 0.2s ease-out);
+
+				&:hover {
+					color: @yellow;
+					background-color: @red;
+				}
+			}
+			&.active a {
+				color: @yellow;
+				background-color: @red;
+			}
+		}
+	}
+}
+
+.page {
+
+	background: url(./img/bg.png) repeat;
+
+	img.logo-computerman {
+		position: absolute;
+		top: -135px;
+		left: 0;
+	}
+
+	#main {
+		height: 2000px;
+
+		#content {
+			margin-top: 70px;
+
+			.product-box {
+				text-transform: uppercase;
+				margin: 50px 0;
+				border: 10px solid @dark-grey;
+				padding: 20px;
+				background: white;
+				.clearfix;
+
+				.title {
+					.font-comic;
+					font-size: 5em;
+					line-height: 1;
+					border-bottom: 5px solid @dark-grey;
+					margin-bottom: 0.3em;
+					width: 70%;
+				}
+				.left {
+					float: left;
+					width: 45%;
+					margin: 0;
+					
+					.features {
+						.font-impact;
+						color: @medium-grey;
+
+						.slabtext {
+							line-height: 1;
+						}
+					}
+				}
+				.right {
+					float: left;
+					width: 55%;
+					margin: 0;
+					.clearfix;
+
+					.price {
+						float: left;
+						width: 80%;
+						margin: 0;
+						.font-price;
+						color: @blue;
+					}
+					.terms-box {
+						float: left;
+						width: 20%;
+						margin: 35% 0 0 0;
+						color: @lightest-grey;
+
+						.slash-area {
+							float: left;
+							width: 20%;
+							margin: 0 5% 0 -5%;
+						}
+						.terms-area {
+							float: left;
+							width: 80%;
+							margin: 0.5em 0 0 0;
+
+							.terms:last-of-type {
+								border-top: 0.3em solid;
+								padding-top: 0.3em;
+								margin-top: 0.3em;
+							}
+						}
+					}
+					.button-area {
+						float: right;
+						width: 60%;
+						margin-top: 1em;
+						margin-right: 20%;
+
+						a.learn-more {
+							display: inline-block;
+							
+							&:hover {
+								text-decoration: none;
+							}
+
+							.slabtext {
+								background: @yellow;
+								padding: 5%;
+								.font-comic;
+								letter-spacing: 0.1em !important;
+								color: @red;
+							}
+							&:after {
+								content: ' ';
+								display: block;
+								position: absolute;
+								background: url(img/right-arrow.svg) right center no-repeat;
+								right: -23%;
+								top: 0;
+								width: 10%;
+								height: 100%;
+								padding: 12%;
+								z-index: -1;
+							}
+						}
+					}
+				}
+				.pow {
+					position: absolute;
+					width: 40%;
+					top: -20%;
+					right: -10%;
+
+					img {
+						height: 100%;
+						width: 100%;
+					}
+					.deal {
+						position: absolute;	
+						width: 53%;
+						top: 30%;
+						left: 22%;
+						height: 40%;
+						.rotate(-15deg);
+						-webkit-transform: rotate(-15deg);
+						text-align: center;
+						color: @red;
+						font-weight: bold;
+
+						hr {
+							margin: 5%;
+							border-color: @red;
+						}
+					}
+				}
+			}
+
+			.owner-name {
+				padding: 20px;
+				text-align: center;
+				.font-handwritten;
+				font-size: 3em;
+				font-weight: bold;
+				background: white;
+				border: 5px solid @dark-grey;
+				text-transform: uppercase;
+				margin-top: 20px;
+				width: 300px;
+				margin-left: 60px;
+				line-height: 0.8;
+
+				small {
+					display: block;
+					font-size: 70%; 
+					font-style: italic;
+				}
+			}
+
+			.bubble {
+				position: relative;
+				width: 100%;
+				height: auto;
+				padding: 20px;
+				background: #FFFFFF;
+				border: @dark-grey solid 5px;
+
+				p {
+					.font-handwritten;
+					font-size: 3em;
+					text-transform: uppercase;
+					margin: 0;
+					font-weight: bold;
+					line-height: 1;
+				}				
+
+
+				.facebook-link {
+					float: right;
+					position: relative;
+					z-index: 10;
+				}
+
+				&:before {
+					content: '';
+					position: absolute;
+					border-style: solid;
+					border-width: 10px 80px 10px 0;
+					border-color: transparent #FFFFFF;
+					display: block;
+					width: 0;
+					z-index: 1;
+					left: -80px;
+					top: 119px;
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					border-style: solid;
+					border-width: 14px 84px 14px 0;
+					border-color: transparent @dark-grey;
+					display: block;
+					width: 0;
+					z-index: 0;
+					left: -89px;
+					top: 115px;
+				}
+			}
+		}
+	}
+}
+
+// SOCIAL ICON MAP
+span.social-icon {
+	display: block;
+	width: 83px;
+	height: 81px;
+	background-image: url(./img/social.png);
+
+	&.facebook {
+		background-position: -121px 0;
+	}
+}
+
+// PARALLAX STYLES
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  -webkit-perspective: 1px;
+  -moz-perspective: 1px;
+  -ms-perspective: 1px;
+  -o-perspective: 1px;
+  perspective: 1px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+  body * {
+    -webkit-perspective: 1px;
+    -moz-perspective: 1px;
+    -ms-perspective: 1px;
+    -o-perspective: 1px;
+    perspective: 1px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d; }
+
+.page {
+  position: relative;
+  top: 230px;
+  background-color: white;
+}
+
+.masthead {
+  position: absolute;
+  top: -45%;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  padding-top: 0;
+  background: url(./img/city.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  -webkit-transform: translateZ(-0.9px) scale(1.9);
+  -moz-transform: translateZ(-0.9px) scale(1.9);
+  -ms-transform: translateZ(-0.9px) scale(1.9);
+  -o-transform: translateZ(-0.9px) scale(1.9);
+  transform: translateZ(-0.9px) scale(1.9);
+  z-index: -900;
+
+  img.logo-atlanta {
+  	margin-top: 80px;
+  }
+ }

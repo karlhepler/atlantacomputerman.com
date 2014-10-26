@@ -4,6 +4,6 @@
 	"dependencies": {
 		"jquery": null,
 		"bootstrap": null,
-		"bootswatch": null
+		"slabText": null
 	}
 }
