@@ -18,6 +18,6 @@ $(function() {
 
 	// FONTS LOADED! DO STUFF!!!
 	function webFontsLoaded() {
-		$('.product-box .pow .deal, .product-box .features, .product-box .price, .product-box .terms-area, .product-box .slash-area, .product-box .button-area, .product-box .title').slabText();
+		$('footer .left ul, .product-box .pow .deal, .product-box .features, .product-box .price, .product-box .terms-area, .product-box .slash-area, .product-box .button-area, .product-box .title').slabText();
 	}	
 });
