@@ -49,6 +49,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#"><img src="./img/logo.png" width="32px" height="32px" alt="Atlanta Computerman"></a>
+          <p class="small-phone-num navbar-text visible-xs"><a href="tel:7705746200">(770) 574-6200</a></p>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -56,7 +57,7 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="./">Home</a></li>
             
-            <p class="navbar-text">Services for</p>
+            <p class="navbar-text hidden-sm">Services for</p>
 
             <li><a href="./services/families/">Families</a></li>
             <li><a href="./services/students/">Students</a></li>
@@ -73,7 +74,7 @@
 
     <div class="page">
 
-      <img class="logo-computerman" src="./img/computerman.png" alt="Computerman" width="596px" height="129px">
+      <img class="img-responsive logo-computerman" src="./img/computerman.png" alt="Computerman" width="596px" height="129px">
 
       <div id="main" class="container">        
 
@@ -99,7 +100,7 @@
             <div class="row">
               <div class="col-sm-5">                
                 <img class="img-responsive" src="./img/karl.png" alt="Karl Hepler, Owner">
-                <div class="owner-name">Karl Hepler<small>Owner</small></div>
+                <div class="owner-name hidden-xs">Karl Hepler<small>Owner</small></div>
               </div>
               <div class="col-sm-7">
                 <div class="row">
@@ -110,7 +111,7 @@
                       <!-- Facebook Like Box -->
                       <fb:like href="https://www.facebook.com/AtlantaComputerman" width="50" layout="box_count" action="like" show_faces="false" share="true"></fb:like>
                       <!-- Call to Action -->
-                      <p>Stop paying hundreds of dollars every time you need your computer fixed!</p>                  
+                      <p>You'll never have to pay for computer repair or support again! <small>We'll get your computer running like new and keep it that way with our best-practices approach and personalized service. We provide unlimited support, repair, and maintenance for your computer, software, and data. So sit back and and relax - we've got you and your family covered!</small></p>
                       <div class="pointer">
                       </div>
                       <div class="pointerBorder">
@@ -216,11 +217,71 @@
                 </div>
                 <!-- END PRODUCT BOX -->
               </div>
-              <div class="col-sm-5"></div>
+              <div class="col-sm-5 hidden-xs">
+                <div class="left-arrow"></div>
+              </div>
             </div>
             <div class="row">
-              <div class="col-sm-6"></div>
-              <div class="col-sm-6"></div>
+              <div class="col-sm-5 hidden-xs">
+                <div class="right-arrow"></div>
+              </div>
+              <div class="col-sm-7">
+                <!-- START PRODUCT BOX -->
+                <div class="product-box">
+                  <div class="title"><span class="slabtext">Contact Us</span></div>
+                  <div class="content">                    
+                    <!-- START CONTACT FORM -->
+                    <form action="#" method="post" class="form-horizontal contact">            
+                      <fieldset>
+                        <div class="form-group">
+                          <div class="col-sm-6">
+                            <label class="sr-only" for="first">First Name</label>
+                            <input placeholder="First Name" class="form-control required" id="first" name="first" size="30" type="text" required />
+                          </div>
+                          <div class="col-sm-6">
+                            <label class="sr-only" for="last">Last Name</label>
+                            <input placeholder="Last Name" class="form-control required" id="last" name="last" size="30" type="text" required />
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-sm-12">
+                            <label class="sr-only" for="email">Email Address</label>
+                            <div class="inner-addon left-addon">                              
+                              <input placeholder="Email Address" class="form-control required email" id="email" name="email" required="true" size="30" type="email" required />
+                              <i class="glyphicon glyphicon-envelope"></i>
+                            </div>                            
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-sm-12">
+                            <label class="sr-only" for="user_email">Phone Number</label>
+                            <div class="inner-addon left-addon">                              
+                              <input placeholder="Phone Number" class="form-control required phone" id="phone" name="phone" required="true" size="30" type="phone" required />
+                              <i class="glyphicon glyphicon-earphone"></i>
+                            </div>                            
+                          </div>
+                        </div>
+                      </fieldset>
+                      <div class="col-xs-8 col-xs-offset-4">
+                        <div class="button-area">                      
+                          <button class="learn-more"><span class="slabtext">Contact Us</span></button>
+                        </div>
+                      </div>
+                    </form>
+                    <!-- END CONTACT FORM -->
+                  </div>
+                  <div class="contact pow">
+                    <img src="./img/pow.png" alt="">
+                    <div class="deal">
+                      <span class="slabtext">Your computer</span>
+                      <span class="slabtext">will be</span>
+                      <span class="slabtext">up & running</span>
+                      <span class="slabtext">in no time!</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- END PRODUCT BOX -->
+              </div>
             </div>
           </div>          
         </div>
@@ -235,7 +296,7 @@
       </div>      
     </div>
     <div class="masthead">
-      <img class="logo-atlanta" src="./img/atlanta.png" alt="Atlanta" width="596px" height="126px">
+      <img class="img-responsive logo-atlanta" src="./img/atlanta.png" alt="Atlanta" width="596px" height="126px">
     </div>    
 
     <!-- Javascript Include -->
