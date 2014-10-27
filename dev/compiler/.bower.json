@@ -1,9 +1,0 @@
-{
-	"name": "Atlanta Computerman Website",
-	"version": "1.0.0",
-	"dependencies": {
-		"jquery": null,
-		"bootstrap": null,
-		"slabText": null
-	}
-}
