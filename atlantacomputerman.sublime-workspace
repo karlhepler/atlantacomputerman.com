@@ -1,0 +1,1257 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"list",
+				"list-n	list-style-type: none;"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"paddin",
+				"padding-bottom"
+			],
+			[
+				"pos",
+				"pos-s	position: static;"
+			],
+			[
+				"text-",
+				"text-transform"
+			],
+			[
+				"font-",
+				"font-style"
+			],
+			[
+				"dark-g",
+				"dark-grey"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"margin-",
+				"margin-right"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"fonts",
+				"font-style"
+			],
+			[
+				"bol",
+				"bolder"
+			],
+			[
+				"color-lig",
+				"color-lightlightgrey"
+			],
+			[
+				"bodrco",
+				"border-color"
+			],
+			[
+				"light",
+				"color-lightgrey"
+			],
+			[
+				"last-",
+				"last-child"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"liste",
+				"listenTo"
+			],
+			[
+				"trans",
+				"transactions"
+			],
+			[
+				"delet",
+				"deleteMyBanks"
+			],
+			[
+				"for",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"scroll",
+				"scroll-stopper"
+			],
+			[
+				"balance",
+				"balanceContainer"
+			],
+			[
+				"sidebar",
+				"sidebarContainer"
+			],
+			[
+				"bankList",
+				"bankListItems"
+			],
+			[
+				"future",
+				"futureBalances"
+			],
+			[
+				"futureB",
+				"futureBalances"
+			],
+			[
+				"sumFut",
+				"sumFutureIncomes"
+			],
+			[
+				"past",
+				"pastExpenses"
+			],
+			[
+				"futu",
+				"futureIncome"
+			],
+			[
+				"amount",
+				"amountLeft"
+			],
+			[
+				"find",
+				"findOne"
+			],
+			[
+				"save",
+				"saveAndReturn"
+			],
+			[
+				"isVal",
+				"isValidExpenseDate"
+			],
+			[
+				"banktype",
+				"bankTypeaheadRegion"
+			],
+			[
+				"banktyp",
+				"bankTypeaheadRegion"
+			],
+			[
+				"bankTyp",
+				"bankTypeaheadRegion"
+			],
+			[
+				"opening",
+				"openingBalance"
+			],
+			[
+				"bankincom",
+				"bankIncomeTotals"
+			],
+			[
+				"thisbudget",
+				"thisBudgetBank"
+			],
+			[
+				"bankincomto",
+				"bankIncomeTotalsIndex"
+			],
+			[
+				"thisb",
+				"thisBudget"
+			],
+			[
+				"fillb",
+				"fillBudgetBalances"
+			],
+			[
+				"valid",
+				"validDueDateBudgets"
+			],
+			[
+				"transaction",
+				"transaction_collection"
+			],
+			[
+				"this",
+				"thisTransaction"
+			],
+			[
+				"same",
+				"sameCount"
+			],
+			[
+				"thisM",
+				"thisModel"
+			],
+			[
+				"first",
+				"firstBank"
+			],
+			[
+				"thisbu",
+				"thisBudget"
+			],
+			[
+				"thisbud",
+				"thisBudgetBank"
+			],
+			[
+				"goal",
+				"goalChanged"
+			],
+			[
+				"bala",
+				"balance"
+			],
+			[
+				"dueDate",
+				"dueDateChanged"
+			],
+			[
+				"dateB",
+				"dateBtnClicked"
+			],
+			[
+				"limit",
+				"limitChanged"
+			],
+			[
+				"toggle",
+				"toggleActive"
+			],
+			[
+				"thisB",
+				"thisBudget"
+			],
+			[
+				"thisBudg",
+				"thisBudget"
+			],
+			[
+				"bankI",
+				"bankIncomeTotals"
+			],
+			[
+				"empty",
+				"emptyBankBudgets"
+			],
+			[
+				"check",
+				"checkboxes"
+			],
+			[
+				"color-li",
+				"color-lightlightgrey"
+			],
+			[
+				"sortab",
+				"sortableDropped"
+			],
+			[
+				"expectd",
+				"expectedIncome"
+			],
+			[
+				"expected",
+				"expectedIncome"
+			],
+			[
+				"exp",
+				"expectedIncomeChanged"
+			],
+			[
+				"change",
+				"changeHappened"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"ui-d",
+				"ui-draggable-dragging"
+			],
+			[
+				"cur",
+				"cur:p	cursor:pointer"
+			],
+			[
+				"expect",
+				"expectedIncome"
+			],
+			[
+				"fundIcon",
+				"fundIconContainer"
+			],
+			[
+				"budgetList",
+				"budgetListCollectionView"
+			],
+			[
+				"validator",
+				"validatorErrors"
+			],
+			[
+				"border-left",
+				"border-left-color"
+			],
+			[
+				"overflo",
+				"overflow"
+			],
+			[
+				"overflow",
+				"overflow-y"
+			],
+			[
+				"overf",
+				"overflow"
+			],
+			[
+				"color",
+				"color-grey"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"stroke",
+				"stroke-thickness"
+			],
+			[
+				"safe",
+				"safeStrings"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"color-ligh",
+				"color-highlight"
+			],
+			[
+				"bordercol",
+				"border-collapse"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"hei",
+				"height"
+			],
+			[
+				"vis",
+				"visible"
+			],
+			[
+				"color-",
+				"color-ocean"
+			],
+			[
+				"spac",
+				"letter-spacing"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"spa",
+				"letter-spacing"
+			],
+			[
+				"Budget",
+				"Budget_Collection"
+			],
+			[
+				"BudgetList",
+				"BudgetList_CollectionView"
+			],
+			[
+				"budget",
+				"budgetsContainer"
+			],
+			[
+				"Maritem",
+				"Marionette.ItemView"
+			],
+			[
+				"addBank",
+				"addBankView"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"mask",
+				"maskMoney"
+			],
+			[
+				"total",
+				"totalBalance"
+			],
+			[
+				"reduced",
+				"reducedObject"
+			],
+			[
+				"transactions",
+				"transactionsTotal"
+			],
+			[
+				"bootstrap",
+				"bootstrap-select"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"totalBu",
+				"totalBudgetAmountChanged"
+			],
+			[
+				"showPrev",
+				"showPrevMonth"
+			],
+			[
+				"showPrevMonth",
+				"showPrevMonthCallback"
+			],
+			[
+				"dist",
+				"distinctDateDueDates"
+			],
+			[
+				"timelineMonth",
+				"timelineMonthContainer"
+			],
+			[
+				"days",
+				"daysInMonth"
+			],
+			[
+				"newMonth",
+				"newMonthYear"
+			],
+			[
+				"Transaction",
+				"TransactionListItem"
+			],
+			[
+				"tran",
+				"transactionAmount"
+			],
+			[
+				"style",
+				"font-style"
+			],
+			[
+				"padin",
+				"padding-bottom"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"back-s",
+				"background-position"
+			],
+			[
+				"min-",
+				"min-height"
+			],
+			[
+				"timeline",
+				"timelineDateView"
+			],
+			[
+				"sorted",
+				"sortedEmptyDates"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"selected_items":
+		[
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"date",
+				"Jekyll: Insert current datetime"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown (Jekyll)"
+			],
+			[
+				"syntax mar",
+				"Set Syntax: Markdown (Jekyll)"
+			],
+			[
+				"post",
+				"Jekyll: New post"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"todo",
+				"SimpleTODO: Add TODO"
+			],
+			[
+				"add",
+				"Git: Add Current File"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"set syntax: html",
+				"Set Syntax: HTML"
+			],
+			[
+				"tasks",
+				"Tasks: New document"
+			],
+			[
+				"task",
+				"Tasks: New"
+			],
+			[
+				"git br",
+				"Git: Change Branch"
+			],
+			[
+				"git ",
+				"Git: Gui"
+			],
+			[
+				"git bran",
+				"Git: New Branch"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"gitcom",
+				"Git: Commit history"
+			],
+			[
+				"git commit",
+				"Git: Commit history"
+			],
+			[
+				"git",
+				"Git: Status"
+			],
+			[
+				"gitstat",
+				"Git: Status"
+			],
+			[
+				"brow",
+				"SFTP: Browse Remote…"
+			],
+			[
+				"browse",
+				"SFTP: Browse Remote…"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"javac",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"browser",
+				"SFTP: Browse Server…"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"javascrip",
+				"Javascript Beautify"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"pretty",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"fold",
+				"BracketHighlighter: Fold Bracket Content"
+			],
+			[
+				"browse ser",
+				"SFTP: Browse Server…"
+			],
+			[
+				"htmlpre",
+				"HTMLPrettify"
+			],
+			[
+				"sftp",
+				"SFTP: Browse Server…"
+			],
+			[
+				"instll",
+				"Package Control: Install Package"
+			],
+			[
+				"server",
+				"SFTP: Setup Server…"
+			],
+			[
+				"terminal",
+				"Preferences: Terminal Key Bindings – Default"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			]
+		],
+		"width": 529.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"git status;",
+			"git status",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Karl/Sites/atlantacomputerman.com"
+	],
+	"file_history":
+	[
+		"/Users/Karl/Sites/atlantacomputerman.com/dev/src/js/dev.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/dev/src/less/dev.less",
+		"/Users/Karl/Sites/atlantacomputerman.com/dev/pages/contact-us/index.html",
+		"/Users/Karl/Sites/atlantacomputerman.com/dev/index.html",
+		"/Users/Karl/Sites/atlantacomputerman.com/dev/compiler/dist-build.sh",
+		"/Users/Karl/Sites/atlantacomputerman.com/dev/compiler/dev-build.sh",
+		"/Users/Karl/Sites/atlantacomputerman.com/index.html",
+		"/Users/Karl/Sites/atlantacomputerman.com/img/left-arrow.svg",
+		"/Users/Karl/Sites/atlantacomputerman.com/img/right-arrow.svg",
+		"/Users/Karl/Sites/atlantacomputerman.com/img/right-btnarrow.svg",
+		"/Users/Karl/Sites/atlantacomputerman.com/dev/compiler/.bower.json",
+		"/Users/Karl/Sites/atlantacomputerman.com/dist.css",
+		"/Users/Karl/Sites/atlantacomputerman.com/dev/compiler/build.sh",
+		"/Users/Karl/Sites/atlantacomputerman.com/dev/.bowerrc",
+		"/Users/Karl/Sites/atlantacomputerman.com/dev/build.sh",
+		"/Users/Karl/Sites/atlantacomputerman.com/src/css/style.css",
+		"/Users/Karl/Sites/atlantacomputerman.com/CNAME",
+		"/Users/Karl/sites/karlhepler.com/_posts/2014-10-20-see-you-next-year.md",
+		"/Users/Karl/Sites/budgetblox3/app/dev/styles/style.less",
+		"/Users/Karl/Sites/budgetblox3/app/dev/ideas.todo",
+		"/Users/Karl/Sites/budgetblox3/Plans and Ideas.todo",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/backbone/docs/todos.html",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/requirejs/tests/text/textOnly.html",
+		"/Users/Karl/Sites/budgetblox3/budgetblox3.sublime-project",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/views/collection/BankList_CollectionView.js",
+		"/Users/Karl/Sites/budgetblox3/server/node_modules/mongoose/lib/collection.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/styles/colors.less",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/jquery/test/data/core/cc_on.html",
+		"/Users/Karl/Sites/budgetblox3/server/config.js",
+		"/Users/Karl/Sites/budgetblox3/server/routes/banks.js",
+		"/Users/Karl/Sites/budgetblox3/server/node_modules/express/node_modules/connect/lib/middleware/basicAuth.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/main.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/.bower.json",
+		"/Users/Karl/Sites/budgetblox3/server/routes/budgets.js.old",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/views/item/BudgetListItem_ItemView.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/requirejs/tests/baseUrl.html",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/iCheck/icheck.js",
+		"/Users/Karl/Sites/budgetblox3/server/node_modules/datejs/src/i18n/it-CH.js",
+		"/Users/Karl/Sites/budgetblox3/server/node_modules/mongoose/examples/express/connection-sharing/modelA.js",
+		"/Users/Karl/Sites/budgetblox3/server/node_modules/ejs/Makefile",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/FitText.js/.bower.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/fastclick/.bower.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/chosen-build/.bower.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/bootstrap-select/.bower.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/bootstrap/.bower.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/backbone.wreqr/.bower.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/backbone.marionette/.bower.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/backbone.babysitter/.bower.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/backbone-filtered-collection/.bower.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/backbone-amd/.bower.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/backbone/.bower.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/alertify/.bower.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/accounting/.bower.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/.bowerrc",
+		"/Users/Karl/Sites/budgetblox3/server/node_modules/rrule/bower_components/timezone-js/bower.json",
+		"/Users/Karl/Sites/budgetblox3/server/node_modules/less-middleware/node_modules/less/bower.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/typeahead.js/bower.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/requirejs-plugins/bower.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/jquery-ui-amd/bower.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/FitText.js/bower.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/fastclick/bower.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/bootstrap-select/bower.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/bootstrap/bower.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/backbone.marionette/bower.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/backbone-filtered-collection/bower.json",
+		"/Users/Karl/Sites/budgetblox3/server/node_modules/rrule/bower.json",
+		"/Users/Karl/Sites/budgetblox3/server/node_modules/less-middleware/node_modules/less/test/browser/runner-browser-options.js",
+		"/private/var/folders/7n/ptrgfp6x71sfjhbp88lry7tr0000gn/T/fz3temp-1/configure.php",
+		"/Users/Karl/Library/Application Support/Sublime Text 3/Packages/TodoReview/TodoReview.sublime-settings",
+		"/Users/Karl/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/Karl/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/Karl/Library/Application Support/Sublime Text 3/Packages/User/JavaScript.sublime-settings",
+		"/Users/Karl/Sites/budgetblox3/app/dev/templates/Timeline_Layout.tpl.old",
+		"/Users/Karl/Sites/budgetblox3/app/dev/templates/Timeline_Layout.tpl",
+		"/Users/Karl/Sites/budgetblox3/server/node_modules/datejs/src/i18n/ta-IN.js",
+		"/Users/Karl/Sites/budgetblox3/test.html",
+		"/Users/Karl/Sites/budgetblox3/app/dev/templates/EditIncome_Layout.tpl",
+		"/Users/Karl/Sites/budgetblox3/app/dev/templates/EditExpense_Layout.tpl",
+		"/Users/Karl/Sites/budgetblox3/app/dev/templates/EditBudget_Layout.tpl",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/requirejs/tests/layers/layer1.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/custom_helpers/parseFloatRound.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/custom_helpers/monthName.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/custom_helpers/formatMoney.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/custom_helpers/daysInMonth.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/controllers/index.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/collections/Transaction_Collection.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/collections/Contact_Collection.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/collections/Budget_Collection.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/collections/Bank_Collection.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vent.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/templates.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/app.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/fonts/glyphicons-halflings-regular.woff",
+		"/Users/Karl/Sites/budgetblox3/app/dev/fonts/glyphicons-halflings-regular.svg",
+		"/Users/Karl/Sites/budgetblox3/README.md",
+		"/Users/Karl/Sites/budgetblox3/LICENSE.md",
+		"/Users/Karl/Sites/budgetblox3/.license.md.swp",
+		"/Users/Karl/Sites/budgetblox3/.gitignore",
+		"/Users/Karl/Sites/budgetblox3/app/dev/templates/BankListItem_ItemView.tpl",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/views/item/BankListItem_ItemView.js",
+		"/Users/Karl/Sites/budgetblox3/server/server.js",
+		"/Users/Karl/Sites/budgetblox3/server/package.json",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/views/layout/Timeline_Layout.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/views/layout/EditIncome_Layout.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/views/layout/EditExpense_Layout.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/views/layout/EditBudget_Layout.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/views/item/EditBank_ItemView.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/views/layout/Timeline_Layout.js.old",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/views/collection/BudgetList_CollectionView.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/views/collection/PreferredBankList_CollectionView.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/templates/EditBank_ItemView.tpl",
+		"/Users/Karl/Sites/budgetblox3/server/views/index.ejs",
+		"/Users/Karl/Sites/budgetblox3/server/schemas/index.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/views/item/TransactionListItem_ItemView.js",
+		"/Users/Karl/Sites/budgetblox3/server/routes/transactions.js",
+		"/Users/Karl/Sites/budgetblox3/server/routes/budgets.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/scripts/views/item/PreferredBankListItem_ItemView.js",
+		"/Users/Karl/Sites/budgetblox3/app/dev/templates/PreferredBankListItem_ItemView.tpl",
+		"/var/folders/7n/ptrgfp6x71sfjhbp88lry7tr0000gn/T/sublime-sftp-browse-1395252247/Cloud Dedicated Server/banglesandbeads.net/store/index.php",
+		"/var/folders/7n/ptrgfp6x71sfjhbp88lry7tr0000gn/T/sublime-sftp-browse-1395252379/Cloud Dedicated Server/banglesandbeads.net/store/includes/configure.php",
+		"/var/folders/7n/ptrgfp6x71sfjhbp88lry7tr0000gn/T/sublime-sftp-browse-1395252154/Cloud Dedicated Server/banglesandbeads.net/store/index.php",
+		"/var/folders/7n/ptrgfp6x71sfjhbp88lry7tr0000gn/T/sublime-sftp-browse-1395252232/Cloud Dedicated Server/banglesandbeads.net/store/index.php",
+		"/var/folders/7n/ptrgfp6x71sfjhbp88lry7tr0000gn/T/sublime-sftp-browse-1395252119/Cloud Dedicated Server/banglesandbeads.net/index.html",
+		"/Users/Karl/Sites/budgetblox3/server/node_modules/datejs/src/i18n/es-DO.js",
+		"/Users/Karl/Sites/budgetblox3/server/node_modules/.bin/express",
+		"/Users/Karl/Sites/budgetblox3/app/dev/styles/offcanvas.less",
+		"/Users/Karl/Sites/budgetblox3/app/dev/styles/custom_navbar.less",
+		"/Users/Karl/Sites/budgetblox3/app/dev/styles/style.css"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/Karl/Sites/budgetblox3/app/dev/scripts/views",
+			"",
+			"/Users/Karl/Sites/budgetblox3/app/dev/scripts/views,/Users/Karl/Sites/budgetblox3/app/dev/styles,/Users/Karl/Sites/budgetblox3/app/dev/templates",
+			"/Users/Karl/Sites/budgetblox3/app/dev/scripts/views,/Users/Karl/Sites/budgetblox3/app/dev/styles",
+			"",
+			"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/bootstrap/less",
+			"/Users/Karl/Sites/budgetblox3/app/dev/scripts",
+			"server/",
+			"server",
+			"app/dev/scripts/views, app/dev/templates",
+			"app/dev/scripts/views",
+			"app/dev/views",
+			"server/routes/months_banks.js",
+			"app/dev/scripts/views",
+			"server/routes/months.js",
+			"server/routes/budgets.js",
+			"app/dev/scripts/views",
+			"app/scripts/views",
+			"app/dev/scripts/collections/months.js,app/dev/scripts/models/month.js",
+			"server/routes/months.js",
+			"app/dev/scripts,-app/dev/scripts/vendor/*,-app/dev/scripts/main.js,-app/dev/scripts/app.js,-app/dev/scripts/custom_helpers/parseFloatRound.js",
+			"app/dev/scripts,-app/dev/scripts/vendor/*,-app/dev/scripts/main.js,-app/dev/scripts/app.js",
+			"app/dev/scripts,-app/dev/scripts/vendor/*",
+			"app/dev/scripts/*,-app/dev/vendor/*",
+			"+app/dev/scripts/*,-app/dev/vendor/*",
+			"app/dev/scripts,-app/dev/vendor/*",
+			"app/dev/scripts,-app/dev/vendor",
+			"app/dev/scripts",
+			"!app/dev/scripts",
+			"app/dev/scripts",
+			"scripts",
+			"goals.js",
+			"banks.js",
+			"js/",
+			"",
+			"budget-definitions.js",
+			"",
+			"transactions.js"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"border-right: 1px solid @light-grey;",
+			"\"./",
+			"quick-su",
+			"social-icon",
+			"facebook",
+			"body",
+			"logo-computerman",
+			"nav",
+			"nav-text",
+			".png",
+			"computer",
+			"input",
+			"<input",
+			"&",
+			"#222",
+			"black",
+			"img",
+			"span",
+			"rgba(213, 213, 0, 0)",
+			"#f50000",
+			"#d5d500",
+			".arrow_box",
+			".learn-more",
+			".learn-more > ",
+			".wiz-buttons > ",
+			"span",
+			"button",
+			"div",
+			"<div>",
+			"div",
+			"<div>",
+			"content",
+			"-webkit-border-radius: 0px;\n				-moz-border-radius: 0px;\n				border-radius: 0px;",
+			"#222",
+			" \n			{",
+			"content",
+			"p",
+			"Bootstraptaste",
+			"bootstraptaste",
+			"770",
+			"remote-support-link",
+			"1em",
+			"remote-support-link",
+			";\n",
+			"p>",
+			"p",
+			"+ ",
+			"10px",
+			"\"//",
+			"//",
+			":",
+			"* ",
+			"right",
+			"border-left:",
+			"padding-left: 2",
+			"padding-left: 4",
+			"icheck",
+			"grippy",
+			"info-block",
+			"left",
+			"grippy_large",
+			"grippy",
+			"initDOM",
+			"amd",
+			"#999",
+			"of-type",
+			"margin",
+			"spacing",
+			"line",
+			".form-control",
+			"pickadate",
+			"classic",
+			"16px",
+			"amd",
+			"handle",
+			"sidebar-container",
+			"ListItems",
+			"budgetListItems",
+			"budgetList",
+			"contactName",
+			"budget",
+			"contactName",
+			"budgets",
+			"console.log",
+			"meta.banks",
+			"budget.meta.banks",
+			"name=\"banks\"",
+			"*",
+			"checked",
+			"banks",
+			"var banks",
+			"meta.banks",
+			"disa",
+			"disabled",
+			".str",
+			"budget",
+			"collapse",
+			"ListItems",
+			"this",
+			"- ",
+			"this",
+			"bank",
+			"balance-container",
+			"budget-bank-container",
+			".desc",
+			"transaction-list",
+			"sidebar",
+			"sidebar-container",
+			"border",
+			"navbar-de",
+			"h5",
+			"h1",
+			"this.$el.find",
+			"search",
+			"btn-account",
+			"user-pic",
+			"btn-google",
+			"btn-addnew",
+			"navbar",
+			"pickadate",
+			"max-width",
+			"transaction",
+			"transaction-buttons",
+			"		\n",
+			"transaction-buttons",
+			"<",
+			"span",
+			"</"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"#sidebar",
+			"maskMoney()",
+			"maskMoney({allowZero:true})",
+			"Months_Banks",
+			"months_banks",
+			"",
+			"months",
+			"Months",
+			"budgets",
+			"Budgets",
+			"month",
+			"Month",
+			"month",
+			"parseFloatRound",
+			"goals",
+			"banks",
+			"\nbutton.btn-add",
+			"ItemView_MonthYear",
+			"itemView_MonthYear",
+			"budget-definition_",
+			"budget-definition",
+			"budgetDefinition",
+			"budget-definition_",
+			"'budget-definition_'",
+			"budgetDefinitionSchema",
+			"BudgetDefinition",
+			"Transaction",
+			"transaction",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 252.0
+	},
+	"output.sftp":
+	{
+		"height": 112.0
+	},
+	"project": "atlantacomputerman.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"style.l",
+				"app/dev/styles/style.less"
+			],
+			[
+				"banklistcoll",
+				"app/dev/scripts/views/collection/BankList_CollectionView.js"
+			],
+			[
+				"style",
+				"app/dev/styles/style.less"
+			],
+			[
+				"collectionview",
+				"app/dev/scripts/views/collection/BudgetList_CollectionView.js"
+			],
+			[
+				"banklis",
+				"app/dev/scripts/views/item/BankListItem_ItemView.js"
+			],
+			[
+				"bankite",
+				"app/dev/templates/BankListItem_ItemView.tpl"
+			],
+			[
+				"budgetlistitem",
+				"app/dev/scripts/views/item/BudgetListItem_ItemView.js"
+			],
+			[
+				"icheck",
+				"app/dev/scripts/vendor/iCheck/icheck.js"
+			],
+			[
+				"main.js",
+				"app/dev/scripts/main.js"
+			],
+			[
+				"timeline",
+				"app/dev/scripts/views/layout/Timeline_Layout.js"
+			],
+			[
+				"style.ls",
+				"app/dev/styles/style.less"
+			],
+			[
+				"layout",
+				"app/dev/scripts/views/layout/Timeline_Layout.js"
+			],
+			[
+				"editbudget",
+				"app/dev/scripts/views/layout/EditBudget_Layout.js"
+			],
+			[
+				"",
+				"app/dev/scripts/vendor/backbone-amd/test/index.html"
+			],
+			[
+				"public/js/bu",
+				"public/js/models/model_Budget.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Sites/ftpbrowser.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 217.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

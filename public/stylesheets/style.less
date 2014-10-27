@@ -1,0 +1,143 @@
+// IMPORTS --------------------------------------
+@import url(//fonts.googleapis.com/css?family=Swanky+and+Moo+Moo);
+@import url(//fonts.googleapis.com/css?family=Bangers);
+@import url(//fonts.googleapis.com/css?family=Oswald:700);
+@import url(//fonts.googleapis.com/css?family=Voltaire);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+@import "/vendor/bootstrap/less/bootstrap";
+@icon-font-path: "/vendor/bootstrap/fonts/";
+@font-family-sans-serif: 'Open Sans', sans-serif;
+
+@import (less) "/vendor/slabText/css/slabtext.css";
+
+// SET FONT
+.font-handwritten { font-family: 'Swanky and Moo Moo', cursive };
+.font-comic { font-family: 'Bangers', cursive };
+.font-impact { font-family: 'Oswald', sans-serif; };
+.font-price { font-family: 'Voltaire', sans-serif; };
+
+// COLORS!!
+@dark-grey: #222;
+@medium-grey: #39434F;
+@light-grey: #3F4B58;
+@lightest-grey: #ccc;
+@yellow: #FFCC00;
+@red: #990000;
+@blue: #3C72CE;
+@light-purple: #88c;
+
+
+header, footer {
+	.container-fluid;
+}
+main {
+	.container;
+}
+section {
+	.make-row();
+}
+h1 {
+	.font-comic;
+}
+h2 {
+	.font-impact;
+}
+h3 {
+	.font-price;
+}
+h4 {
+	.font-comic;
+}
+
+header {
+	background-image: url(/images/city.jpg);
+	background-size: cover;
+	height: 250px;
+
+	section:first-of-type {
+		height: 205px;
+	}
+
+	.quick-contact-header {
+		position: absolute;
+		top: 0px;
+		width: 100%;
+		padding-right: 15px;
+		left: 0px;
+	}
+
+	h1 {
+		margin: 0;
+
+		a {
+			display: block;
+			position: relative;
+
+			span { display: none; }
+			img {
+				.img-responsive;
+				position: absolute;
+			}
+		}
+	}
+	h2 {
+		font-family: @font-family-sans-serif;
+		font-size: @font-size-base;
+		color: white;
+		text-align: center;
+	}
+}
+
+.quick-support-contact-box {
+	margin-top: 7px;
+
+	h1 {
+		padding: 14px;
+		background: @medium-grey;
+		color: @yellow;
+		text-transform: uppercase;
+		font-size: 1.8em;
+		font-weight: normal;
+		margin-bottom: 0;
+		margin-top: 0;	
+		letter-spacing: 0.1em;	
+	}
+	ul {
+		list-style: none;
+		font-size: 1.2em;
+		background: @light-grey;
+		padding: 10px 20px;
+
+		li {
+			margin-bottom: 10px;
+
+			a {
+				.glyphicon {
+					margin-right: 0.8em;
+					top: 0.3em;
+				}
+				span.email,
+				span.phone-number,
+				span.hours {
+
+					small {
+						font-size: 60%;
+						display: block;
+						margin-left: 3em;
+						line-height: 0.5;
+					}
+				}			
+
+				color: @lightest-grey;
+				.transition(color 0.2s ease-out);
+				font-weight: 200;
+				font-style: italic;
+			}
+			a:hover {
+				text-decoration: none;
+				color: white;
+			}
+		}
+	}
+}
