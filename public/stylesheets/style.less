@@ -594,18 +594,26 @@ body > main > section:nth-child(3) > div.col-sm-7 > div > div.content > form > d
 // SOCIAL ICON MAP ----------------------
 span.social-icon {
 	display: block;
-	width: 83px;
-	height: 81px;
+	width: 87px;
+	height: 88px;
 	background-image: url(/images/social.png);
+	.transition(opacity 0.2s ease-out);
 
-	&.facebook {
-		background-position: -121px 0;
+	&:hover {
+		opacity: 0.75;
 	}
+
 	&.twitter {
-		background-position: -121px 0;
+		background-position: -19px -9px;
+	}
+	&.facebook {
+		background-position: -136px -9px;
 	}
 	&.google-plus {
-		background-position: -121px 0;
+		background-position: -248px -9px;
+	}
+	&.rss {
+		background-position: -356px -9px;
 	}
 }
 
