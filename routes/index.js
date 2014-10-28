@@ -94,5 +94,52 @@ exports.quickContact = function(req, res) {
 }
 
 exports.contact = function(req, res) {
+	Validator = require('validator.js');
+	var Assert = Validator.Assert,
+	    validator = new Validator.Validator();
 
+	var constraint = {
+		'first': new Assert().NotBlank(),
+		'last': new Assert().NotBlank(),		
+		'email': new Assert().Email(),
+		'phone': new Assert().NotBlank()
+	};
+
+	var isValid = validator.validate(req.body, constraint);
+
+	if ( isValid ) {
+		console.log(req.body);
+
+		// We have verified that all fields have been filled - now send to ZenDesk
+		var zendesk = require('node-zendesk'),
+		    fs      = require('fs');
+
+		var client = zendesk.createClient({
+		  username:  'atlantacomputerman@gmail.com',
+		  token:     '1Kb0XYfLXtCAXu3j29D1Uf3Oxomn2upcERGDWJer',
+		  remoteUri: 'https://atlantacomputerman.zendesk.com/api/v2'
+		});
+
+		var request = {
+			"ticket": {
+				"subject": "New Contact - 24 Hour Response",
+				"comment": { "body": "Thank you for contacting us! We will be in touch with you within 24 hours!" },
+				"requester": { "locale_id": 1, "name": req.body.first+' '+req.body.last, "email": req.body.email, "phone": req.body.phone }
+			}
+		};
+
+		client.tickets.create(request, function(zen_err, zen_req, zen_res ) {
+			if (zen_err) {
+				res.send(zen_err);
+				return;
+			}
+			else {
+				res.send(zen_res);
+				return;
+			}
+		});
+	}
+	else {
+		res.send( isValid );
+	}
 }

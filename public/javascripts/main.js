@@ -46,6 +46,8 @@ $(function() {
 		// Start spinner
 		$('.spinner').show();
 
+		var thisForm = $(this)[0];
+
 		// Post the form
 		$.post('/quick-contact', formData, function(data) {
 			// Hide the spinner
@@ -55,7 +57,7 @@ $(function() {
 			$('#quick-contact-modal').modal('hide');
 
 			// Clear the form
-			$(this)[0].reset();
+			thisForm.reset();
 		});
 	});
 
@@ -69,14 +71,19 @@ $(function() {
 		// Start spinner
 		$('.spinner').show();
 
+		var thisForm = $(this)[0];
+
 		// Post the form
 		$.post('/contact', formData, function(data) {
 			// Hide the spinner
 			$('.spinner').hide();
 
 			// Clear the form
-			$(this)[0].reset();
+			thisForm.reset();
 		});
 	});
+
+	// Phone number input mask
+	$("#phone").mask("(999) 999-9999");
 	
 });
