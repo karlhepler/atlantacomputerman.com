@@ -26,6 +26,8 @@
 @red: #990000;
 @blue: #3C72CE;
 @light-purple: #88c;
+@green: #78b336;
+@light-green: #8dcf3f;
 
 
 body {	
@@ -775,4 +777,155 @@ section.contact {
 			}
 		}
 	}
+}
+
+// PRICE TABLE ---------------------------
+a.price-table {
+  color: inherit;
+  background-color: white;
+  .box-shadow(0 0 5px @lightest-grey);
+  margin-top: 80px;
+  margin-bottom: 0;
+  .border-bottom-radius(5px);
+  .transition(all 0.2s ease-out);
+  
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+    margin-top: 70px;
+    margin-bottom: 10px;
+    box-shadow: 0 15px 10px darken(@lightest-grey,20%);
+  }
+  display: block;
+  position: relative;
+  text-align: center;
+
+  &.callout {
+  	h4 {
+			.border-top-radius(0);
+			background-color: @green;
+  	}
+  	&:after {
+	    display: block;
+	    position: absolute;
+	    width: 100%;
+	    background: @light-green;
+	    color: rgba(39,65,90,.5);
+	    top: -68px;
+	    left: 0;
+	    content: 'Most Popular';
+	    text-transform: uppercase;
+	    padding: 20px;
+	    font-size: 20px;
+	    font-weight: bold;
+	    .border-top-radius(5px);
+	  }
+	  h5 {
+	  	color: @green;
+	  }
+  }
+  
+  h4 {
+    .font-comic;
+    font-size: 4em;
+    color: white;
+    background-color: @blue;
+    margin: 0;
+    padding: 0.5em;
+    .border-top-radius(5px);
+    span.slabtext {
+    	letter-spacing: 0.1em !important;
+    }
+  }
+  
+  h5 {
+    .font-price;
+    color: @blue;
+    padding: 1em;
+    
+    .price {      
+      font-size: 10em;
+      float: left;
+      width: 70%;
+      margin: 0;
+      padding: 0;
+    }
+    .price-terms {
+      float: left;
+      margin: 5.5em 0 0 0;
+      padding: 0;
+      width: 30%;
+      
+      .slash {
+        float: left;
+        width: 30%;
+        font-size: 2em;
+      }
+      .terms {
+        width: 70%;
+        text-transform: uppercase;
+        .clearfix;
+        float: left;
+        margin-top: 0.8em;
+
+        span {
+          display: block;
+          float: left;
+          
+          &:last-of-type {
+          	margin-top: 3px;
+          	padding-top: 5px;
+            border-top: 2px solid;
+          }
+        }
+      }
+    }
+  }
+  h6 {
+  	.font-impact;
+  	font-size: 1.5em;
+  	font-weight: bold;
+  	text-transform: uppercase;
+  	color: white;
+  	margin: 0;
+  	padding: 0.5em;
+  	background-color: lighten(@red, 10%);
+
+  	small {
+  		display: block;
+			font-family: @font-family-sans-serif;
+			color: white;
+			font-size: 50%;
+			margin-top: 0.5em;
+  	}
+  }
+  p.tag-line {
+    width: 100%;
+    clear: both;
+    display: block;
+    position: relative;
+    font-size: 1.7em;
+    color: @red;
+    text-transform: uppercase;
+    .font-handwritten;
+    padding: 1em 1em 0 1em;
+    line-height: 1;
+    font-weight: normal;
+  }
+  del {
+    color: @lightest-grey;
+  }
+  ul {
+    list-style: none;
+    padding: 1em 0;
+    margin: 0;
+    text-transform: uppercase;
+    
+    li {
+      padding: 1em 1em;
+      border-top: 2px solid lighten(@lightest-grey, 15%);
+      color: lighten(@light-grey, 25%);
+      font-size: 1.2em;
+    }
+  }
 }

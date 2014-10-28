@@ -48,7 +48,6 @@ exports.quickContact = function(req, res) {
 	    validator = new Validator.Validator();
 
 	var constraint = {
-		'subject': new Assert().NotBlank(),
 		'comment': new Assert().NotBlank(),
 		'name': new Assert().NotBlank(),
 		'email': new Assert().Email()
@@ -71,7 +70,7 @@ exports.quickContact = function(req, res) {
 
 		var request = {
 			"ticket": {
-				"subject": req.body.subject,
+				"subject": "New Quick Contact Support Request - 24 Hour Response",
 				"comment": { "body": req.body.comment },
 				"requester": { "locale_id": 1, "name": req.body.name, "email": req.body.email }
 			}
@@ -123,7 +122,7 @@ exports.contact = function(req, res) {
 		var request = {
 			"ticket": {
 				"subject": "New Contact - 24 Hour Response",
-				"comment": { "body": "Thank you for contacting us! We will be in touch with you within 24 hours!" },
+				"comment": { "body": "INFORMATION SUBMITTED:\n\nNAME: "+req.body.first+" "+req.body.last+"\nEMAIL: "+req.body.email+"\nPHONE: "+req.body.phone },
 				"requester": { "locale_id": 1, "name": req.body.first+' '+req.body.last, "email": req.body.email, "phone": req.body.phone }
 			}
 		};
