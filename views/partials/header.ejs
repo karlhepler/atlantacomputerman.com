@@ -3,7 +3,7 @@
 		<!-- Title Area -->
 		<div class="col-sm-7 col-md-8 col-lg-9">
 			<h1>
-			  <a href="http://www.atlantacomputerman.com">
+			  <a href="/">
 			    <img src="/images/atlanta.png" alt="Atlanta" width="596" height="126" data-0="top:15px;" data-500="top:200px;">
 			    <img src="/images/computerman.png" alt="Computerman" width="596" height="129" data-0="top:100px;" data-500="top:150px;">
 			    <span>Atlanta Computerman</span>
@@ -12,8 +12,8 @@
 		</div>
 		<!-- Quick Contact -->
 		<div class="col-lg-3 col-md-4 col-sm-5 hidden-xs">
-			<div class="quick-contact-header" data-0="top:0px;" data-500="top:200px;">
-				<%= include ../partials/quick-contact %>
+			<div class="quick-contact-header" data-0="top:0px;" data-500="top:150px;">
+				<%= include ../partials/quick-contact-box %>
 			</div>			
 		</div>
 	</section>
@@ -23,7 +23,8 @@
 		</div>
 	</section>	
 </header>
-<nav class="navbar navbar-default" role="navigation">
+
+<nav class="navbar navbar-default" role="navigation" data-0="position:absolute;" data-250="position:fixed;">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -40,19 +41,19 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/">Home</a></li>
+        <li <% if (menuItem == 'home') {%>class="active"<%}%>><a href="/">Home</a></li>
         
-        <li><a href="/services/">Services</a></li>
+        <li <% if (menuItem == 'services') {%>class="active"<%}%>><a href="/services/">Services</a></li>
         <p class="navbar-text hidden-sm glyphicon glyphicon-chevron-right"></p>
 
-        <li><a href="/services/families/">Families</a></li>
-        <li><a href="/services/students/">Students</a></li>
-        <li><a href="/services/seniors/">Seniors</a></li>
+        <li <% if (menuItem == 'services-families') {%>class="active"<%}%>><a href="/services/families/">Families</a></li>
+        <li <% if (menuItem == 'services-students') {%>class="active"<%}%>><a href="/services/students/">Students</a></li>
+        <li <% if (menuItem == 'services-seniors') {%>class="active"<%}%>><a href="/services/seniors/">Seniors</a></li>
       </ul>
       
       <!-- NAVBAR RIGHT -->
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/contact-us/">Contact Us</a></li>
+        <li <% if (menuItem == 'contact-us') {%>class="active"<%}%>><a href="/contact-us/">Contact Us</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
