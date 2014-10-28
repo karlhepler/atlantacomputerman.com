@@ -30,7 +30,7 @@ $(function() {
 	}
 
 	// Trigger modal when clicking quick support contact email link
-	$('.quick-support-contact-box .email:parent').click(function(e) {
+	$('.quick-support-contact-box .email:parent, section.contact span.email:parent').click(function(e) {
 		e.preventDefault();
 
 		$('#quick-contact-modal').modal('show');

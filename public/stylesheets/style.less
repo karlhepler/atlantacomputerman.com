@@ -538,8 +538,8 @@ main {
 }
 
 // THE FUCKING CONTACT US BUTTON I COULD GET WORKING RIGHT!!!!!!
-#main > main > section:nth-child(3) > div.col-sm-7 > div > div.content > form > div {
-	width: inherit;
+.contact-us-button-area {
+	width: inherit !important;
 }
 
 // SPEECH BUBBLE ------------------------
@@ -725,5 +725,54 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+	}
+}
+
+// CONTACT PAGE ----------------------
+section.contact {
+	img.phone-booth {
+		margin-top: 70px;
+	}
+	.pow {
+		display: none;
+	}
+	ul.big-text {
+		margin-top: 0.5em;
+		list-style: none;
+		font-size: 1.2em;
+		background: white;
+		border: 10px solid @dark-grey;
+		padding: 1em 2em 0;
+
+		li {
+			margin-bottom: 1em;
+
+			a {
+				.glyphicon {
+					margin-right: 0.8em;
+					top: 0.3em;
+				}
+				span.email,
+				span.phone-number,
+				span.hours {
+
+					small {
+						font-size: 60%;
+						display: block;
+						margin-left: 3em;
+						line-height: 2em;
+					}
+				}			
+
+				color: @red;
+				.transition(color 0.2s ease-out);
+				font-weight: 200;
+				font-style: italic;
+			}
+			a:hover {
+				text-decoration: none;
+				color: darken(@red, 10%);
+			}
+		}
 	}
 }
