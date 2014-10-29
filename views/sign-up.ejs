@@ -1,47 +1,58 @@
 <% include /partials/head %>
 <% include /partials/header %>
 <!---------------------------------------------------------------------------------------------------------------->
+<h1 class="page-title">Sign Up <small>Choose the configuration that works best for you and your family!</small></h1>
 
 <section class="sign-up">
 	<div class="col-sm-4">
-		<!-- PLAN SELECTOR -->
-		<div class="plan-selector">
-			<h1>Step 1<small>Overview</small></h1>
-			<!-- Choose number of computers -->
-			<div class="num-computers">
-		    <div class="input-group">
-  	      <span class="input-group-btn">
-  	        <button class="btn btn-default minus" type="button"><span class="glyphicon glyphicon-minus"></span></button>
-  	      </span>
-  	      <input id="num-computers" type="text" class="form-control" maxlength="2">    	      
-  	      <span class="input-group-btn">
-            <button class="btn btn-default plus" type="button"><span class="glyphicon glyphicon-plus"></span></button>
-          </span>
-  	    </div><!-- /input-group -->
-  	    <label for="num-computers" class="control-label">Computers</label>
+		<div class="row">
+			<div class="col-xs-12">
+				<h2><span class="circle">1</span> <small>Account Configuration</small></h2>
+				<!-- PLAN SELECTOR -->
+				<div class="plan-selector">			
+					<!-- Choose number of computers -->
+					<div class="num-computers">
+				    <div class="input-group">
+		  	      <span class="input-group-btn">
+		  	        <button class="btn btn-default minus" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+		  	      </span>
+		  	      <input id="num-computers" type="text" class="form-control" maxlength="2" readonly>    	      
+		  	      <span class="input-group-btn">
+		            <button class="btn btn-default plus" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+		          </span>
+		  	    </div><!-- /input-group -->
+		  	    <label for="num-computers" class="control-label">Computers</label>
+					</div>
+					<!-- Choose how much data -->
+					<div class="gb-data">
+				    <div class="input-group">
+		  	      <span class="input-group-btn">
+		  	        <button class="btn btn-default minus" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+		  	      </span>
+		  	      <input id="gb-data" type="text" class="form-control" maxlength="3" readonly>    	      
+		  	      <span class="input-group-btn">
+		            <button class="btn btn-default plus" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+		          </span>
+		  	    </div><!-- /input-group -->
+		  	    <label for="gb-data" class="control-label"><small>GB</small> DATASAVER</label>
+					</div>			
+					<div class="tfs-support checkbox">
+					  <label>
+					    <input type="checkbox" value="tfs-support" disabled>
+					    24x7 SUPPORT <small>COMING SOON!</small>
+					  </label>
+					</div>
+				</div>
 			</div>
-			<!-- Choose how much data -->
-			<div class="gb-data">
-		    <div class="input-group">
-  	      <span class="input-group-btn">
-  	        <button class="btn btn-default minus" type="button"><span class="glyphicon glyphicon-minus"></span></button>
-  	      </span>
-  	      <input id="gb-data" type="text" class="form-control" maxlength="3">    	      
-  	      <span class="input-group-btn">
-            <button class="btn btn-default plus" type="button"><span class="glyphicon glyphicon-plus"></span></button>
-          </span>
-  	    </div><!-- /input-group -->
-  	    <label for="gb-data" class="control-label"><small>GB</small> DATASAVER</label>
-			</div>			
-			<div class="tfs-support checkbox">
-			  <label>
-			    <input type="checkbox" value="tfs-support" disabled>
-			    24x7 SUPPORT <small>COMING SOON!</small>
-			  </label>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<h2><span class="circle">3</span> <small>Review & Checkout</small></h2>
 			</div>
 		</div>
 	</div>
 	<div class="col-sm-8">
+		<h2><span class="circle">2</span> <small>Computer Configuration</small></h2>
 		<!-- COMPUTER LIST -->
 		<ul class="computer-list">
 			<%= include /partials/computer-list-item %>

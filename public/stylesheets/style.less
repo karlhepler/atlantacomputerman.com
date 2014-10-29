@@ -732,6 +732,9 @@ footer {
 
 // CONTACT PAGE ----------------------
 section.contact {
+	.product-box {
+		margin-top: 0;
+	}
 	img.phone-booth {
 		margin-top: 70px;
 	}
@@ -930,8 +933,58 @@ a.price-table {
   }
 }
 
+// SECTION HEADER ----------------------
+h1.page-title {
+	font-size: 3em;
+	border-bottom: 3px solid black;
+	padding-bottom: 0.1em;
+	margin-top: 0;
+	margin-bottom: 0.5em;
+	
+	a {
+		color: @red;
+		.transition(color 0.2s ease-out);
+
+		&:hover {
+			text-decoration: none;
+			color: lighten(@red, 10%);
+		}
+	}
+	span.glyphicon {
+		font-size: 80%;
+		color: @lightest-grey;
+	}
+	small {
+		.font-handwritten;
+		font-size: 50%;
+	}
+}
+
 // SIGN UP -----------------------------
-section.sign-up {
+section.sign-up {	
+	h2 {
+		.clearfix;
+		text-transform: uppercase;
+
+		.circle {
+			width: 2em;
+			height: 2em;
+			border-radius: 50%;
+			font-size: 1em;
+			color: white;
+			line-height: 2em;
+			text-align: center;
+			background: @dark-grey;
+			display: block;
+			float: left;
+		}		
+
+		small {
+			line-height: 3em;
+			margin-left: 0.5em;
+			float: left;
+		}
+	}
 	
 	div.plan-selector {
 		padding: 1em;
@@ -956,14 +1009,18 @@ section.sign-up {
 			margin-bottom: 1em;
 
 			input {
-				width: 2.7em;
-				margin: 0;
-				padding: 0.25em 0.5em;
-				font-size: 1.5em;
-				height: 2em;
-				text-align: center;
-				border: 1px solid black;
-				box-shadow: grey 0 0 10px;
+				&[readonly] {
+					width: 2.7em;
+					margin: 0;
+					padding: 0.25em 0.5em;
+					font-size: 1.5em;
+					height: 2em;
+					text-align: center;
+					border: 1px solid black;
+					box-shadow: grey 0 0 10px;
+					background: white;
+					cursor: default;
+				}				
 			}
 			button {
 				border: 1px solid black;
@@ -998,6 +1055,7 @@ section.sign-up {
 	}
 
 	ul.computer-list {
+			padding: 0;
 		li {
 			list-style: none;
 			font-size: 0.6em;
@@ -1046,15 +1104,19 @@ section.sign-up {
 					}
 
 					input {
-						font-size: 14px;
-						width: 60px;
-						margin: 0;
-						padding: 0.25em 0.5em;
-						font-size: 1.5em;
-						height: 2em;
-						text-align: center;
-						border: 1px solid black;
-						box-shadow: grey 0 0 10px;
+						&[readonly] {
+							font-size: 14px;
+							width: 60px;
+							margin: 0;
+							padding: 0.25em 0.5em;
+							font-size: 1.5em;
+							height: 2em;
+							text-align: center;
+							border: 1px solid black;
+							box-shadow: grey 0 0 10px;
+							cursor: default;
+							background: white;
+						}
 					}
 					button {
 						border: 1px solid black;
