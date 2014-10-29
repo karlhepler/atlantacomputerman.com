@@ -235,7 +235,7 @@ header {
 }
 
 // FORMS ---------------------------
-form.contact, form.quick-contact {
+form.contact, form.quick-contact, ul.computer-list fieldset {
 	.font-handwritten;
 
 	/* enable absolute positioning */
@@ -932,42 +932,177 @@ a.price-table {
 
 // SIGN UP -----------------------------
 section.sign-up {
-	.num-computers,
-	.gb-data {
-		.clearfix;
-		margin-bottom: 1em;
+	
+	div.plan-selector {
+		padding: 1em;
+		background: white;
+		border: @dark-grey solid 5px;
+		padding-bottom: 0;
+		.font-comic;
+	
+		.num-computers,
+		.gb-data {
+			.clearfix;
+			margin-bottom: 1em;
 
-		input {
-			width: 2.25em;
-			margin: 0;
-			padding: 0.25em 0.5em;
-			font-size: 1.5em;
-			height: 2em;
-			text-align: center;
-			border: 1px solid black;
-			box-shadow: grey 0 0 10px;
-		}
-		button {
-			border: 1px solid black;
-			border-radius: 0;
-			padding: 0 0.3em;
-			height: 100%;
-			
-			&.minus {
-				border-right: none;
+			input {
+				width: 2.7em;
+				margin: 0;
+				padding: 0.25em 0.5em;
+				font-size: 1.5em;
+				height: 2em;
+				text-align: center;
+				border: 1px solid black;
+				box-shadow: grey 0 0 10px;
 			}
-			&.plus {
-				border-left: none;
+			button {
+				border: 1px solid black;
+				border-radius: 0;
+				padding: 0 0.3em;
+				height: 100%;
+				background-color: @medium-grey;
+				color: white;
+				.transition(background-color 0.2s ease-out);
+
+				&:hover {
+					background-color: black;
+				}
+				
+				&.minus {
+					border-right: none;
+				}
+				&.plus {
+					border-left: none;
+				}
+			}
+			.input-group {
+				width: 1px;
+				float: left;
+			}
+			label {
+				margin-top: 0.3em;
+				font-size: 1.5em;
+				margin-left: 0.5em;
 			}
 		}
-		.input-group {
-			width: 1px;
+	}
+
+	ul.computer-list {
+		list-style: none;
+		font-size: 0.6em;
+		padding: 2em;
+		border: @dark-grey 5px solid;
+		margin: 0;
+		background: white;
+		.clearfix;
+		
+		.computer-type {
 			float: left;
+			width: 30%;
+			padding-right: 2em;
+
+			select {
+				text-transform: uppercase;
+			}
 		}
-		label {
-			margin-top: 0.3em;
-			font-size: 1.5em;
-			margin-left: 0.5em;
-		}
+
+		fieldset {
+			width: 70%;
+			border-left: 1px solid @lightest-grey;
+			padding-left: 2em;
+			float: left;			
+
+			.form-group {
+				.make-row();
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+
+			.left {
+				font-size: 14px;
+				float: left;
+				width: 40%;
+				.font-comic;
+				text-align: center;
+
+				.input-group {
+					float: none !important;
+					margin-left: auto;
+					margin-right: auto;
+				}
+
+				input {
+					font-size: 14px;
+					width: 2.7em;
+					margin: 0;
+					padding: 0.25em 0.5em;
+					font-size: 1.5em;
+					height: 2em;
+					text-align: center;
+					border: 1px solid black;
+					box-shadow: grey 0 0 10px;
+				}
+				button {
+					border: 1px solid black;
+					border-radius: 0;
+					padding: 0 5px;
+					height: 100%;
+					background-color: @medium-grey;
+					color: white;
+					.transition(background-color 0.2s ease-out);
+					
+					span {
+						font-size: 14px;
+					}
+
+					&:hover {
+						background-color: black;
+					}
+					&.minus {
+						border-right: none;
+					}
+					&.plus {
+						border-left: none;
+					}
+				}
+				.input-group {
+					width: 1px;
+					float: left;
+				}
+				label {
+					margin-top: 0.3em;
+					font-size: 1.5em;
+				}
+			}
+			.right {
+				float: left;
+				width: 60%;
+
+				.invincibility.checkbox label {
+					font-size: 18px;
+				}
+			}
+
+			.checkbox {
+				.font-impact;
+				font-weight: bold;
+				margin-top: 0;
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+
+				label {
+					text-transform: uppercase;
+					font-size: 14px;
+					letter-spacing: 0.05em;
+
+					input {
+						height: auto;
+					}
+				}
+			}
+		}		
 	}
 }

@@ -4,7 +4,7 @@
 
 <section class="sign-up">
 	<div class="col-sm-4">
-		<!-- GENERAL SELECTOR -->
+		<!-- PLAN SELECTOR -->
 		<div class="plan-selector">
 			<!-- Choose number of computers -->
 			<div class="num-computers">
@@ -18,34 +18,96 @@
           </span>
   	    </div><!-- /input-group -->
   	    <label for="num-computers" class="control-label">Computers</label>
-			</div>			
+			</div>
 			<!-- Choose how much data -->
 			<div class="gb-data">
 		    <div class="input-group">
   	      <span class="input-group-btn">
   	        <button class="btn btn-default minus" type="button"><span class="glyphicon glyphicon-minus"></span></button>
   	      </span>
-  	      <input id="num-computers" type="text" class="form-control" maxlength="2">    	      
+  	      <input id="gb-data" type="text" class="form-control" maxlength="3">    	      
   	      <span class="input-group-btn">
             <button class="btn btn-default plus" type="button"><span class="glyphicon glyphicon-plus"></span></button>
           </span>
   	    </div><!-- /input-group -->
-  	    <label for="num-computers" class="control-label">GB Data</label>
+  	    <label for="gb-data" class="control-label">GB of Data</label>
 			</div>			
 			<!-- Choose 24x7 Support -->
 		</div>
 	</div>
-	<div class="col-sm-4">
-		<!-- DETAILED SELECTOR -->
-		<div class="computer-list">
-			
-		</div>
-	</div>
-	<div class="col-sm-4">
-		<!-- COST & BILLING -->
-		<div class="cost-billing">
-			
-		</div>
+	<div class="col-sm-8">
+		<!-- COMPUTER LIST -->
+		<ul class="computer-list">
+			<!-- COMPUTER -->
+			<li>
+				<div class="computer-type">
+					<img src="/images/desktop.png" alt="Desktop Computer" class="img-responsive">
+					<select class="form-control">
+					  <option value="desktop">Desktop</option>
+					  <option value="laptop">Laptop</option>
+					</select>
+				</div>
+				<fieldset>
+				  <div class="form-group">
+				    <div class="col-sm-6">
+				      <label class="sr-only" for="first">First Name</label>
+				      <input placeholder="First Name" class="form-control" id="first" name="first" size="30" type="text" required />
+				    </div>
+				    <div class="col-sm-6">
+				      <label class="sr-only" for="last">Last Name</label>
+				      <input placeholder="Last Name" class="form-control" id="last" name="last" size="30" type="text" required />
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <div class="col-sm-12">
+				      <label class="sr-only" for="email">Email Address</label>
+				      <div class="inner-addon left-addon">                              
+				        <input placeholder="Email Address" class="form-control" id="email" name="email" required="true" size="30" type="email" required />
+				        <i class="glyphicon glyphicon-envelope"></i>
+				      </div>                            
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <div class="col-sm-12">
+				      <label class="sr-only" for="user_email">Phone Number</label>
+				      <div class="inner-addon left-addon">                              
+				        <input placeholder="Phone Number" class="form-control" id="phone" name="phone" required="true" size="30" type="text" required />
+				        <i class="glyphicon glyphicon-earphone"></i>
+				      </div>                            
+				    </div>
+				  </div>
+				  <hr>
+				  <div class="left">
+	  				<div class="gb-data-computer">
+	  			    <div class="input-group">
+	  	  	      <span class="input-group-btn">
+	  	  	        <button class="btn btn-default minus" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+	  	  	      </span>
+	  	  	      <input id="gb-data-computer" type="text" class="form-control" maxlength="3">    	      
+	  	  	      <span class="input-group-btn">
+	  	            <button class="btn btn-default plus" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+	  	          </span>
+	  	  	    </div><!-- /input-group -->
+	  	  	    <label for="gb-data-computer" class="control-label">GB of Data</label>
+	  				</div>
+				  </div>
+				  <div class="right">
+				  	<div class="invincibility checkbox">
+				  	  <label>
+				  	    <input type="checkbox" value="invincibility">
+				  	    Invincibility
+				  	  </label>
+				  	</div>
+				  	<div class="web-filtering checkbox">
+				  	  <label>
+				  	    <input type="checkbox" value="web-filtering">
+				  	    Web Content Filtering
+				  	  </label>
+				  	</div>
+				  </div>				  
+				</fieldset>
+			</li>
+		</ul>
 	</div>
 </section>
 
