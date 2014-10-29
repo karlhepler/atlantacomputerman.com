@@ -1079,10 +1079,12 @@ section.sign-up {
 					padding: 10px;
 					text-transform: none;
 					font-family: @font-family-sans-serif;
-
-					td:first-of-type {
-						width: 100%;
-					}
+					
+					table.user-select-table {
+						td:first-of-type {
+							width: 100%;
+						}
+					}					
 
 					.form-group {
 						input, i {							
@@ -1092,12 +1094,31 @@ section.sign-up {
 							.font-handwritten;
 						}
 					}
-					.button-area {
-						text-align: right;
-						button {
-							font-size: 1em;
+
+					table.button-area-table {
+						margin-top: 10px;
+						td:first-of-type {
+							width: 100%;
 						}
-					}
+						.alert {
+							margin-bottom: 0;
+							padding: 6px 1em;
+							.font-impact;
+							text-transform: uppercase;
+							border-radius: 0;
+
+							span {
+								margin-right: 1em;
+							}
+						}
+						.button-area {
+							text-align: right;
+							width: 180px;
+							button {
+								font-size: 1em;
+							}
+						}
+					}					
 					
 					.btn-group {
 						padding-left: 6px;

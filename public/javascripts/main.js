@@ -84,7 +84,7 @@ $(function() {
 	});
 
 	// Phone number input mask
-	$("#phone").mask("(999) 999-9999");
+	$(".phone-input").mask("(999) 999-9999");
 
 
 
@@ -92,6 +92,10 @@ $(function() {
 	// -------------- SIGN UP ------------------ //
 	// ----------------------------------------- //
 	
+	// Set up the variables	
+	var users = [];
+	var userID = 0;
+
 	// Select computer type
 	$('section.sign-up select.form-factor').change(function() {
 		if ( $(this).val() == 'desktop' ) {
@@ -116,7 +120,10 @@ $(function() {
 	// Show create user form if "CREATE USER" is selected
 	$(document).on('change', 'section.sign-up select.user-select', function() {
 		if ( $(this).val() == 'create-new-user' ) {
+			// Insert the template
 			$(this).parents('.user').html( $('.create-user-template').html() );
+			// Phone number input mask
+			$(".phone-input").mask("(999) 999-9999");
 		}
 	});
 
@@ -132,6 +139,50 @@ $(function() {
 		e.preventDefault();
 
 		$(this).parents('.user').remove();
+	});
+
+	// Create a user when the create button is clicked!
+	$(document).on('submit', 'section.sign-up form.create-user', function(e) {
+		e.preventDefault();
+
+		// Grab form fields
+		var fields = $(this).serializeArray();
+
+		// Make sure all fields are filled
+		var error = false;
+		for (var i = fields.length - 1; i >= 0; i--) {
+			// If one of them is empty...
+			if ( fields[i].value = '' ) {
+				// Show error in field
+				$(this).children('[name="' + fields[i].name + '"]').parents('.form-group').addClass('has-error');
+				// Set error to true
+				error = true;
+			}
+		};
+		// Check to see if there was an error
+		if (error) {
+			// Display alert
+			$(this).children('.alert').show();
+		}
+		else {
+			// No errors! Create the user
+			var user = {};
+			for (var i = fields.length - 1; i >= 0; i--) {
+				user[fields[i].name] = fields[i].value;
+			};
+
+			// Add the ID
+			user.id = userID++;
+			
+			// Now push the user into the users var and save the userID
+			users.push(user);
+
+			// Now update all of the selects with the new user
+			var selects = $('section.sign-up ul.computer-list').find('select.user-select');
+			for (var i = selects.length - 1; i >= 0; i--) {
+				$(selects[i]).append('<option value="' + user.id + '">' + user.first + ' ' + user.last + '</option>');
+			};
+		}
 	});
 	
 });
