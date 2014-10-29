@@ -85,5 +85,20 @@ $(function() {
 
 	// Phone number input mask
 	$("#phone").mask("(999) 999-9999");
+
+
+
+	// ----------------------------------------- //
+	// -------------- SIGN UP ------------------ //
+	// ----------------------------------------- //
+	
+	$('section.sign-up select').change(function() {
+		if ( $(this).val() == 'desktop' ) {
+			$(this).prev('img').attr('src','/images/desktop.png');
+		}
+		else {
+			$(this).prev('img').attr('src','/images/laptop.png');
+		}
+	});
 	
 });
