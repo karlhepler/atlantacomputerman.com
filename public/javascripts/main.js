@@ -117,10 +117,13 @@ $(function() {
 		$(this).prev('ul.user-list').append( li );
 
 		// Fill the select with users
-		var select = li.find('select.user-select');
+		var $select = li.find('select.user-select');
 		for (var i = 0; i < users.length; i++) {
-			select.append('<option value="' + users[i].id + '">' + users[i].first + ' ' + users[i].last + '</option>');
+			$select.append('<option value="' + users[i].id + '">' + users[i].first + ' ' + users[i].last + '</option>');
 		};
+
+		// FINALLY - disable selected
+		disableSelected( $select.parents('.user-list') );
 	});
 
 	// Show create user form if "CREATE USER" is selected - or if user is selected
@@ -135,6 +138,9 @@ $(function() {
 		else {
 			// Another user was selected, so show the edit button!
 			$(this).parents('table.user-select-table').find('button.edit-btn').show();
+
+			// FINALLY - disable selected
+			disableSelected( $(this).parents('.user-list') );
 		}
 	});
 
@@ -149,7 +155,12 @@ $(function() {
 	$(document).on('click', 'section.sign-up .btn-group button.cancel-btn', function(e) {
 		e.preventDefault();
 
+		var $userList = $(this).parents('.user-list');
+
+		// Remove the li
 		$(this).parents('.user').remove();
+
+		disableSelected($userList);
 	});
 
 	// Create a user when the create button is clicked!
@@ -241,17 +252,20 @@ $(function() {
 			container.html( $('.select-user-template').html() );
 
 			// Implant the users into the select box
-			var select = container.find('select.user-select');
+			var $select = container.find('select.user-select');
 			for (var i = 0; i < users.length; i++) {
-				select.append('<option value="' + users[i].id + '">' + users[i].first + ' ' + users[i].last + '</option>');
+				$select.append('<option value="' + users[i].id + '">' + users[i].first + ' ' + users[i].last + '</option>');
 			};	
 
 			// Select the user!
-			select.children('[value="' + user.id + '"]').attr('selected','selected');
+			$select.children('[value="' + user.id + '"]').attr('selected','selected');
 
 			// Show the edit button!
-			select.parents('table.user-select-table').find('button.edit-btn').show();
-		}
+			$select.parents('table.user-select-table').find('button.edit-btn').show();
+
+			// FINALLY - disable selected
+			disableSelected( container.parents('.user-list') );
+		}		
 	});
 
 	// WHEN USER CLICKS "EDIT USER" button ------
@@ -279,5 +293,32 @@ $(function() {
 		container.find('input[name="email"]').val( user.email );
 		container.find('input[name="phone"]').val( user.phone );
 	});
+
+	// This function disables selected options from other selects
+	function disableSelected( $userList ) {
+		// First undisable everything
+		var disabled = $userList.find(':disabled');
+		for (var i = disabled.length - 1; i >= 0; i--) {
+			$(disabled[i]).prop('disabled',false);
+		};
+
+		// Loop through all selected
+		var selected = $userList.find(':selected');
+		for (var i = selected.length - 1; i >= 0; i--) {
+			// Loop through all options
+			var options = $userList.find('option');
+			for (var n = options.length - 1; n >= 0; n--) {
+				// Disable the matching option
+				if ( $(options[n]).val() == $(selected[i]).val() )
+					$(options[n]).prop('disabled',true);
+			};
+
+			// Enable this selected
+			$(selected[i]).prop('disabled',false);
+		};
+
+		// Don't forget to re-disable all "select-option-label"s
+		$userList.find('option.select-option-label').prop('disabled',true);
+	}
 	
 });
