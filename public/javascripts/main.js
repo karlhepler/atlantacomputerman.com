@@ -92,13 +92,46 @@ $(function() {
 	// -------------- SIGN UP ------------------ //
 	// ----------------------------------------- //
 	
-	$('section.sign-up select').change(function() {
+	// Select computer type
+	$('section.sign-up select.form-factor').change(function() {
 		if ( $(this).val() == 'desktop' ) {
 			$(this).prev('img').attr('src','/images/desktop.png');
 		}
 		else {
 			$(this).prev('img').attr('src','/images/laptop.png');
 		}
+	});
+
+	// Add user button
+	$('section.sign-up button.add-user').click(function(e) {
+		e.preventDefault();
+
+		// Create li.user
+		var li = $('<li />', { class: 'user' }).append( $('.select-user-template').html() );
+
+		// Append li.user to ul.user-list
+		$(this).prev('ul.user-list').append( li );
+	});
+
+	// Show create user form if "CREATE USER" is selected
+	$(document).on('change', 'section.sign-up select.user-select', function() {
+		if ( $(this).val() == 'create-new-user' ) {
+			$(this).parents('.user').html( $('.create-user-template').html() );
+		}
+	});
+
+	// Remove the create user form if "Cancel" is pressed
+	$(document).on('click', 'section.sign-up .button-area button.cancel-btn', function(e) {
+		e.preventDefault();
+
+		$(this).parents('.user').html( $('.select-user-template').html() );
+	});
+
+	// Remove the select user li if the x is pressed
+	$(document).on('click', 'section.sign-up .btn-group button.cancel-btn', function(e) {
+		e.preventDefault();
+
+		$(this).parents('.user').remove();
 	});
 	
 });

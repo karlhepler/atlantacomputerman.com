@@ -1067,6 +1067,79 @@ section.sign-up {
 			margin-bottom: 30px;
 			box-shadow: grey 0 10px 10px;
 			
+			ul.user-list {
+				padding: 0;
+				margin-bottom: 10px;
+
+				li.user {
+					box-shadow: none;
+					border: 1px solid @lightest-grey;
+					margin-bottom: -1px;
+					font-size: 14px;
+					padding: 10px;
+					text-transform: none;
+					font-family: @font-family-sans-serif;
+
+					td:first-of-type {
+						width: 100%;
+					}
+
+					.form-group {
+						input, i {							
+							font-size: 18px;
+						}
+						input {
+							.font-handwritten;
+						}
+					}
+					.button-area {
+						text-align: right;
+						button {
+							font-size: 1em;
+						}
+					}
+					
+					.btn-group {
+						padding-left: 6px;
+						width: 64px;
+
+						button.btn {
+							padding: 6px;
+							background: transparent;
+							font-size: 14px;
+
+							&.edit-btn {
+								color: darken(@yellow, 20%);
+								display: none;
+
+								&:hover {
+									color: @yellow;
+								}
+							}
+							&.cancel-btn {
+								color: @red;
+								float: right;
+								
+								&:hover {
+									color: lighten(@red, 20%);
+								}
+							}
+						}
+					}					
+				}
+			}
+			button.add-user {
+				background-color: @yellow;
+				color: @red;
+				border: none;
+				.transition(all 0.2s ease-out);
+
+				&:hover {
+					background-color: @red;
+					color: @yellow;
+				}
+			}
+
 			.computer-type {
 				float: left;
 				width: 30%;
@@ -1081,7 +1154,12 @@ section.sign-up {
 				width: 70%;
 				border-left: 1px solid @lightest-grey;
 				padding-left: 2em;
-				float: left;			
+				float: left;
+
+				h3 {
+					margin-top: 0;
+					margin-bottom: 1em;
+				}
 
 				.form-group {
 					.make-row();
