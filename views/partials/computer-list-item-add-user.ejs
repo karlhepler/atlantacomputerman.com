@@ -1,5 +1,6 @@
 <form class="create-user">
   <div class="form-group">
+    <input type="hidden" name="id" value="">
     <div class="col-sm-6">
       <label class="sr-only" for="first">First Name</label>
       <input placeholder="First Name" class="form-control" id="first-1" name="first" size="30" type="text" required />
@@ -29,11 +30,11 @@
   </div>
   <table class="button-area-table">
     <tr>
-      <td><div style="display:none;" class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-ban-circle"></span> Please fill in all fields</div></td>
+      <td><div class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-ban-circle"></span> Please fill in all fields</div></td>
       <td>
         <div class="button-area">
           <button class="btn cancel-btn btn-default">Cancel</button>
-          <button type="submit" class="btn create-btn btn-primary">Create User</button>
+          <button type="submit" class="btn create-btn btn-primary">Save</button>
         </div>
       </td>
     </tr>

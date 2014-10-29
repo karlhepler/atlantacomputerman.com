@@ -115,15 +115,26 @@ $(function() {
 
 		// Append li.user to ul.user-list
 		$(this).prev('ul.user-list').append( li );
+
+		// Fill the select with users
+		var select = li.find('select.user-select');
+		for (var i = 0; i < users.length; i++) {
+			select.append('<option value="' + users[i].id + '">' + users[i].first + ' ' + users[i].last + '</option>');
+		};
 	});
 
-	// Show create user form if "CREATE USER" is selected
+	// Show create user form if "CREATE USER" is selected - or if user is selected
 	$(document).on('change', 'section.sign-up select.user-select', function() {
+		// If CREATE USER is selected....
 		if ( $(this).val() == 'create-new-user' ) {
 			// Insert the template
 			$(this).parents('.user').html( $('.create-user-template').html() );
 			// Phone number input mask
 			$(".phone-input").mask("(999) 999-9999");
+		}
+		else {
+			// Another user was selected, so show the edit button!
+			$(this).parents('table.user-select-table').find('button.edit-btn').show();
 		}
 	});
 
@@ -152,13 +163,14 @@ $(function() {
 		var error = false;
 		for (var i = fields.length - 1; i >= 0; i--) {
 			// If one of them is empty...
-			if ( fields[i].value = '' ) {
+			if ( fields[i].value == '' && fields[i].name != 'id' ) {
 				// Show error in field
 				$(this).children('[name="' + fields[i].name + '"]').parents('.form-group').addClass('has-error');
 				// Set error to true
 				error = true;
 			}
-		};
+		};		
+
 		// Check to see if there was an error
 		if (error) {
 			// Display alert
@@ -168,21 +180,104 @@ $(function() {
 			// No errors! Create the user
 			var user = {};
 			for (var i = fields.length - 1; i >= 0; i--) {
-				user[fields[i].name] = fields[i].value;
+				var key = fields[i].name;
+				// Lowercase!
+				var val = fields[i].value.toLowerCase();
+
+				// If it's a part of a name, capitalize the first letter
+				if ( key == 'first' || key == 'last' )
+					val = val.charAt(0).toUpperCase() + val.slice(1);
+
+				// Set the user!
+				user[key] = val;
 			};
 
-			// Add the ID
-			user.id = userID++;
-			
-			// Now push the user into the users var and save the userID
-			users.push(user);
-
-			// Now update all of the selects with the new user
-			var selects = $('section.sign-up ul.computer-list').find('select.user-select');
-			for (var i = selects.length - 1; i >= 0; i--) {
-				$(selects[i]).append('<option value="' + user.id + '">' + user.first + ' ' + user.last + '</option>');
+			// Check to see if there is already a user with the same ID
+			userExists = false;
+			var n;
+			for (n = users.length - 1; n >= 0; n--) {
+				if ( user.id !== '' && users[n].id == user.id ) {
+					userExists = true;
+					break;
+				}
 			};
+
+			// If the user exists, just update - otherwise create
+			if ( userExists ) {
+				// Set the user to the new info
+				users[n] = user;
+
+				// Now update all of the selects with the new user info
+				var selects = $('section.sign-up ul.computer-list').find('select.user-select');
+				// Cycle through all selects
+				for (var i = selects.length - 1; i >= 0; i--) {
+					// Cycle through all options for this select
+					var options = $(selects[i]).children();
+					for (var m = options.length - 1; m >= 0; m--) {
+						// If the option value matches the user, then update and break!
+						if ( $(options[m]).val() == user.id ) {
+							$(options[m]).text(user.first + ' ' + user.last);
+							break;
+						}
+					};
+				};
+			}
+			else {
+				// Add the ID
+				user.id = userID++;
+				
+				// Now push the user into the users var and save the userID
+				users.push(user);
+
+				// Now update all of the selects with the new user
+				var selects = $('section.sign-up ul.computer-list').find('select.user-select');
+				for (var i = selects.length - 1; i >= 0; i--) {
+					$(selects[i]).append('<option value="' + user.id + '">' + user.first + ' ' + user.last + '</option>');
+				};
+			}
+
+			// Finally, return to the user select screen, with the new user selected
+			var container = $(this).parents('.user');
+			container.html( $('.select-user-template').html() );
+
+			// Implant the users into the select box
+			var select = container.find('select.user-select');
+			for (var i = 0; i < users.length; i++) {
+				select.append('<option value="' + users[i].id + '">' + users[i].first + ' ' + users[i].last + '</option>');
+			};	
+
+			// Select the user!
+			select.children('[value="' + user.id + '"]').attr('selected','selected');
+
+			// Show the edit button!
+			select.parents('table.user-select-table').find('button.edit-btn').show();
 		}
+	});
+
+	// WHEN USER CLICKS "EDIT USER" button ------
+	$(document).on('click', 'section.sign-up button.edit-btn', function(e) {
+		e.preventDefault();
+
+		// Select the user id matching the select value		
+		var user;
+		var id = $(this).parents('table.user-select-table').find('select.user-select').val();
+		for (var i = users.length - 1; i >= 0; i--) {
+			if ( users[i].id == id ) {
+				user = users[i];
+				break;
+			}			
+		};
+
+		// Show the create user template
+		var container = $(this).parents('.user');
+		container.html( $('.create-user-template').html() );
+
+		// Fill in the fields based on the user
+		container.find('input[name="id"]').val( user.id );
+		container.find('input[name="first"]').val( user.first );
+		container.find('input[name="last"]').val( user.last );
+		container.find('input[name="email"]').val( user.email );
+		container.find('input[name="phone"]').val( user.phone );
 	});
 	
 });
