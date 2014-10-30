@@ -12,7 +12,7 @@ var pricing = {
 	},
 	invincibility: 19,
 	pc_guardian: 29,
-	family_guardian: 89
+	family_guardian: 99
 };
 // PRICING DATA [END]----------------------------
 
@@ -452,7 +452,8 @@ function calculateFinalPrice() {
 			familyWebProtect = 0,
 			pcGuardian = 0,
 			familyGuardian = 0, 
-			data = 0;
+			data = 0,
+			packageDiscount = 0;
 
 	// Grab the numbers!
 	numComputers = parseInt( $('section.sign-up #num-computers').val() );
@@ -496,6 +497,10 @@ function calculateFinalPrice() {
 	// Calculate web protect deal for families (1/2 off if all comps in fam are web protect)
 	familyWebProtect = Math.floor(webProtect/4) * 4;
 	webProtect -= familyWebProtect;
+
+	// For true family guardian, the price is $99 with or without web filtering,
+	// so subtract $10 for every 4 familyWebProtect
+	packageDiscount = 10 * ( Math.floor(familyWebProtect/4) );
 	
 
 	// FINALLY - DO THE MATH!
@@ -504,7 +509,8 @@ function calculateFinalPrice() {
 								 + pricing.family_guardian * familyGuardian
 								 + pricing.web_protect * webProtect
 								 + pricing.web_protect / 2 * familyWebProtect
-								 + pricing.invincibility * invincibility;
+								 + pricing.invincibility * invincibility
+								 - packageDiscount;
 
 	 // Now update the final-price div
 	 $('section.sign-up .final-price').text( finalPrice );
