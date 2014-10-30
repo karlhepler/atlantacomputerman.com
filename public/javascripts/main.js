@@ -1,5 +1,31 @@
+// PRICING DATA [START]-------------------------
+var pricing = {
+	web_protect: 5,
+	datasaver: {
+		0: 0,
+		10: 10,
+		50: 20,
+		100: 40,
+		250: 95,
+		500: 190,
+		1000: 380
+	},
+	invincibility: 19,
+	pc_guardian: 29,
+	family_guardian: 99
+};
+// PRICING DATA [END]----------------------------
+
+// Set up the variables	
+var users = [];
+var userID = 0;
+
 // JQUERY DOCUMENT READY --------------
 $(function() {
+
+	
+
+
 
 	// Load fonts ---------------------------
 	WebFontConfig = {
@@ -99,6 +125,7 @@ $(function() {
 		num++;
 		$input.val(num);
 
+		calculateFinalPrice();
 	});
 	$('section.sign-up #remove-computer').click(function(e) {
 		e.preventDefault();
@@ -115,6 +142,8 @@ $(function() {
 			num--;
 			$input.val(num);
 		}
+
+		calculateFinalPrice();
 	});
 	$(document).on('click', 'section.sign-up ul.computer-list li button.close', function(e) {
 		e.preventDefault();
@@ -131,6 +160,8 @@ $(function() {
 			num--;
 			$input.val(num);
 		}
+
+		calculateFinalPrice();
 	});
 
 	// Add & Subtract GB
@@ -142,6 +173,8 @@ $(function() {
 			num-=5;
 			$input.val(num);
 		}
+
+		calculateFinalPrice();
 	});
 	$(document).on('click', 'section.sign-up ul.computer-list li .gb-data-computer .plus', function(e) {
 		var $input = $(this).parents('.gb-data-computer').find('input');
@@ -149,16 +182,14 @@ $(function() {
 
 		num+=5;
 		$input.val(num);
+
+		calculateFinalPrice();
 	});
 
 
 	// ----------------------------------------- //
 	// -------------- SIGN UP ------------------ //
-	// ----------------------------------------- //
-	
-	// Set up the variables	
-	var users = [];
-	var userID = 0;
+	// ----------------------------------------- //	
 
 	// Select computer type
 	$(document).on('change', 'section.sign-up select.form-factor', function() {
@@ -212,7 +243,30 @@ $(function() {
 	$(document).on('click', 'section.sign-up .button-area button.cancel-btn', function(e) {
 		e.preventDefault();
 
-		$(this).parents('.user').html( $('.select-user-template').html() );
+		var $container = $(this).parents('.user');
+
+		// Get user id
+		var id = $container.find('input[name="id"]').val();
+
+		// Show the user select
+		$container.html( $('.select-user-template').html() );
+
+		// Fill the select with users
+		var $select = $container.find('select.user-select');
+		for (var i = 0; i < users.length; i++) {
+			$select.append('<option value="' + users[i].id + '">' + users[i].first + ' ' + users[i].last + '</option>');
+		};		
+
+		if ( id !== '') {
+			// Select the previous user
+			$select.children('[value="' + id + '"]').attr('selected','selected');
+			
+			// Show the edit button!	
+			$select.parents('table.user-select-table').find('button.edit-btn').show();
+		}
+
+		// FINALLY - disable selected
+		disableSelected( $select.parents('.user-list') );
 	});
 
 	// Remove the select user li if the x is pressed
@@ -386,3 +440,69 @@ $(function() {
 	}
 	
 });
+
+// Update calculation when invincibility / web protect are selected
+$(document).on('change', 'section.sign-up input[value="invincibility"], section.sign-up input[value="web-filtering"]', function() {
+	calculateFinalPrice();
+});
+
+// --- CALCULATION ---- //
+function calculateFinalPrice() {
+	// Declare the variables
+	var numComputers = 0,
+			gbAmount = 0,
+			invincibility = 0,
+			webProtect = 0,
+			pcGuardian = 0,
+			familyGuardian = 0, 
+			data = 0;
+
+	// Grab the numbers!
+	numComputers = parseInt( $('section.sign-up #num-computers').val() );
+	gbAmount = 0;
+			var gbAmountInput = $('section.sign-up .gb-amount');
+			for (var i = gbAmountInput.length - 1; i >= 0; i--) {
+				gbAmount += parseInt($(gbAmountInput[i]).val());
+			};
+	invincibility = $('section.sign-up input[value="invincibility"]:checked').length;
+	webProtect = $('section.sign-up input[value="web-filtering"]:checked').length;
+
+	// Find number of pc guardian computers
+	pcGuardian = numComputers - invincibility;
+
+	// Calculate family guardian
+	familyGuardian = Math.floor( pcGuardian / 4 );
+
+	// Recalculate pcGuardian
+	pcGuardian %= 4;
+
+	// Calculate data amount
+	if ( gbAmount > 500 ) {
+		data = 1000;
+	}
+	else if ( gbAmount > 250 ) {
+		data = 500;
+	}
+	else if ( gbAmount > 100 ) {
+		data = 250;
+	}
+	else if ( gbAmount > 50 ) {
+		data = 100;
+	}
+	else if ( gbAmount > 10 ) {
+		data = 50;
+	}
+	else if ( gbAmount > 0 ) {
+		data = 10;
+	}
+
+	// FINALLY - DO THE MATH!
+	var finalPrice = pricing.datasaver[data]
+								 + pricing.pc_guardian * pcGuardian
+								 + pricing.family_guardian * familyGuardian
+								 + pricing.web_protect * webProtect
+								 + pricing.invincibility * invincibility;
+
+	 // Now update the final-price div
+	 $('section.sign-up .final-price').text( finalPrice );
+}
