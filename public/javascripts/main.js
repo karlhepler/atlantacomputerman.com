@@ -496,7 +496,12 @@ function calculateFinalPrice() {
 	}
 
 	// Calculate web protect deal for families (1/2 off if all comps in fam are web protect)
-	familyWebProtect = Math.floor( (webProtect-invincibility)/4 );
+	if ( webProtect > 0 ) {
+		familyWebProtect = Math.floor( (webProtect-invincibility)/4 );
+	}
+	else {
+		familyWebProtect = Math.floor( webProtect/4 );
+	}
 	webProtect -= (familyWebProtect * 4);
 
 	// For true family guardian, the price is $99 with or without web filtering,
