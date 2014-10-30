@@ -2,11 +2,18 @@
 <% include /partials/header %>
 <!---------------------------------------------------------------------------------------------------------------->
 
-<!-- START UNDERSCORE TEMPLATES -->
+<!-- START PARTIAL TEMPLATES -->
 <script type="text/template" class="select-user-template"><%= include /partials/computer-list-item-select-user %></script>
 <script type="text/template" class="create-user-template"><%= include /partials/computer-list-item-add-user %></script>
 <script type="text/template" class="computer-list-item"><%= include /partials/computer-list-item %></script>
-<!-- END UNDERSCORE TEMPLATES -->
+
+<script type="text/template" class="estimate-line-fgwp"><%= include /partials/estimate-lines/fgwp %></script>
+<script type="text/template" class="estimate-line-fg"><%= include /partials/estimate-lines/fg %></script>
+<script type="text/template" class="estimate-line-pg"><%= include /partials/estimate-lines/pg %></script>
+<script type="text/template" class="estimate-line-pi"><%= include /partials/estimate-lines/pi %></script>
+<script type="text/template" class="estimate-line-wp"><%= include /partials/estimate-lines/wp %></script>
+<script type="text/template" class="estimate-line-ds"><%= include /partials/estimate-lines/fgwp %></script>
+<!-- END PARTIAL TEMPLATES -->
 
 <h1 class="page-title">Sign Up <small>Choose the configuration that works best for you and your family!</small></h1>
 
@@ -44,7 +51,29 @@
 	<div class="col-sm-4">
 		<h2><span class="circle">2</span> <small>Review & Checkout</small></h2>
 		<div class="review-checkout">
-			<h3 class="final-price">29</h3>
+			<table class="estimate">
+				<tbody>
+					<tr class="pc-guardian">
+						<td class="title">PC Guardian</td>
+						<td><span class="quantity">1</span></td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>Monthly Cost</td>
+						<td><span class="final-price">$29<small>/mo</small></span></td>
+					</tr>
+					<tr class="setup-cost">
+						<td>One-Time Setup Cost</td>
+						<td>$49</td>
+					</tr>
+					<tr>
+						<td>Due Today</td>
+						<td><span class="due-today">$29</span></td>
+					</tr>
+				</tfoot>
+			</table>
+			<button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button>
 		</div>
 	</div>
 </section>

@@ -453,7 +453,8 @@ function calculateFinalPrice() {
 			pcGuardian = 0,
 			familyGuardian = 0, 
 			data = 0,
-			packageDiscount = 0;
+			packageDiscount = 0,
+			setupCost = 0;
 
 	// Grab the numbers!
 	numComputers = parseInt( $('section.sign-up #num-computers').val() );
@@ -495,12 +496,12 @@ function calculateFinalPrice() {
 	}
 
 	// Calculate web protect deal for families (1/2 off if all comps in fam are web protect)
-	familyWebProtect = Math.floor(webProtect/4) * 4;
-	webProtect -= familyWebProtect;
+	familyWebProtect = Math.floor( (webProtect-invincibility)/4 );
+	webProtect -= (familyWebProtect * 4);
 
 	// For true family guardian, the price is $99 with or without web filtering,
 	// so subtract $10 for every 4 familyWebProtect
-	packageDiscount = 10 * ( Math.floor(familyWebProtect/4) );
+	packageDiscount = 10 * ( Math.floor(familyWebProtect) );
 	
 
 	// FINALLY - DO THE MATH!
@@ -508,10 +509,58 @@ function calculateFinalPrice() {
 								 + pricing.pc_guardian * pcGuardian
 								 + pricing.family_guardian * familyGuardian
 								 + pricing.web_protect * webProtect
-								 + pricing.web_protect / 2 * familyWebProtect
+								 + (pricing.web_protect / 2) * (familyWebProtect * 4)
 								 + pricing.invincibility * invincibility
 								 - packageDiscount;
 
-	 // Now update the final-price div
-	 $('section.sign-up .final-price').text( finalPrice );
+	// Update the estimate!
+	var $estimate_table = $('section.sign-up table.estimate');
+	var $estimate_body = $estimate_table.children('tbody');
+
+	var family_guardian_web_protect_template = $('.estimate-line-fgwp').html();
+	var family_guardian_template = $('.estimate-line-fg').html();
+	var pc_guardian_template = $('.estimate-line-pg').html();
+	var pc_invincibility_template = $('.estimate-line-pi').html();
+	var web_protect_template = $('.estimate-line-wp').html();
+	var datasaver_template = $('.estimate-line-ds').html();
+	
+	// Clear the estimate
+	$estimate_body.html('');
+
+	// Family Guardian + Web Protect
+	if ( familyWebProtect > 0 ) {
+		$estimate_body.append(family_guardian_web_protect_template);
+		$estimate_body.find('.family-guardian-web-protect .quantity').text( familyWebProtect );
+	}
+	// Family Guardian
+	if ( familyGuardian - familyWebProtect > 0 ) {
+		$estimate_body.append(family_guardian_template);
+		$estimate_body.find('.family-guardian .quantity').text( familyGuardian - familyWebProtect );
+	}
+	// PC Guardian
+	if ( pcGuardian > 0 ) {
+		$estimate_body.append(pc_guardian_template);
+		$estimate_body.find('.pc-guardian .quantity').text( pcGuardian );
+	}
+	// Invincibility
+	if ( invincibility > 0 ) {
+		$estimate_body.append(pc_invincibility_template);
+		$estimate_body.find('.pc-invincibility .quantity').text( invincibility );
+	}
+	// Web Protect
+	if ( webProtect > 0 ) {
+		$estimate_body.append(web_protect_template);
+		$estimate_body.find('.web-protect .quantity').text( webProtect );
+	}
+	// Datasaver
+	if ( data > 0 ) {
+		$estimate_body.append(datasaver_template);
+		$estimate_body.find('.datasaver .quantity').text( pricing.datasaver[data] );
+	}
+
+	// Update final price
+	$estimate_table.find('.final-price').html( '$'+finalPrice+'<small>/mo</small>' );
+
+	// Update due today
+	$estimate_table.find('.due-today').text( '$' + (finalPrice+setupCost) );
 }
