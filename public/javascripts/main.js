@@ -86,6 +86,53 @@ $(function() {
 	// Phone number input mask
 	$(".phone-input").mask("(999) 999-9999");
 
+	// ADD / REMOVE COMPUTERS ---------------------
+	$('section.sign-up #add-computer').click(function(e) {
+		e.preventDefault();
+
+		// Add a computer!
+		$('section.sign-up ul.computer-list').append( $('.computer-list-item').html() );
+
+		// Increase the number of computers in the input!
+		var $input = $('section.sign-up #num-computers');
+		var num = parseInt($input.val());
+		num++;
+		$input.val(num);
+
+	});
+	$('section.sign-up #remove-computer').click(function(e) {
+		e.preventDefault();
+
+		var $input = $('section.sign-up #num-computers');
+		var num = parseInt($input.val());
+
+		// Make sure num > 1
+		if ( num > 1 ) {
+			// Remove the last computer in the list!
+			$('section.sign-up ul.computer-list li:last').remove();
+
+			// Decrease the number of computers in the input!			
+			num--;
+			$input.val(num);
+		}
+	});
+	$(document).on('click', 'section.sign-up ul.computer-list li button.close', function(e) {
+		e.preventDefault();
+
+		var $input = $('section.sign-up #num-computers');
+		var num = parseInt($input.val());
+
+		// Make sure num > 1
+		if ( num > 1 ) {
+			// Remove this computer from the list!
+			$(this).parents('li').remove();
+
+			// Decrease the number of computers in the input!			
+			num--;
+			$input.val(num);
+		}
+	});
+
 
 
 	// ----------------------------------------- //
@@ -97,7 +144,7 @@ $(function() {
 	var userID = 0;
 
 	// Select computer type
-	$('section.sign-up select.form-factor').change(function() {
+	$(document).on('change', 'section.sign-up select.form-factor', function() {
 		if ( $(this).val() == 'desktop' ) {
 			$(this).prev('img').attr('src','/images/desktop.png');
 		}
@@ -107,7 +154,7 @@ $(function() {
 	});
 
 	// Add user button
-	$('section.sign-up button.add-user').click(function(e) {
+	$(document).on('click','section.sign-up button.add-user', function(e) {
 		e.preventDefault();
 
 		// Create li.user

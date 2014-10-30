@@ -989,14 +989,16 @@ section.sign-up {
 	div.plan-selector {
 		padding: 1em;
 		background: white;
-		border: @dark-grey solid 5px;
+		border: @lightest-grey solid 2px;
 		padding-bottom: 0;
+		margin-bottom: 20px;
 		.font-comic;
 
 		.tfs-support.checkbox {
 			.font-impact;
 			font-size: 18px;
 			color: @lightest-grey;
+			text-align: right;
 
 			label {
 				cursor: no-drop;
@@ -1066,6 +1068,13 @@ section.sign-up {
 			.clearfix;
 			margin-bottom: 30px;
 			box-shadow: grey 0 10px 10px;
+			position: relative;
+
+			button.close {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+			}
 			
 			ul.user-list {
 				padding: 0;
