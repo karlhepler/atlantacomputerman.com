@@ -133,6 +133,23 @@ $(function() {
 		}
 	});
 
+	// Add & Subtract GB
+	$(document).on('click', 'section.sign-up ul.computer-list li .gb-data-computer .minus', function(e) {
+		var $input = $(this).parents('.gb-data-computer').find('input');
+		var num = parseInt($input.val());
+
+		if ( num >= 5 ) {
+			num-=5;
+			$input.val(num);
+		}
+	});
+	$(document).on('click', 'section.sign-up ul.computer-list li .gb-data-computer .plus', function(e) {
+		var $input = $(this).parents('.gb-data-computer').find('input');
+		var num = parseInt($input.val());
+
+		num+=5;
+		$input.val(num);
+	});
 
 
 	// ----------------------------------------- //
