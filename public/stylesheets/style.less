@@ -892,7 +892,10 @@ a.price-table {
   	color: white;
   	margin: 0;
   	padding: 0.5em;
-  	background-color: lighten(@red, 10%);
+
+  	span.glyphicon {
+  		margin-right: 0.5em;
+  	}
 
   	small {
   		display: block;
@@ -900,6 +903,13 @@ a.price-table {
 			color: white;
 			font-size: 50%;
 			margin-top: 0.5em;
+  	}
+
+  	&.datasaver {
+			background-color: lighten(@red, 10%);
+  	}
+  	&.web-protect {
+  		background-color: @yellow;
   	}
   }
   p.tag-line {
