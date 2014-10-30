@@ -12,7 +12,7 @@ var pricing = {
 	},
 	invincibility: 19,
 	pc_guardian: 29,
-	family_guardian: 99
+	family_guardian: 89
 };
 // PRICING DATA [END]----------------------------
 
@@ -22,10 +22,6 @@ var userID = 0;
 
 // JQUERY DOCUMENT READY --------------
 $(function() {
-
-	
-
-
 
 	// Load fonts ---------------------------
 	WebFontConfig = {
@@ -260,7 +256,7 @@ $(function() {
 		if ( id !== '') {
 			// Select the previous user
 			$select.children('[value="' + id + '"]').attr('selected','selected');
-			
+
 			// Show the edit button!	
 			$select.parents('table.user-select-table').find('button.edit-btn').show();
 		}
@@ -453,6 +449,7 @@ function calculateFinalPrice() {
 			gbAmount = 0,
 			invincibility = 0,
 			webProtect = 0,
+			familyWebProtect = 0,
 			pcGuardian = 0,
 			familyGuardian = 0, 
 			data = 0;
@@ -496,11 +493,17 @@ function calculateFinalPrice() {
 		data = 10;
 	}
 
+	// Calculate web protect deal for families (1/2 off if all comps in fam are web protect)
+	familyWebProtect = Math.floor(webProtect/4) * 4;
+	webProtect -= familyWebProtect;
+	
+
 	// FINALLY - DO THE MATH!
 	var finalPrice = pricing.datasaver[data]
 								 + pricing.pc_guardian * pcGuardian
 								 + pricing.family_guardian * familyGuardian
 								 + pricing.web_protect * webProtect
+								 + pricing.web_protect / 2 * familyWebProtect
 								 + pricing.invincibility * invincibility;
 
 	 // Now update the final-price div
