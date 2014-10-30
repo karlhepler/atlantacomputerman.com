@@ -971,7 +971,7 @@ h1.page-title {
 }
 
 // SIGN UP -----------------------------
-section.sign-up {	
+section.sign-up {
 	h2 {
 		.clearfix;
 		text-transform: uppercase;
@@ -1314,6 +1314,43 @@ section.sign-up {
 			&:last-of-type {
 				margin-bottom: 0;
 			}		
+		}
+	}
+
+	.review-checkout {
+		padding: 10px;
+		border: 3px solid #222;
+		background: white;
+		font-size: 1.2em;
+
+		table.estimate {
+			width: 100%;
+
+			tr {
+				td {
+					&:first-of-type {
+						width: 100%;
+					}
+					&:last-of-type {
+						span {
+							width: 1px;
+						}
+					}
+				}
+			}
+
+			tbody.estimate-lines {
+				border-bottom: 1px solid black;
+
+				tr {
+					td {
+						padding-bottom: 5px;
+					}
+				}				
+			}
+			tfoot.estimate-totals {
+				
+			}
 		}
 	}
 }

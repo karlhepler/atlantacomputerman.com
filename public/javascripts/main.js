@@ -555,7 +555,7 @@ function calculateFinalPrice() {
 	// Datasaver
 	if ( data > 0 ) {
 		$estimate_body.append(datasaver_template);
-		$estimate_body.find('.datasaver .quantity').text( pricing.datasaver[data] );
+		$estimate_body.find('.datasaver .quantity').text( data );
 	}
 
 	// Update final price
