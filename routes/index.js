@@ -42,8 +42,8 @@ exports.signUp = function(req, res) {
 	res.render('sign-up', { title: 'Sign Up', menuItem: 'sign-up' });
 }
 
-exports.pcPrep = function(req, res) {
-	res.render('pc-prep', { title: 'PC Prep', menuItem: 'pc-prep' });
+exports.explanationOfOurServices = function(req, res) {
+	res.render('explanation-of-our-services', { title: 'Explanation of Our Services', menuItem: 'explanation-of-our-services' });
 }
 
 exports.quickContact = function(req, res) {
