@@ -38,6 +38,7 @@ app.get('/services/students', routes.servicesStudents);
 app.get('/services/seniors', routes.servicesSeniors);
 app.get('/our-story', routes.ourStory);
 app.get('/sign-up', routes.signUp);
+app.get('/pc-prep', routes.pcPrep);
 app.post('/quick-contact', routes.quickContact);
 app.post('/contact', routes.contact);
 

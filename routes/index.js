@@ -42,6 +42,10 @@ exports.signUp = function(req, res) {
 	res.render('sign-up', { title: 'Sign Up', menuItem: 'sign-up' });
 }
 
+exports.pcPrep = function(req, res) {
+	res.render('pc-prep', { title: 'PC Prep', menuItem: 'pc-prep' });
+}
+
 exports.quickContact = function(req, res) {
 	Validator = require('validator.js');
 	var Assert = Validator.Assert,

@@ -362,6 +362,55 @@ main {
 	background-color: rgba(0,0,0,0.5);
 }
 
+.button-area {
+	float: right;
+	width: 60%;
+	margin-top: 1em;
+	margin-right: 20px;
+
+	.learn-more {
+		display: inline-block;
+		border: none;
+		padding: 0;
+		
+		&:hover {
+			text-decoration: none;				
+		}
+
+		.slabtext {
+			background: @yellow;
+			padding: 5%;
+			.font-comic;
+			letter-spacing: 0.1em !important;
+			color: @red;
+			.transition(color 0.2s ease-out);
+			.transition(background-color 0.2s ease-out);
+
+			&:hover {
+				color: @yellow;
+				background: @red;
+			}
+		}			
+	}
+	
+	button {
+		background: @yellow;
+		.font-comic;
+		letter-spacing: 0.1em !important;
+		color: @red;
+		.transition(color 0.2s ease-out);
+		.transition(background-color 0.2s ease-out);
+		padding: 0.4em !important;
+		float: right  !important;
+		margin-right: -20px !important;
+
+		&:hover {
+			color: @yellow;
+			background: @red;
+		}
+	}		
+}
+
 // PRODUCT BOX ---------------------
 .product-box {
 	text-transform: uppercase;
@@ -386,54 +435,7 @@ main {
 		border-bottom: 5px solid @dark-grey;
 		margin-bottom: 0.3em;
 		width: 70%;
-	}
-	.button-area {
-		float: right;
-		width: 60%;
-		margin-top: 1em;
-		margin-right: 20px;
-
-		.learn-more {
-			display: inline-block;
-			border: none;
-			padding: 0;
-			
-			&:hover {
-				text-decoration: none;				
-			}
-
-			.slabtext {
-				background: @yellow;
-				padding: 5%;
-				.font-comic;
-				letter-spacing: 0.1em !important;
-				color: @red;
-				.transition(color 0.2s ease-out);
-				.transition(background-color 0.2s ease-out);
-
-				&:hover {
-					color: @yellow;
-					background: @red;
-				}
-			}			
-		}
-		button {
-			background: @yellow;
-			.font-comic;
-			letter-spacing: 0.1em !important;
-			color: @red;
-			.transition(color 0.2s ease-out);
-			.transition(background-color 0.2s ease-out);
-			padding: 0.4em !important;
-			float: right  !important;
-			margin-right: -20px !important;
-
-			&:hover {
-				color: @yellow;
-				background: @red;
-			}
-		}		
-	}
+	}	
 	.left {
 		float: left;
 		width: 45%;
@@ -560,9 +562,6 @@ main {
 		margin: 0;
 		line-height: 1;
 		small {
-			border-top: solid 3px;
-			margin-top: 1em;
-			padding-top: 1em;
 			font-weight: normal;
 			font-family: sans-serif;
 			text-transform: none;
@@ -573,7 +572,6 @@ main {
 		}
 	}
 
-
 	.facebook-holder {
 		float: right;
 		.facebook-link {
@@ -582,6 +580,16 @@ main {
 		}
 		.facebook-likes {
 
+		}
+	}
+
+	.tagline-box {
+		border-top: 3px solid @lightest-grey;
+		margin-top: 1em;
+		padding-top: 1em;
+
+		.button-area {
+			width: 100%;
 		}
 	}
 
