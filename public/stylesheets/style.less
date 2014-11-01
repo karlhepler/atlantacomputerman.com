@@ -238,7 +238,7 @@ header {
 }
 
 // FORMS ---------------------------
-form.contact, form.quick-contact, ul.computer-list fieldset {
+form.contact, form.quick-contact, ul.computer-list, form.billing-info, fieldset {
 	.font-handwritten;
 
 	/* enable absolute positioning */
@@ -300,6 +300,133 @@ form.contact, form.quick-contact, ul.computer-list fieldset {
 }
 form.quick-contact {
 	font-size: 70%;
+}
+form.billing-info {
+	font-size: 14px;
+	font-family: @font-family-sans-serif;
+
+	h3 {
+		font-family: inherit;
+		font-size: 1.2em;
+		text-transform: uppercase;
+		background-color: lighten(@blue, 10%);
+		color: white;
+		padding: 0.5em;
+		margin: 0;
+	}
+
+	button {
+		color: white;
+		background-color: @green;
+		border: none;
+		.transition(background-color 0.2s ease-out);
+
+		&:hover {
+			background-color: lighten(@green, 10%);
+		}
+	}
+
+	fieldset {
+		border: 2px solid lighten(@blue, 10%);
+		border-top: none;
+		border-radius: 0;
+		font-family: inherit;
+		margin-bottom: 1em;
+		
+		.form-group {			
+			.col-xs-12, .col-xs-6 {
+				padding-left: 0;
+				padding-right: 0;				
+
+				input.form-control {
+					border: none;
+					font-size: 1em;
+					border-bottom: 1px solid lighten(@blue, 30%);
+					text-transform: none;
+				}
+
+				select.form-control {
+					border: none;
+					box-shadow: none;
+					border-radius: 0;
+					-webkit-appearance: none;
+					background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>");
+					background-repeat: no-repeat;
+					background-position: right 0.5em center;
+					background-size: 14px 14px;
+					padding-right: 2em;
+					height: 2em;
+					padding-top: 0.3em;
+					background-color: white;
+				}
+
+				.inner-addon.left-addon {
+					i.fa {
+						padding-top: 0.5em;
+						font-size: 1em;
+					}
+				}
+
+				input.zip-code, input.cc-cvc {
+					border-bottom: none;
+					border-left: 1px solid lighten(@blue, 30%);
+				}
+				input.cc-exp {
+					border-bottom: none;
+				}
+			}
+		}
+	}
+
+	// fieldset {
+	// 	font-family: @font-family-sans-serif;
+	// 	border: 2px solid @lightest-grey;
+	// 	border-radius: 0.5em;
+
+	// 	input, select {
+	// 		font-size: 1em;
+	// 		border: 1px solid @lightest-grey;
+	// 		margin-top: -1px;
+	// 		text-transform: none;
+
+	// 		&.form-control {
+	// 			height: auto;
+	// 			padding: 5px;
+	// 		}
+	// 	}
+	// 	select.form-control {
+	// 		border-radius: 0;
+	// 		-webkit-appearance: none;
+	// 		background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>");
+	// 		background-repeat: no-repeat;
+	// 		background-position: right 0.5em center;
+	// 		background-size: 14px 14px;
+	// 		padding-right: 2em;
+	// 	}
+	// 	.form-group {
+	// 		.col-xs-12, .col-xs-6, .col-xs-12 {
+	// 			padding: 0;
+
+	// 			input, select {
+	// 				padding: 0.5em;
+	// 				border: none;
+	// 				border-top: 1px solid @lightest-grey;
+	// 			}
+
+	// 			.inner-addon.left-addon i {
+	// 				font-size: 1em;
+	// 				padding-top: 0.75em;
+					
+	// 				input.form-control {
+	// 					padding-left: 2em;
+	// 				}
+	// 			}
+	// 		}
+	// 	}		
+	// 	input.cc-cvc, input.zip-code {
+	// 		border-left: 1px solid @light-grey;
+	// 	}
+	// }	
 }
 
 // MODAL ---------------------------
@@ -1274,6 +1401,7 @@ section.sign-up {
 
 				select {
 					text-transform: uppercase;
+					font-family: @font-family-sans-serif;
 				}
 			}
 
@@ -1404,13 +1532,17 @@ section.sign-up {
 	}
 
 	.review-checkout {
-		padding: 10px;
-		border: 3px solid #222;
-		background: white;
-		font-size: 1em;
+		// padding: 10px;
+		// border: 3px solid #222;
+		// background: white;
+		// font-size: 1em;
 
 		table.estimate {
 			width: 100%;
+			text-transform: uppercase;
+			background: white;
+			border: 2px solid lighten(@green, 10%);
+			margin-bottom: 1em;
 
 			tr {
 				td {
@@ -1429,17 +1561,58 @@ section.sign-up {
 				display: table;
 
 				tr {
-					td {
-						padding-bottom: 5px;
+					td {						
+						padding: 0.5em 1em 0 1em;						
+					}
+					&:first-of-type {
+						td {
+							padding-top: 1em;
+						}						
 					}
 				}
 			}
 			tfoot.estimate-totals {
 				display: table;
+				margin-top: 1em;
 
 				tr {
-					td {
+					&:first-of-type {			
+						font-size: 1.5em;
+						line-height: 1;
+						background: lighten(@green, 10%);
+						color: white;
+						.font-price;
 
+						small {
+							font-size: 0.7em;
+							margin-left: 0.5em;
+						}
+					}
+					td {
+						padding: 1em;
+					}
+					&.setup-cost {
+						td {
+							padding-top: 1em;
+							padding-bottom: 0;
+							color: @lightest-grey;
+
+							&:last-of-type {
+								text-align: right;
+							}
+						}
+					}
+					&.due-today-tr {
+						td {
+							padding: 0 0.7em 0.5em 0.7em;
+							.font-impact;
+							font-size: 1.5em;
+							color: @red;
+
+							&:last-of-type {
+								text-align: right;
+							}
+						}
 					}
 				}
 			}
