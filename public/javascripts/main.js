@@ -108,6 +108,9 @@ $(function() {
 	// Phone number input mask
 	$(".phone-input").mask("(999) 999-9999");
 
+	// Zip code input mask
+	$('.zip-code').mask('99999?-9999');
+
 	// ADD / REMOVE COMPUTERS ---------------------
 	$('section.sign-up #add-computer').click(function(e) {
 		e.preventDefault();
@@ -333,7 +336,7 @@ $(function() {
 				users[n] = user;
 
 				// Now update all of the selects with the new user info
-				var selects = $('section.sign-up ul.computer-list').find('select.user-select');
+				var selects = $('section.sign-up').find('select.user-select');
 				// Cycle through all selects
 				for (var i = selects.length - 1; i >= 0; i--) {
 					// Cycle through all options for this select
@@ -355,7 +358,7 @@ $(function() {
 				users.push(user);
 
 				// Now update all of the selects with the new user
-				var selects = $('section.sign-up ul.computer-list').find('select.user-select');
+				var selects = $('section.sign-up').find('select.user-select');
 				for (var i = selects.length - 1; i >= 0; i--) {
 					$(selects[i]).append('<option value="' + user.id + '">' + user.first + ' ' + user.last + '</option>');
 				};
@@ -397,15 +400,15 @@ $(function() {
 		};
 
 		// Show the create user template
-		var container = $(this).parents('.user');
-		container.html( $('.create-user-template').html() );
+		var $container = $(this).parents('.user');
+		$container.html( $('.create-user-template').html() );
 
 		// Fill in the fields based on the user
-		container.find('input[name="id"]').val( user.id );
-		container.find('input[name="first"]').val( user.first );
-		container.find('input[name="last"]').val( user.last );
-		container.find('input[name="email"]').val( user.email );
-		container.find('input[name="phone"]').val( user.phone );
+		$container.find('input[name="id"]').val( user.id );
+		$container.find('input[name="first"]').val( user.first );
+		$container.find('input[name="last"]').val( user.last );
+		$container.find('input[name="email"]').val( user.email );
+		$container.find('input[name="phone"]').val( user.phone );
 	});
 
 	// This function disables selected options from other selects
@@ -577,131 +580,3 @@ function calculatePricing() {
 	// Update due today
 	$estimate_table.find('.due-today').text( '$' + (monthlyCost+setupCost) );
 }
-
-// --- CALCULATION ---- //
-// function calculatePricing() {
-// 	// Declare the variables
-// 	var numComputers = 0,
-// 			gbAmount = 0,
-// 			invincibility = 0,
-// 			webProtect = 0,
-// 			familyWebProtect = 0,
-// 			pcGuardian = 0,
-// 			familyGuardian = 0, 
-// 			data = 0,
-// 			packageDiscount = 0,
-// 			setupCost = 0;
-
-// 	// Grab the numbers!
-// 	numComputers = parseInt( $('section.sign-up #num-computers').val() );
-// 	gbAmount = 0;
-// 			var gbAmountInput = $('section.sign-up .gb-amount');
-// 			for (var i = gbAmountInput.length - 1; i >= 0; i--) {
-// 				gbAmount += parseInt($(gbAmountInput[i]).val());
-// 			};
-// 	invincibility = $('section.sign-up input[value="invincibility"]:checked').length;
-// 	webProtect = $('section.sign-up input[value="web-filtering"]:checked').length;
-
-// 	// Find number of pc guardian computers
-// 	pcGuardian = numComputers - invincibility;
-
-// 	// Calculate family guardian
-// 	familyGuardian = Math.floor( pcGuardian / 4 );
-
-// 	// Recalculate pcGuardian
-// 	pcGuardian %= 4;
-
-// 	// Calculate data amount
-// 	if ( gbAmount > 500 ) {
-// 		data = 1000;
-// 	}
-// 	else if ( gbAmount > 250 ) {
-// 		data = 500;
-// 	}
-// 	else if ( gbAmount > 100 ) {
-// 		data = 250;
-// 	}
-// 	else if ( gbAmount > 50 ) {
-// 		data = 100;
-// 	}
-// 	else if ( gbAmount > 10 ) {
-// 		data = 50;
-// 	}
-// 	else if ( gbAmount > 0 ) {
-// 		data = 10;
-// 	}
-
-// 	// Calculate web protect deal for families (1/2 off if all comps in fam are web protect)
-// 	if ( webProtect > 0 ) {
-// 		familyWebProtect = Math.floor( (webProtect-invincibility)/4 );
-// 	}
-// 	else {
-// 		familyWebProtect = Math.floor( webProtect/4 );
-// 	}
-// 	webProtect -= (familyWebProtect * 4);
-
-// 	// For true family guardian, the price is $99 with or without web filtering,
-// 	// so subtract $10 for every 4 familyWebProtect
-// 	packageDiscount = 10 * ( Math.floor(familyWebProtect) );
-	
-
-// 	// FINALLY - DO THE MATH!
-// 	var finalPrice = pricing.datasaver[data]
-// 								 + pricing.pc_guardian * pcGuardian
-// 								 + pricing.family_guardian * familyGuardian
-// 								 + pricing.web_protect * webProtect
-// 								 + (pricing.web_protect / 2) * (familyWebProtect * 4)
-// 								 + pricing.invincibility * invincibility
-// 								 - packageDiscount;
-
-// 	// Update the estimate!
-// 	var $estimate_table = $('section.sign-up table.estimate');
-// 	var $estimate_body = $estimate_table.children('tbody');
-
-// 	var family_guardian_web_protect_template = $('.estimate-line-fgwp').html();
-// 	var family_guardian_template = $('.estimate-line-fg').html();
-// 	var pc_guardian_template = $('.estimate-line-pg').html();
-// 	var pc_invincibility_template = $('.estimate-line-pi').html();
-// 	var web_protect_template = $('.estimate-line-wp').html();
-// 	var datasaver_template = $('.estimate-line-ds').html();
-	
-// 	// Clear the estimate
-// 	$estimate_body.html('');
-
-// 	// Family Guardian + Web Protect
-// 	if ( familyWebProtect > 0 ) {
-// 		$estimate_body.append(family_guardian_web_protect_template);
-// 		$estimate_body.find('.family-guardian-web-protect .quantity').text( familyWebProtect );
-// 	}
-// 	// Family Guardian
-// 	if ( familyGuardian - familyWebProtect > 0 ) {
-// 		$estimate_body.append(family_guardian_template);
-// 		$estimate_body.find('.family-guardian .quantity').text( familyGuardian - familyWebProtect );
-// 	}
-// 	// PC Guardian
-// 	if ( pcGuardian > 0 ) {
-// 		$estimate_body.append(pc_guardian_template);
-// 		$estimate_body.find('.pc-guardian .quantity').text( pcGuardian );
-// 	}
-// 	// Invincibility
-// 	if ( invincibility > 0 ) {
-// 		$estimate_body.append(pc_invincibility_template);
-// 		$estimate_body.find('.pc-invincibility .quantity').text( invincibility );
-// 	}
-// 	// Web Protect
-// 	if ( webProtect > 0 ) {
-// 		$estimate_body.append(web_protect_template);
-// 		$estimate_body.find('.web-protect .quantity').text( webProtect );
-// 	}
-// 	// Datasaver
-// 	if ( data > 0 ) {
-// 		$estimate_body.append(datasaver_template);
-// 		$estimate_body.find('.datasaver .quantity').text( data );
-// 	}
-
-// 	// Update final price
-// 	$estimate_table.find('.final-price').html( '$'+finalPrice+'<small>/mo</small>' );
-
-// 	// Update due today
-// 	$estimate_table.find('.due-today').text( '$' + (finalPrice+setupCost) );
-// }

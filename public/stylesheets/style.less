@@ -9,6 +9,9 @@
 @icon-font-path: "/vendor/bootstrap/fonts/";
 @font-family-sans-serif: 'Open Sans', sans-serif;
 
+@import "/vendor/fontawesome/less/font-awesome";
+@fa-font-path: "/vendor/fontawesome/fonts";
+
 @import (less) "/vendor/slabText/css/slabtext.css";
 
 // SET FONT
@@ -205,7 +208,7 @@ header {
 			margin-bottom: 10px;
 
 			a {
-				.glyphicon {
+				.fa {
 					margin-right: 0.8em;
 					top: 0.3em;
 				}
@@ -244,16 +247,17 @@ form.contact, form.quick-contact, ul.computer-list fieldset {
 	}
 
 	/* style icon */
-	.inner-addon .glyphicon {
+	.inner-addon .fa {
 	  position: absolute;
 	  padding: 0.5em;
 	  pointer-events: none;
 	  font-size: 2em;
+	  top: 0;
 	}
 
 	/* align icon */
-	.left-addon .glyphicon  { left:  0px;}
-	.right-addon .glyphicon { right: 0px;}
+	.left-addon .fa  { left:  0px;}
+	.right-addon .fa { right: 0px;}
 
 	/* add padding  */
 	.left-addon input  { padding-left:  2em; }
@@ -375,7 +379,6 @@ main {
 
 	span {
 		color: @blue;
-		top: 5px;
 		margin-right: 0.5em;
 	}
 }
@@ -836,7 +839,7 @@ section.contact {
 			margin-bottom: 1em;
 
 			a {
-				.glyphicon {
+				.fa {
 					margin-right: 0.8em;
 					top: 0.3em;
 				}
@@ -976,7 +979,7 @@ a.price-table {
   	margin: 0;
   	padding: 0.5em;
 
-  	span.glyphicon {
+  	span.fa {
   		margin-right: 0.5em;
   	}
 
@@ -1043,7 +1046,7 @@ h1.page-title {
 			color: lighten(@red, 10%);
 		}
 	}
-	span.glyphicon {
+	span.fa {
 		font-size: 80%;
 		color: @lightest-grey;
 	}
@@ -1439,6 +1442,13 @@ section.sign-up {
 
 					}
 				}
+			}
+		}
+
+		table.user-select-table {
+			width: 100%;
+			.btn-group {
+				display: none;
 			}
 		}
 	}

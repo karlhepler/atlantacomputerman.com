@@ -1,36 +1,36 @@
-<form class="create-user">
+<form novalidate class="create-user">
   <div class="form-group">
     <input type="hidden" name="id" value="">
     <div class="col-sm-6">
-      <label class="sr-only" for="first">First Name</label>
-      <input placeholder="First Name" class="form-control" id="first-1" name="first" size="30" type="text" required />
+      <label class="sr-only">First Name</label>
+      <input placeholder="First Name" class="form-control" name="first" type="text" required>
     </div>
     <div class="col-sm-6">
-      <label class="sr-only" for="last">Last Name</label>
-      <input placeholder="Last Name" class="form-control" id="last-1" name="last" size="30" type="text" required />
+      <label class="sr-only">Last Name</label>
+      <input placeholder="Last Name" class="form-control" name="last" type="text" required>
     </div>
   </div>
   <div class="form-group">
     <div class="col-sm-12">
-      <label class="sr-only" for="email">Email Address</label>
-      <div class="inner-addon left-addon">                              
-        <input placeholder="Email Address" class="form-control" id="email-1" name="email" required="true" size="30" type="email" required />
-        <i class="glyphicon glyphicon-envelope"></i>
+      <label class="sr-only">Email Address</label>
+      <div class="inner-addon left-addon">
+        <input placeholder="Email Address" class="form-control" name="email" type="email" required>
+        <i class="fa fa-envelope"></i>
       </div>                            
     </div>
   </div>
   <div class="form-group">
     <div class="col-sm-12">
-      <label class="sr-only" for="user_email">Phone Number</label>
+      <label class="sr-only">Phone Number</label>
       <div class="inner-addon left-addon">                              
-        <input placeholder="Phone Number" class="phone-input form-control" id="phone-1" name="phone" required="true" size="30" type="text" required />
-        <i class="glyphicon glyphicon-earphone"></i>
+        <input placeholder="Phone Number" class="phone-input form-control" name="phone" type="text" pattern="\d*" required>
+        <i class="fa fa-phone"></i>
       </div>                            
     </div>
   </div>
   <table class="button-area-table">
     <tr>
-      <td><div class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-ban-circle"></span> Please fill in all fields</div></td>
+      <td><div class="alert alert-danger" role="alert"><span class="fa fa-ban"></span> Please fill in all fields</div></td>
       <td>
         <div class="button-area">
           <button class="btn cancel-btn btn-default">Cancel</button>

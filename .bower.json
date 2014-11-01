@@ -5,6 +5,8 @@
 		"jquery": null,
 		"bootstrap": null,
 		"slabText": null,
-		"skrollr": null
+		"skrollr": null,
+		"jquery.payment": null,
+		"fontawesome": null
 	}
 }
