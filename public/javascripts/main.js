@@ -444,19 +444,26 @@ $(document).on('change', 'section.sign-up input[value="invincibility"], section.
 
 function calculatePricing() {
 	// Setup variables
-	var numComputers = 0,
-			totalGB = 0,
+	var numComputers 		 = 0,
+			totalGB          = 0,
 			numInvincibility = 0,
-			numWebProtect = 0;
+			numWebProtect    = 0;
 
-	var numFamilyGuardian = 0,
+	var numFamilyGuardian 					= 0,
 			numFamilyGuardianWebProtect = 0,
-			numPcGuardian = 0;
+			numPcGuardian               = 0,
+			numInvincibileWebProtect    = 0,
+			theInvincible               = null,
+			dataPackage                 = 0,
+			setupCost                   = 0,
+			monthlyCost 								= 0;
 
 	// Collect information
-	numComputers = parseInt( $('section.sign-up #num-computers').val() );
-	numInvincibility = $('section.sign-up input[value="invincibility"]:checked').length;
-	numWebProtect = $('section.sign-up input[value="web-filtering"]:checked').length;
+	numComputers     = parseInt( $('section.sign-up #num-computers').val() );
+	theInvincible    = $('section.sign-up input[value="invincibility"]:checked');
+	numInvincibility = theInvincible.length;
+	numWebProtect    = $('section.sign-up input[value="web-filtering"]:checked').length;
+
 	var gbAmountInput = $('section.sign-up .gb-amount');
 	for (var i = gbAmountInput.length - 1; i >= 0; i--) {
 		totalGB += parseInt($(gbAmountInput[i]).val());
@@ -473,20 +480,102 @@ function calculatePricing() {
 	numPcGuardian %= 4;
 
 	// Now we need to figure out Family Guardian + Web Protect
-	numFamilyGuardianWebProtect = Math.floor(numWebProtect / 4);
-	numWebProtect %= 4;
-	if ( numFamilyGuardian >= numFamilyGuardianWebProtect ) {
-		numFamilyGuardian -= numFamilyGuardianWebProtect;
+	if ( numWebProtect > 3 ) {
+		// Go through each invincible
+		for (var i = theInvincible.length - 1; i >= 0; i--) {
+			// Determine if its neighborhood web protect is checked & if so, add one to numInvincibileWebProtect & subtract from the other
+			numInvincibileWebProtect += $(theInvincible[i]).parents('.right').find('input[value="web-filtering"]:checked').length;
+		};
+
+		// Fix the numWebProtect
+		numWebProtect -= numInvincibileWebProtect;
+
+		// Now calculate the number for family guardian web protects
+		numFamilyGuardianWebProtect = Math.floor(numWebProtect / 4);
+		numWebProtect %= 4;
+		if ( numFamilyGuardian >= numFamilyGuardianWebProtect ) {
+			numFamilyGuardian -= numFamilyGuardianWebProtect;
+		}
 	}
 
-	console.log('numComputers', numComputers);
-	console.log('totalGB', totalGB);
-	console.log('numInvincibility', numInvincibility);
-	console.log('numWebProtect', numWebProtect);
-	console.log('numFamilyGuardian', numFamilyGuardian);
-	console.log('numFamilyGuardianWebProtect', numFamilyGuardianWebProtect);
-	console.log('numPcGuardian', numPcGuardian);
-	console.log('----------');
+	// Calculate the data package
+	if ( totalGB > 500 ) {
+		dataPackage = 1000;
+	}
+	else if ( totalGB > 250 ) {
+		dataPackage = 500;
+	}
+	else if ( totalGB > 100 ) {
+		dataPackage = 250;
+	}
+	else if ( totalGB > 50 ) {
+		dataPackage = 100;
+	}
+	else if ( totalGB > 10 ) {
+		dataPackage = 50;
+	}
+	else if ( totalGB > 0 ) {
+		dataPackage = 10;
+	}
+
+	// Calculate the final price
+	monthlyCost = pricing.datasaver[dataPackage]
+							+ (numWebProtect + numInvincibileWebProtect) * pricing.web_protect
+							+ numFamilyGuardian * pricing.family_guardian
+							+ numPcGuardian * pricing.pc_guardian
+							+ numFamilyGuardianWebProtect * pricing.family_guardian
+							+ numInvincibility * pricing.invincibility;
+
+	// NOW EVERYTHING HAS BEEN CALCULATED! TIME FOR THE DISPLAY!
+	var $estimate_table = $('section.sign-up table.estimate');
+	var $estimate_body = $estimate_table.children('tbody');
+
+	var family_guardian_web_protect_template = $('.estimate-line-fgwp').html();
+	var family_guardian_template = $('.estimate-line-fg').html();
+	var pc_guardian_template = $('.estimate-line-pg').html();
+	var pc_invincibility_template = $('.estimate-line-pi').html();
+	var web_protect_template = $('.estimate-line-wp').html();
+	var datasaver_template = $('.estimate-line-ds').html();
+	
+	// Clear the estimate
+	$estimate_body.html('');
+
+	// Family Guardian + Web Protect
+	if ( numFamilyGuardianWebProtect > 0 ) {
+		$estimate_body.append(family_guardian_web_protect_template);
+		$estimate_body.find('.family-guardian-web-protect .quantity').text( numFamilyGuardianWebProtect );
+	}
+	// Family Guardian
+	if ( numFamilyGuardian > 0 ) {
+		$estimate_body.append(family_guardian_template);
+		$estimate_body.find('.family-guardian .quantity').text( numFamilyGuardian );
+	}
+	// PC Guardian
+	if ( numPcGuardian > 0 ) {
+		$estimate_body.append(pc_guardian_template);
+		$estimate_body.find('.pc-guardian .quantity').text( numPcGuardian );
+	}
+	// Invincibility
+	if ( numInvincibility > 0 ) {
+		$estimate_body.append(pc_invincibility_template);
+		$estimate_body.find('.pc-invincibility .quantity').text( numInvincibility );
+	}
+	// Web Protect
+	if ( (numWebProtect + numInvincibileWebProtect) > 0 ) {
+		$estimate_body.append(web_protect_template);
+		$estimate_body.find('.web-protect .quantity').text( (numWebProtect + numInvincibileWebProtect) );
+	}
+	// Datasaver
+	if ( dataPackage > 0 ) {
+		$estimate_body.append(datasaver_template);
+		$estimate_body.find('.datasaver .quantity').text( dataPackage );
+	}
+
+	// Update final price
+	$estimate_table.find('.final-price').html( '$'+monthlyCost+'<small>/mo</small>' );
+
+	// Update due today
+	$estimate_table.find('.due-today').text( '$' + (monthlyCost+setupCost) );
 }
 
 // --- CALCULATION ---- //
