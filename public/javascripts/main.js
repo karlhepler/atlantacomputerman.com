@@ -580,3 +580,19 @@ function calculatePricing() {
 	// Update due today
 	$estimate_table.find('.due-today').text( '$' + (monthlyCost+setupCost) );
 }
+
+// THE BIG FORM SUBMIT!!!!
+$('section.sign-up form.billing-info input.cc-number').payment('formatCardNumber');
+$('section.sign-up form.billing-info input.cc-exp').payment('formatCardExpiry');
+$('section.sign-up form.billing-info input.cc-cvc').payment('formatCardCVC');
+
+$('section.sign-up form.billing-info').submit(function(e) {
+	e.preventDefault();
+});
+
+$('section.sign-up form.billing-info button.submit-btn').click(function(e) {
+	e.preventDefault();
+
+	// VALIDATION -------------
+	
+});
