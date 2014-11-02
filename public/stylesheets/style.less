@@ -311,7 +311,7 @@ form.billing-info {
 		text-transform: uppercase;
 		background-color: lighten(@blue, 10%);
 		color: white;
-		padding: 0.5em;
+		padding: 1em;
 		margin: 0;
 	}
 
@@ -343,6 +343,7 @@ form.billing-info {
 					font-size: 1em;
 					border-bottom: 1px solid lighten(@blue, 30%);
 					text-transform: none;
+					padding: 1.5em;
 				}
 
 				select.form-control {
@@ -355,15 +356,19 @@ form.billing-info {
 					background-position: right 0.5em center;
 					background-size: 14px 14px;
 					padding-right: 2em;
-					height: 2em;
+					height: 3em;
 					padding-top: 0.3em;
 					background-color: white;
+					padding-left: 1.5em;
 				}
 
 				.inner-addon.left-addon {
 					i.fa {
 						padding-top: 0.5em;
-						font-size: 1em;
+						font-size: 1.5em;
+					}
+					input.cc-number {
+						padding-left: 3em;
 					}
 				}
 
@@ -377,56 +382,6 @@ form.billing-info {
 			}
 		}
 	}
-
-	// fieldset {
-	// 	font-family: @font-family-sans-serif;
-	// 	border: 2px solid @lightest-grey;
-	// 	border-radius: 0.5em;
-
-	// 	input, select {
-	// 		font-size: 1em;
-	// 		border: 1px solid @lightest-grey;
-	// 		margin-top: -1px;
-	// 		text-transform: none;
-
-	// 		&.form-control {
-	// 			height: auto;
-	// 			padding: 5px;
-	// 		}
-	// 	}
-	// 	select.form-control {
-	// 		border-radius: 0;
-	// 		-webkit-appearance: none;
-	// 		background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>");
-	// 		background-repeat: no-repeat;
-	// 		background-position: right 0.5em center;
-	// 		background-size: 14px 14px;
-	// 		padding-right: 2em;
-	// 	}
-	// 	.form-group {
-	// 		.col-xs-12, .col-xs-6, .col-xs-12 {
-	// 			padding: 0;
-
-	// 			input, select {
-	// 				padding: 0.5em;
-	// 				border: none;
-	// 				border-top: 1px solid @lightest-grey;
-	// 			}
-
-	// 			.inner-addon.left-addon i {
-	// 				font-size: 1em;
-	// 				padding-top: 0.75em;
-					
-	// 				input.form-control {
-	// 					padding-left: 2em;
-	// 				}
-	// 			}
-	// 		}
-	// 	}		
-	// 	input.cc-cvc, input.zip-code {
-	// 		border-left: 1px solid @light-grey;
-	// 	}
-	// }	
 }
 
 // MODAL ---------------------------
@@ -1532,11 +1487,6 @@ section.sign-up {
 	}
 
 	.review-checkout {
-		// padding: 10px;
-		// border: 3px solid #222;
-		// background: white;
-		// font-size: 1em;
-
 		table.estimate {
 			width: 100%;
 			text-transform: uppercase;
