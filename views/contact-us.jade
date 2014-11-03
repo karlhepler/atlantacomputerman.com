@@ -1,0 +1,34 @@
+| <% include /partials/head %>
+| <% include /partials/header %>
+// ------------------------------------------------------------------------------------------------------------
+h1.page-title
+  | Contact Us
+  small We will contact you within 24 hours!
+section.contact
+  .col-sm-4
+    img.img-responsive(src='/images/phone-woman.png', alt='')
+    ul.big-text
+      li
+        a(href='tel:+17705746200')
+          span.slabtext
+            span.fa.fa-phone
+            span.phone-number (770) 574-6200
+      li
+        a(href='mailto:support@atlantacomputerman.com')
+          span.slabtext
+            span.fa.fa-envelope
+            span.email
+              | support
+              small @atlantacomputerman.com
+      li
+        a(href='/services')
+          span.slabtext
+            span.fa.fa-clock-o
+            span.hours
+              | Mon - Fri / 9am - 6pm
+              small 24x7 Support Coming Soon!
+  .col-sm-8
+    | <%= include /partials/contact-box %>
+// ------------------------------------------------------------------------------------------------------------
+| <% include /partials/footer %>
+| <% include /partials/foot %>
