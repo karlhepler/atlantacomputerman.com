@@ -1,25 +1,25 @@
-| <% include /partials/head %>
-| <% include /partials/header %>
+include /partials/head
+include /partials/header
 // ------------------------------------------------------------------------------------------------------------
 // START PARTIAL TEMPLATES
 script.select-user-template(type='text/template')
-  <%= include /partials/computer-list-item-select-user %>
+  include /partials/computer-list-item-select-user
 script.create-user-template(type='text/template')
-  <%= include /partials/computer-list-item-add-user %>
+  include /partials/computer-list-item-add-user
 script.computer-list-item(type='text/template')
-  <%= include /partials/computer-list-item %>
+  include /partials/computer-list-item
 script.estimate-line-fgwp(type='text/template')
-  <%= include /partials/estimate-lines/fgwp %>
+  include /partials/estimate-lines/fgwp
 script.estimate-line-fg(type='text/template')
-  <%= include /partials/estimate-lines/fg %>
+  include /partials/estimate-lines/fg
 script.estimate-line-pg(type='text/template')
-  <%= include /partials/estimate-lines/pg %>
+  include /partials/estimate-lines/pg
 script.estimate-line-pi(type='text/template')
-  <%= include /partials/estimate-lines/pi %>
+  include /partials/estimate-lines/pi
 script.estimate-line-wp(type='text/template')
-  <%= include /partials/estimate-lines/wp %>
+  include /partials/estimate-lines/wp
 script.estimate-line-ds(type='text/template')
-  <%= include /partials/estimate-lines/ds %>
+  include /partials/estimate-lines/ds
 // END PARTIAL TEMPLATES
 h1.page-title
   | Sign Up
@@ -50,7 +50,7 @@ section.sign-up
             small COMING SOON!
     // COMPUTER LIST
     ul.computer-list
-      | <%= include /partials/computer-list-item %>
+      include /partials/computer-list-item
   .col-sm-4
     h2
       span.circle 2
@@ -86,7 +86,7 @@ section.sign-up
           // Account Contact
           .user.form-group
             .col-xs-12
-              | <%= include /partials/computer-list-item-select-user %>
+              include /partials/computer-list-item-select-user
         // Billing Address
         fieldset.billing-address
           h3 Billing Address
@@ -182,5 +182,5 @@ section.sign-up
           | Checkout
           span.fa.fa-chevron-right
 // ------------------------------------------------------------------------------------------------------------
-| <% include /partials/footer %>
-| <% include /partials/foot %>
+include /partials/footer
+include /partials/foot
