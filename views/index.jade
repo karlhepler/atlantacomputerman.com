@@ -1,0 +1,169 @@
+include /partials/head
+include /partials/header
+// ------------------------------------------------------------------------------------------------------------
+section
+  .col-sm-5
+    img.img-responsive(src='/images/karl.png', alt='Karl Hepler, Owner')
+    .owner-name.hidden-xs
+      | Karl Hepler
+      small Owner
+  .col-sm-7
+    .row
+      .col-xs-12
+        .bubble
+          .row
+            .col-lg-8.col-md-7.col-sm-6
+              p.big-text
+                span.slabtext You'll never have to worry
+                span.slabtext about computer repair
+                span.slabtext or tech support again!
+            .col-lg-4.col-md-5.col-sm-6
+              .facebook-holder
+                // Facebook Link
+                a.facebook-link(alt='Atlanta Computerman on Facebook', href='https://www.facebook.com/AtlantaComputerman', target='_blank')
+                  span.social-icon.facebook
+                // Facebook Like Box
+                fb:like.facebook-likes(href='https://www.facebook.com/AtlantaComputerman', width='50', layout='box_count', action='like', show_faces='false', share='true')
+          .row.tagline-box
+            .col-xs-8
+              p
+                small
+                  | We're a local Atlanta business dedicated to bringing enterprise-level computer support to you and your family. We provide unlimited support, repair, and maintenance for your computer, software, and data. So sit back and and relax - we've got you and your family covered!
+            .col-xs-4
+              .button-area.big-text
+                a.learn-more(href='/explanation-of-our-services')
+                  span.slabtext
+                    | Learn more
+                    i.fa.fa-chevron-right
+          .pointer
+          .pointerBorder
+    .row
+      .col-xs-12
+        // START PRODUCT BOX
+        .product-box
+          .title.big-text
+            span.slabtext PC Invincibility
+          .content
+            .left
+              .features.big-text
+                span.slabtext 100% Guaranteed
+                span.slabtext Impossible
+                span.slabtext to get viruses
+                span.slabtext
+                  span.glyphicon.glyphicon-plus
+                  | Remote Support
+            .right
+              .price-area
+                .price.big-text
+                  span.slabtext $19
+                .terms-box
+                  .slash-area.big-text
+                    span.slabtext.slash /
+                  .terms-area.big-text
+                    span.slabtext.terms month
+                    span.slabtext.terms computer
+              .button-area.big-text
+                a.learn-more(href='/services')
+                  span.slabtext
+                    | Learn more
+                    i.fa.fa-chevron-right
+          .pow
+            img(src='/images/pow.png', alt='')
+            .deal.big-text
+              span.slabtext No need for
+              span.slabtext anti-virus!
+              hr
+              span.slabtext Your computer
+              span.slabtext will be invincible!
+        // END PRODUCT BOX
+section
+  .col-sm-7
+    // START PRODUCT BOX
+    .product-box
+      .title.big-text
+        span.slabtext PC Guardian
+      .content
+        .left
+          .features.big-text
+            span.slabtext Unlimited
+            span.slabtext Remote
+            span.slabtext Support
+            span.slabtext
+              span.amp &
+              | Anti-Virus
+        .right
+          .price-area
+            .price.big-text
+              span.slabtext $29
+            .terms-box
+              .slash-area.big-text
+                span.slabtext.slash /
+              .terms-area.big-text
+                span.slabtext.terms month
+                span.slabtext.terms computer
+          .button-area.big-text
+            a.learn-more(href='/services')
+              span.slabtext
+                | Learn more
+                i.fa.fa-chevron-right
+      .pow
+        img(src='/images/pow.png', alt='')
+        .deal.big-text
+          span.slabtext 10% discount for
+          span.slabtext students,
+          span.slabtext seniors,
+          span.slabtext
+            span.amp &
+            | veterans!
+    // END PRODUCT BOX
+  .col-sm-5.hidden-xs
+    .left-arrow
+section
+  .col-sm-5.hidden-xs
+    .right-arrow
+  .col-sm-7
+    // START PRODUCT BOX
+    .product-box
+      .title.big-text
+        span.slabtext Family Guardian
+      .content
+        .left
+          .features.big-text
+            span.slabtext Unlimited
+            span.slabtext Remote Support
+            span.slabtext Anti-Virus
+            span.slabtext
+              span.amp &
+              | Web Filtering
+        .right
+          .price-area
+            .price.big-text
+              span.slabtext $99
+            .terms-box
+              .slash-area.big-text
+                span.slabtext.slash /
+              .terms-area.big-text
+                span.slabtext.terms month
+                span.slabtext.terms 4 computers
+          .button-area.big-text
+            a.learn-more(href='/services/families')
+              span.slabtext
+                | Learn more
+                i.fa.fa-chevron-right
+      .pow
+        img(src='/images/pow.png', alt='')
+        .deal.big-text
+          span.slabtext The best value
+          span.slabtext for families!
+          hr
+          span.slabtext support up to
+          span.slabtext 4 computers!
+    // END PRODUCT BOX
+section
+  .col-sm-7
+    include /partials/contact-box
+  .col-sm-5.hidden-xs
+    .left-arrow
+// ------------------------------------------------------------------------------------------------------------
+include /partials/footer
+include /partials/foot

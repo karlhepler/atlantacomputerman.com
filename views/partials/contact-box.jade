@@ -1,0 +1,40 @@
+.product-box
+  .title.big-text
+    span.slabtext Contact Us
+  .content
+    // START CONTACT FORM
+    form.form-horizontal.contact(novalidate='', action='#', method='post')
+      fieldset
+        .form-group
+          .col-sm-6
+            label.sr-only(for='first') First Name
+            input#first.form-control(placeholder='First Name', name='first', type='text', required='')
+          .col-sm-6
+            label.sr-only(for='last') Last Name
+            input#last.form-control(placeholder='Last Name', name='last', type='text', required='')
+        .form-group
+          .col-sm-12
+            label.sr-only(for='email') Email Address
+            .inner-addon.left-addon
+              input#email.form-control(placeholder='Email Address', name='email', type='email', required='')
+              i.fa.fa-envelope
+        .form-group
+          .col-sm-12
+            label.sr-only(for='user_email') Phone Number
+            .inner-addon.left-addon
+              input#phone.phone-input.form-control(pattern='\d*', placeholder='Phone Number', name='phone', type='text', required='')
+              i.fa.fa-phone
+      p
+        | We will send you an email confirmation immediately & contact you within 24 hours.
+      .contact-us-button-area.button-area
+        button.learn-more
+          | Contact Us
+          i.fa.fa-chevron-right
+    // END CONTACT FORM
+  .contact.pow
+    img(src='/images/pow.png', alt='')
+    .deal.big-text
+      span.slabtext Your computer
+      span.slabtext will be
+      span.slabtext up & running
+      span.slabtext in no time!

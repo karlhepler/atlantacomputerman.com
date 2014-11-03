@@ -1,0 +1,32 @@
+form#[object HTMLInputElement].create-user(novalidate='')
+  .form-group
+    input(type='hidden', name='id', value='')
+    .col-sm-6
+      label.sr-only First Name
+      input.form-control(placeholder='First Name', name='first', type='text', required='')
+    .col-sm-6
+      label.sr-only Last Name
+      input.form-control(placeholder='Last Name', name='last', type='text', required='')
+  .form-group
+    .col-sm-12
+      label.sr-only Email Address
+      .inner-addon.left-addon
+        input.form-control(placeholder='Email Address', name='email', type='email', required='')
+        i.fa.fa-envelope
+  .form-group
+    .col-sm-12
+      label.sr-only Phone Number
+      .inner-addon.left-addon
+        input.phone-input.form-control(placeholder='Phone Number', name='phone', type='text', pattern='\d*', required='')
+        i.fa.fa-phone
+  table.button-area-table
+    tbody
+      tr
+        td
+          .alert.alert-danger(role='alert')
+            span.fa.fa-ban
+            | Please fill in all fields
+        td
+          .button-area
+            button.btn.cancel-btn.btn-default Cancel
+            button.btn.create-btn.btn-primary(type='submit') Save

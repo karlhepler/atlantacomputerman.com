@@ -1,0 +1,37 @@
+li
+  button.close(type='button')
+    span.glyphicon.glyphicon-remove
+    span.sr-only Delete
+  .computer-type
+    img.img-responsive(src='/images/desktop.png', alt='Desktop Computer')
+    select.form-control.form-factor
+      option(value='desktop') Desktop
+      option(value='laptop') Laptop
+  fieldset
+    h3 Who uses this computer?
+    ul.user-list
+    button.add-user.btn.btn-default Add User
+    hr
+    .left
+      .gb-data-computer
+        .input-group
+          span.input-group-btn
+            button.btn.btn-default.minus(type='button')
+              span.glyphicon.glyphicon-minus
+          input.gb-amount.form-control(type='text', maxlength='3', readonly='', value='0')
+          span.input-group-btn
+            button.btn.btn-default.plus(type='button')
+              span.glyphicon.glyphicon-plus
+        // /input-group
+        label.control-label
+          small GB
+          | OF FILES
+    .right
+      .invincibility.checkbox
+        label
+          input(type='checkbox', value='invincibility')
+          | Invincibility!
+      .web-filtering.checkbox
+        label
+          input(type='checkbox', value='web-filtering')
+          | Web Protect

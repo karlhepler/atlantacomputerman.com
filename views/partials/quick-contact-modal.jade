@@ -1,0 +1,33 @@
+#quick-contact-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='quick-contact-modalLabel', aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal')
+          span(aria-hidden='true') ×
+          span.sr-only Close
+        h1#quick-contact-modalLabel.modal-title How may we help you?
+      // START CONTACT FORM
+      form.form-horizontal.quick-contact(novalidate='', action='#', method='post')
+        .modal-body
+          fieldset
+            .form-group
+              .col-xs-12
+                label.sr-only(for='comment') What's going on?
+                textarea#comment.form-control.required(placeholder='What"s going on?', name='comment', cols='10', rows='3', required='')
+            .form-group
+              .col-sm-6
+                label.sr-only(for='name') Your Name
+                .inner-addon.left-addon
+                  input#name.form-control(placeholder='Your Name', name='name', type='text', required='')
+                  i.fa.fa-user
+              .col-sm-6
+                label.sr-only(for='email') Email Address
+                .inner-addon.left-addon
+                  input#email.form-control(placeholder='Email Address', name='email', type='email', required='')
+                  i.fa.fa-envelope
+        .modal-footer
+          p
+            | We will send you an email confirmation immediately & contact you within 24 hours.
+          button.btn.btn-default(type='button', data-dismiss='modal') Cancel
+          button.btn.btn-primary(type='submit') Submit
+      // END CONTACT FORM
