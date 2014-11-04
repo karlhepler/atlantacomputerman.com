@@ -2,8 +2,7 @@ a.price-table {
   color: inherit;
   background-color: white;
   .box-shadow(0 0 5px @lightest-grey);
-  margin-top: 80px;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   .border-bottom-radius(5px);
   .transition(all 0.2s ease-out);
   
@@ -19,6 +18,8 @@ a.price-table {
   text-align: center;
 
   &.callout {
+    margin-top: 90px;
+
   	h2.title {
 			.border-top-radius(0);
 			background-color: @green;
@@ -117,4 +118,21 @@ a.price-table {
       font-size: 1.2em;
     }
   }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+  a.price-table {
+    margin-top: 80px;
+    margin-bottom: 0;
+
+    &.callout {
+      margin-top: 80px;
+
+      &:hover {
+        margin-top: 70px;
+        margin-bottom: 10px;
+      }
+    }
+  }  
 }
