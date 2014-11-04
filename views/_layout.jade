@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    
+    //- Title
+    title #{title} | Atlanta Computerman! Your Family's Friendly Neighborhood I.T. & Computer Support Guardian.
+    
+    //- Main Stylesheet
+    link(href="/stylesheets/style.css", rel="stylesheet")
+    
+  body
+    
+    header
+        .container
+            include _header
+
+    main
+        .container
+            //- This is the Computerman portion of the logo
+            img#computerman(src="/images/computerman.png", alt="Computerman", width="569", height="129", data-spy="affix", data-offset-top="91")
+            
+            //- Main block
+            block main
+
+        footer
+            .container
+                include _footer
+    
+    //- Main javascript file
+    script(src="/vendor/jquery/dist/jquery.min.js")
+    script(src="/vendor/bootstrap/js//affix.js")
+    script(data-main="/javascripts/main.js", src="/vendor/require/build/require.min.js")

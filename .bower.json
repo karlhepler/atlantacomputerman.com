@@ -4,10 +4,9 @@
 	"dependencies": {
 		"jquery": null,
 		"bootstrap": null,
-		"slabText": null,
-		"skrollr": null,
 		"jquery.payment": null,
 		"fontawesome": null,
-		"marionette": null
+		"marionette": null,
+		"require": null
 	}
 }
