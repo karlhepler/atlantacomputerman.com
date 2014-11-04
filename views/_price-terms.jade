@@ -1,0 +1,13 @@
+mixin price-terms(price, period, unit)
+	h4.price-terms
+		.left
+			.price.bigtext
+				span.slabtext= price
+		.right
+			.slash.bigtext
+				span.slabtext /
+			.terms
+				.period.bigtext
+					span.slabtext= period
+				.unit.bigtext
+					span.slabtext= unit

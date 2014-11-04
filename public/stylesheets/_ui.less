@@ -1,8 +1,72 @@
 .button {
 	.btn;
 	.btn-default;
+
+	.font-comic;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 0;
+	background-color: @yellow;
+	color: @red;
+	.transition(all 0.2s ease-out);
+	letter-spacing: 0.1em;
+	font-size: 1.8em;
+	position: relative;
+	z-index: 1;
+
+	&:hover {
+		background-color: @red;
+		color: @yellow;
+	}
+
+	.fa {
+		margin-left: 0.5em;
+	}
 }
+
 .bigtext {
 	text-transform: uppercase;
 	font-weight: bold;
+}
+
+h4.price-terms {
+	.font-price;
+	color: @blue;
+	position: relative;
+	.clearfix;
+	padding: 0 0.5em;
+	margin: 0.5em 0;
+
+	.left {
+		width: 70%;
+
+		.price {
+			font-size: 10em;
+			margin: 0;
+			padding: 0;
+		}
+	}
+	.right {
+		position: absolute;
+		width: 30%;
+		right: 0;
+		bottom: 0.5em;
+		
+		.slash {
+			width: 24%;
+			float: left;
+		}
+		.terms {
+			width: 76%;
+			float: left;
+
+			.period, .unit {
+				width: 100%;
+			}
+			.unit {
+				border-top: 2px solid;
+				padding-top: 2px;
+			}
+		}
+	}
 }

@@ -1,0 +1,104 @@
+.product-box {
+	text-transform: uppercase;
+	margin: 5em 0 0 0;
+	border: 10px solid @dark-grey;
+	padding: 20px;
+	background: white;
+	.clearfix;
+	position: relative;
+
+	.button {
+		float: right;
+		margin-top: 1em;
+	}
+
+	.title {
+		.font-comic;
+		font-size: 5em;
+		border-bottom: 5px solid @dark-grey;
+		margin-bottom: 0.3em;
+		width: 70%;
+	}	
+	.left {
+		float: left;
+		width: 45%;
+		margin: 0;
+		
+		.features {
+			.font-impact;
+			color: @light-purple;
+			font-size: 0.8em; // X-SMALL ONLY
+
+			.slabtext {
+				line-height: 1;
+			}
+		}
+	}
+	.right {
+		float: left;
+		width: 55%;
+		margin: 0;
+		.clearfix;
+	}
+	.pow {
+		position: absolute;
+		width: 40%;
+		top: -5em;
+		right: -10%;
+		z-index: 1;
+
+		img {
+			height: 100%;
+			width: 100%;
+		}
+		.deal {
+			position: absolute;	
+			width: 53%;
+			top: 30%;
+			left: 22%;
+			height: 40%;
+			.rotate(-15deg);
+			-webkit-transform: rotate(-15deg);
+			text-align: center;
+			color: @red;
+			font-weight: bold;
+			font-size: 0.5em; // X-SMALL ONLY
+		}
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {	
+	.product-box {
+		.left .features {
+			font-size: 1.3em;
+		}
+		.pow .deal {
+			font-size: 0.68em;
+		}
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+	.product-box {
+		.left .features {
+			font-size: 1.8em;
+		}
+		.pow .deal {
+			font-size: 0.95em;
+		}
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+	.product-box {
+		.left .features {
+			font-size: 2.1em;
+		}
+		.pow .deal {
+			font-size: 1.15em;
+		}
+	}
+}

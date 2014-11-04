@@ -3,93 +3,36 @@
 	position: relative;
 	width: 100%;
 	height: auto;
-	padding: 20px;
+	padding: 15px 15px 0 15px;
 	background: #FFFFFF;
 	border: @dark-grey solid 5px;
-
-	.button-area {
-		float: right;
-		width: 60%;
-		margin-top: 1em;
-		margin-right: 20px;
-
-		.learn-more {
-			display: inline-block;
-			border: none;
-			padding: 0;
-			
-			&:hover {
-				text-decoration: none;				
-			}
-
-			.slabtext {
-				background: @yellow;
-				padding: 5%;
-				.font-comic;
-				letter-spacing: 0.1em !important;
-				color: @red;
-				.transition(all 0.2s ease-out);
-
-				&:hover {
-					color: @yellow;
-					background: @red;
-				}
-			}			
-		}
-		
-		button {
-			background: @yellow;
-			.font-comic;
-			letter-spacing: 0.1em !important;
-			color: @red;
-			.transition(all 0.2s ease-out);
-			padding: 0.4em !important;
-			float: right  !important;
-			margin-right: -20px !important;
-
-			&:hover {
-				color: @yellow;
-				background: @red;
-			}
-		}		
+	
+	.tagline {
+		.font-handwritten;
+		font-size: 1.5em;		
 	}
-
-	p {
-		// .font-handwritten;
-		// font-size: 1.5em;
-		// text-transform: uppercase;
-		// margin: 0;
-		// line-height: 1;
-		// small {
-		// 	font-weight: normal;
-		// 	font-family: sans-serif;
-		// 	text-transform: none;
-		// 	font-size: 14px;
-		// 	display: block;
-		// 	line-height: 1.3;
-		// 	font-style: italic;
-		// }
-	}
-
-	.facebook-holder {
-		float: right;
-		.facebook-link {
-			float: left;
-			margin-right: 1em;
-		}
-		.facebook-likes {
-
-		}
-	}
-
-	.tagline-box {
-		border-top: 3px solid @lightest-grey;
+	.desc {
+		font-style: italic;
+		border-top: 2px solid @lightest-grey;
 		margin-top: 1em;
 		padding-top: 1em;
+		padding-bottom: 15px
+	}
 
-		.button-area {
-			width: 100%;
+	.facebook {
+		.row > div {
+			text-align: center;
+			margin-bottom: 15px;
+
+			.facebook-link span {
+				margin-left: auto;
+				margin-right: auto;
+			}
 		}
+	}
+
+	.button {
+		margin-top: 40px;
 	}
 
 	&:before {

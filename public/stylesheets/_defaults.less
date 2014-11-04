@@ -1,13 +1,39 @@
 img {
 	.img-responsive;
 }
+
 form {
 	.form-horizontal;
 
 	input, textarea {
 		.form-control;
-	}
-	textarea {
+		.font-handwritten;
+		font-size: 1.5em;
+		color: black;
+		padding: 0.5em;
+		border: 3px solid;
+		border-radius: 0;
+		.box-shadow(none);
 		height: inherit;
+	}
+
+	p.info {
+		font-style: italic;
+		font-weight: bold;
+		color: @blue;
+	}
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+}
+
+a {
+	color: @red;
+	.transition(color 0.2s ease-out);
+	
+	&:hover {
+		color: lighten(@red, 10%);
+		text-decoration: none;
 	}
 }

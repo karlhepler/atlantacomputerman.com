@@ -8,38 +8,40 @@ block content
 	//- Contains pic of me and the hello
 	section
 		.col-sm-5
-			img(src="/images/karl.png", alt="Karl Hepler, Owner")
-			.owner-name Karl Hepler
-				small Owner
+			.owner
+				img(src="/images/karl.png", alt="Karl Hepler, Owner")
+				h2.owner-name Karl Hepler
+					small Owner
 
 		.col-sm-7
 			.row
 				.col-xs-12
 					.bubble
 						.row
-							.col-sm-6.col-md-7.col-lg-8
-								.tagline.bigtext You'll never have to worry about computer repair or tech support again!
-							.col-sm-6.col-md-5.col-lg-4
+							.col-md-7.col-lg-8
+								h1.tagline.bigtext You'll never have to worry about computer repair or tech support again!
+								p.desc We're a local Atlanta business dedicated to bringing enterprise-level computer support to you and your family. We provide unlimited support, repair, and maintenance for your computer, software, and data. So sit back and and relax - we've got you and your family covered!								
+							.col-md-5.col-lg-4
 								.facebook
-									//- Facebook button
-									a.facebook-link(alt="Atlanta Computerman on Facebook", href="https://www.facebook.com/AtlantaComputerman", target="_blank")
-										span.social-icon.facebook
-									//- Facebook like box
-									fb:like.facebook-likes(href="https://www.facebook.com/AtlantaComputerman", width="50", layout="box_count", action="like", show_faces="false", share="true")
-						.row
-							.col-xs-8
-								p.desc We're a local Atlanta business dedicated to bringing enterprise-level computer support to you and your family. We provide unlimited support, repair, and maintenance for your computer, software, and data. So sit back and and relax - we've got you and your family covered!
-							.col-xs-4
-								a.button(href="/explanation-of-our-services") Learn More
-									i.fa.fa-chevron-right
+									.row
+										.col-xs-6.col-sm-2.col-md-5
+											//- Facebook like box
+											fb:like.facebook-likes(href="https://www.facebook.com/AtlantaComputerman", width="50", layout="box_count", action="like", show_faces="false", share="true")
+										.col-xs-6.col-sm-3.col-md-7
+											//- Facebook button
+											a.facebook-link(alt="Atlanta Computerman on Facebook", href="https://www.facebook.com/AtlantaComputerman", target="_blank")
+												span.social-icon.facebook
+										.col-xs-12.col-sm-7.col-md-12
+											a.button(href="/explanation-of-our-services") Learn More
+												i.fa.fa-chevron-right
 			.row
 				.col-xs-12
 					//- PC Invincibility
-					+product-box('PC Invincibility', '$19', '/services', "Computer virus? Never again, guaranteed!", 'No need for anti-virus! Your computer will be invincible!')
+					+product-box('PC Invincibility', '$19', 'month', 'computer', '/services', "Computer virus? Never again, guaranteed!", 'No need for anti-virus! Your computer will be invincible!')
 	section
 		.col-sm-7
 			//- PC Guardian
-			+product-box('PC Guardian', '$29', '/services', 'Unlimited remote support & anti-virus!', '10% discount for students, seniors, & veterans!')
+			+product-box('PC Guardian', '$29', 'month', 'computer', '/services', 'Unlimited remote support & anti-virus!', '10% discount for students, seniors, & veterans!')
 		.col-sm-5.hidden-xs
 			img.img-thumbnail(src="/images/stock/woman.jpg")
 	section
@@ -47,7 +49,7 @@ block content
 			img.img-thumbnail(src="/images/stock/family.jpg")
 		.col-sm-7
 			//- Family Guardian
-			+product-box('Family Guardian', '$99', '/services/families', 'Unlimited remote support, anti-virus, & web filtering!', 'The best value for families! Support up to 4 computers!')
+			+product-box('Family Guardian', '$99', 'month', '4 computers', '/services/families', 'Unlimited remote support, anti-virus, & web filtering!', 'Support up to 4 computers! The best value for families!')
 	section
 		.col-sm-7
 			include _contact-box

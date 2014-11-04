@@ -1,0 +1,56 @@
+#page-home {
+	
+	img.img-thumbnail {
+		margin-top: 5em;
+	}
+
+	.owner {
+		position: absolute;
+		width: 90%;
+
+		img {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		h2.owner-name {
+			display: none;
+			text-align: center;
+			border: 3px solid;
+			background-color: white;
+			.font-handwritten;
+			font-weight: bold;
+			padding: 1em;
+			text-transform: uppercase;
+			font-size: 2.2em;
+
+			small {
+				display: block;
+				.font-default;
+			}
+
+			margin-bottom: 1em;
+		}
+	}
+
+	.bubble {
+		margin-top: 250px;
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {	
+	#page-home {
+		.owner {
+			width: 100%;
+			position: relative;
+
+			h2.owner-name {
+				display: block;
+			}
+		}
+		.bubble {
+			margin-top: 0;
+		}
+	}
+}

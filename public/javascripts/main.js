@@ -26,7 +26,7 @@ require.config({
 
 
 // Require what it needs, then start the app!
-require(['app', 'backbone', '_router', '_controller', '_vent'], function(app, Backbone, Router, Controller, vent) {
+require(['app', 'backbone', '_router', '_controller', '_vent', 'WebFont'], function(app, Backbone, Router, Controller, vent) {
   'use strict';
 
   // Start the app

@@ -1,19 +1,17 @@
-mixin product-box(title, price, link, features, deal)
+include _price-terms
+
+mixin product-box(title, price, period, unit, link, features, deal)
 	.product-box
-		.title.bigtext= title
+		h1.title.bigtext
+			span.slabtext= title
 		.content
 			.left
-				.features.bigtext= features
+				h2.features.bigtext= features
 			.right
-				.price-terms
-					.price= price
-					.terms
-						.slash /
-						.terms
-							.period month
-							.unit computer
-				a.button(href="#{link}") Learn More
-					i.fa.fa-chevron-right
+				+price-terms(price, period, unit)
+
+			a.button(href="#{link}") Learn More
+				i.fa.fa-chevron-right
 		.pow
 			img(src="/images/pow.png")
-			.deal.bigtext= deal
+			h3.deal= deal
