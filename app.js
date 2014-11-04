@@ -30,6 +30,17 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+app.get('/contact-us', routes.contactUs);
+app.get('/terms-of-service', routes.termsOfService);
+app.get('/privacy-statement', routes.privacyStatement);
+app.get('/onsite-cost-calculator', routes.onsiteCostCalculator);
+app.get('/services', routes.services);
+app.get('/services/families', routes.servicesFamilies);
+app.get('/services/students', routes.servicesStudents);
+app.get('/services/seniors', routes.servicesSeniors);
+app.get('/our-story', routes.ourStory);
+app.get('/sign-up', routes.signUp);
+app.get('/explanation-of-our-services', routes.explanationOfOurServices);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

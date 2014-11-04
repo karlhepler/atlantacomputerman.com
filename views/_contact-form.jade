@@ -1,0 +1,25 @@
+form.contact-form(novalidate)
+  fieldset
+    .form-group
+      .col-xs-12
+        textarea(placeholder="How may we help you?", name="message", rows="3", required)
+    .form-group
+      .col-sm-6
+        label.sr-only First Name
+        input(type="text", placeholder="First Name", name="fname", required)
+      .col-sm-6
+        label.sr-only Last Name
+        input(type="text", placeholder="Last Name", name="lname", required)
+    .form-group
+      .col-sm-6
+        label.sr-only Email Address
+        input(type="text", placeholder="Email Address", name="email", required)
+      .col-sm-6
+        label.sr-only Phone Number
+        input(type="text", placeholder="Phone Number", name="phone", required)
+    .form-group
+      .col-sm-6
+        .info We will send you an email confirmation immediately & contact you within 24 hours.
+      .col-sm-6
+        button.button Contact Us
+          i.fa.fa-chevron-right

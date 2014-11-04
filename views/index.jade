@@ -18,7 +18,7 @@ block content
 					.bubble
 						.row
 							.col-sm-6.col-md-7.col-lg-8
-								.tagline You'll never have to worry about computer repair or tech support again!
+								.tagline.bigtext You'll never have to worry about computer repair or tech support again!
 							.col-sm-6.col-md-5.col-lg-4
 								.facebook
 									//- Facebook button
@@ -28,7 +28,7 @@ block content
 									fb:like.facebook-likes(href="https://www.facebook.com/AtlantaComputerman", width="50", layout="box_count", action="like", show_faces="false", share="true")
 						.row
 							.col-xs-8
-								.desc We're a local Atlanta business dedicated to bringing enterprise-level computer support to you and your family. We provide unlimited support, repair, and maintenance for your computer, software, and data. So sit back and and relax - we've got you and your family covered!
+								p.desc We're a local Atlanta business dedicated to bringing enterprise-level computer support to you and your family. We provide unlimited support, repair, and maintenance for your computer, software, and data. So sit back and and relax - we've got you and your family covered!
 							.col-xs-4
 								a.button(href="/explanation-of-our-services") Learn More
 									i.fa.fa-chevron-right
@@ -41,15 +41,15 @@ block content
 			//- PC Guardian
 			+product-box('PC Guardian', '$29', '/services', 'Unlimited remote support & anti-virus!', '10% discount for students, seniors, & veterans!')
 		.col-sm-5.hidden-xs
-			.big-left-arrow
+			img.img-thumbnail(src="/images/stock/woman.jpg")
 	section
 		.col-sm-5.hidden-xs
-			.big-right-arrow
+			img.img-thumbnail(src="/images/stock/family.jpg")
 		.col-sm-7
 			//- Family Guardian
 			+product-box('Family Guardian', '$99', '/services/families', 'Unlimited remote support, anti-virus, & web filtering!', 'The best value for families! Support up to 4 computers!')
 	section
 		.col-sm-7
-			include _contact-form
+			include _contact-box
 		.col-sm-5.hidden-xs
-			.big-left-arrow
+			img.img-thumbnail(src="/images/stock/dog.jpg")
