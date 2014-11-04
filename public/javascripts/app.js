@@ -1,13 +1,10 @@
 define(['marionette', 
-				'_vent',				
-
-				// Globals -----
-				'bootstrap',
-				'WebFont',
-				'slabText'
+				'_vent',
+				'init'
 				],
 function(Marionette,
-				 vent
+				 vent,
+				 init
 				 ) { 'use strict';
 
 	// Declare the new Marionette application
@@ -15,39 +12,15 @@ function(Marionette,
 
 	// Set up regions
 	app.addRegions({
-		content: '#content'
+		content: '#content>section'
 	});
 
 	app.addInitializer(function() {
-		// Load web fonts!
-		WebFont.load({
-	    google: {
-	      families: ['Swanky and Moo Moo', 'Bangers',
-	                'Oswald:700', 'Voltaire',
-	                'Open Sans:400,600']
-	    },
-	    active: function() {
-	     $('.bigtext').slabText({ viewpointBreakpoint: '768', fontRatio: '0.7' });
-	    }
-	  });
-
-		// Setup affix -------------------------
-	  $('#computerman-div').affix({
-	  	offset: {
-	  		top: 91
-	  	}
-	  });
-	  $('nav.navbar.navbar-default').affix({
-	  	offset: {
-	  		top: 220
-	  	}
-	  });
-
+		init();
 	});
 
 	// -------------------------------------------------
-	// I want to load a month at a time into the collection
-
+	// SIGN UP!!!!!
 	vent.on('nav:sign-up', function() {
 		console.log('SIGN UP!');
 	});
