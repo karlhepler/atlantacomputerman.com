@@ -39,28 +39,12 @@ require(['app', 'backbone', '_router', '_controller', '_vent', 'WebFont'], funct
 
   // Start recording history
   Backbone.history.start({
-    // pushState: true
+    pushState: true
   });
 
 
   // UPDATE THE URL WHEN A NAVIGATION EVENT IS TRIGGERED
-  vent.on('nav:default', function() {
-    router.navigate('');
+  vent.on('nav:sign-up', function() {
+    router.navigate('sign-up');
   });
 });
-
-// JQUERY DOCUMENT READY --------------
-// $(function() {
-
-//  WebFont.load({
-//     google: {
-//       families: ['Swanky and Moo Moo', 'Bangers',
-//                 'Oswald:700, Voltaire',
-//                 'Open Sans:400,600']
-//     },
-//     active: function() {
-//      $('.bigtext').slabText({ viewpointBreakpoint: '380', fontRatio: '1.5' });
-//     }
-//   });
-
-// });

@@ -48,8 +48,8 @@ function(Marionette,
 	// -------------------------------------------------
 	// I want to load a month at a time into the collection
 
-	vent.on('nav:default', function() {
-		console.log('HELLO!');
+	vent.on('nav:sign-up', function() {
+		console.log('SIGN UP!');
 	});
 
 	// FINALLY... RETURN THE APP!!!!
