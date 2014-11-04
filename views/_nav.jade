@@ -1,0 +1,33 @@
+nav.navbar.navbar-default(role="navigation", data-spy="affix", data-offset-top="220")
+  .container
+    //- Brand and toggle get grouped for better mobile display
+    .navbar-header
+      button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1")
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href="/")
+        img(src="/images/logo.png", width="32px", height="32px", alt="Atlanta Computerman")
+      p.small-phone-num.navbar-text.visible-xs
+        a(href="tel:7705746200") (770) 574-6200
+    
+    //- Collect the nav links, forms, and other content for toggling
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li
+          a(href="/") Home
+        li
+          a(href="/services") Services
+        p.navbar-text.hidden-sm.fa.fa-chevron-right
+        li
+          a(href="/services/families") Families
+        li
+          a(href="/services/students") Students
+        li
+          a(href="/services/seniors") Seniors        
+      
+      //- NAVBAR RIGHT
+      ul.nav.navbar-nav.navbar-right
+        li
+          a(href="/contact-us") Contact Us

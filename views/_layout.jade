@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang="en", xmlns:fb="http://ogp.me/ns/fb#")
   head
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
@@ -12,19 +12,32 @@ html(lang="en")
     link(href="/stylesheets/style.css", rel="stylesheet")
     
   body
+    //- Facebook header
+    #fb-root
+    script (function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=296712177088798&version=v2.0";fjs.parentNode.insertBefore(js, fjs);}(document,'script','facebook-jssdk'));
     
+    //- Page header
     header
         .container
             include _header
 
+    //- The main area
     main
-        .container
-            //- This is the Computerman portion of the logo
-            img#computerman(src="/images/computerman.png", alt="Computerman", width="569", height="129", data-spy="affix", data-offset-top="91")
-            
-            //- Main block
-            block main
-
+        //- The fanciness of the logo
+        #computerman-div(data-spy="affix", data-offset-top="91")
+            .container
+                section
+                    .col-sm-8
+                        img#computerman(src="/images/computerman.png", width="569", height="129", alt="Computerman")
+        
+        //- Include the navigation
+        include _nav
+        
+        //- Here's the content block!
+        #content
+            block content            
+        
+        //- Finally - the footer!
         footer
             .container
                 include _footer

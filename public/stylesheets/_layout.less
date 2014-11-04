@@ -21,30 +21,29 @@ header {
 }
 main {
 	margin-top: @header-height;
-	background-color: white;
-	position: relative;
+	background: white url(/images/bg.png) repeat;
 	z-index: 1;
+	position: relative;
 
-	.container {
-		background-color: white;
+	img#computerman {
+		margin-top: -129px;
 	}
+	div#computerman-div {
+		height: 0;
 
-	.affix-top {
-		position: absolute;
-		top: -129px;
+		&.affix {
+			top: 0;
+			z-index: -1;
+			width: 100%;
+			img#computerman {
+				margin-top: 0;
+			}
+		}
+	}	
+	
+	#content {
+		.container;
+		background: white url(/images/bg.png) repeat;
+		padding-top: 70px;
 	}
-	.affix {
-		position: fixed;
-		top: 0;
-		z-index: -1;
-	}
-
-	footer {
-		
-	}
-}
-
-// General settings
-img {
-	.img-responsive;
 }

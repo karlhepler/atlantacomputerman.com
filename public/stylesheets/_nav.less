@@ -1,0 +1,67 @@
+nav.navbar.navbar-default {
+	border: none;
+	border-radius: 0;
+	background-color: @yellow;
+	font-size: 1.2em;
+	line-height: 1.2;
+	text-transform: uppercase;
+	font-style: italic;
+	font-weight: 600;
+	margin-bottom: 0;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+
+	&.affix {
+		position: fixed;
+		top: 0;
+	}
+
+	.navbar-brand { padding-top: 10px; }
+
+	ul.nav.navbar-nav {
+		p.navbar-text {
+			color: @red;
+			font-size: 1.8em;
+			line-height: 0.7;
+			font-weight: normal;
+		}
+		li {
+			a {
+				color: @red;
+				.transition(all 0.2s ease-out);
+
+				&:hover {
+					color: @yellow;
+					background-color: @red;
+				}
+			}
+			&.active a {
+				color: @yellow;
+				background-color: @red;
+			}
+		}
+	}
+
+	.navbar-toggle {
+		border-color: @red;
+
+		.icon-bar {
+			background-color: @red;
+		}
+
+		&:hover, &:focus {
+			background-color: @red;
+
+			.icon-bar {
+				background-color: @yellow;
+			}
+		}
+	}
+
+	.navbar-collapse, .navbar-form {
+		border-color: @red;
+	}
+}
