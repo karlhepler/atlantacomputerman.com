@@ -1,5 +1,16 @@
 extends _layout
 
+include _price-table
+
 //- Start
 block content
 	section
+		.col-md-4
+			+price-table('PC Invincibility', false, 0, false, '$19', 'month', 'computer', 'No need for anti-virus!', '/sign-up')
+				li Renew-on-restart
+		.col-md-4
+			+price-table('PC Guardian', true, 0, false, '$29', 'month', 'computer', "It's like having your own professional I.T. Department!", '/sign-up')
+				li Enterprise-level antivirus
+		.col-md-4
+			+price-table('Family Guardian', false, 0, true, '$99', 'month', '4 computers', "Protect your family & filter the web!", '/sign-up')
+				li Enterprise-level antivirus

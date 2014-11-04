@@ -1,0 +1,51 @@
+include _price-terms
+
+mixin price-table(title, callout, gb, webprotect, price, period, unit, tagline, link)
+	if callout == true
+		a.price-table.callout(href="#{link}")
+			h2.bigtext.title
+				span.slabtext= title
+			if gb > 0
+				h3.datasaver
+					span.fa.fa-cloud-upload
+					| DATASAVER
+					small #{gb}GB AUTOMATIC Online Backup
+			if webprotect == true
+				h3.web-protect
+					span.fa.fa-globe
+					| WEB PROTECT
+					small Custom Web Content Filtering Per Computer
+			+price-terms(price, period, unit)
+			p.tagline= tagline
+			ul
+				li Complete Computer Cleanup
+				li Unlimited Remote Support
+				li Free Hardware Installation
+				block
+	else
+		a.price-table(href="#{link}")
+			h2.bigtext.title
+				span.slabtext= title
+			if gb > 0
+				h3.datasaver
+					span.fa.fa-cloud-upload
+					| DATASAVER
+					small #{gb}GB AUTOMATIC Online Backup
+			if webprotect == true
+				h3.web-protect
+					span.fa.fa-globe
+					| WEB PROTECT
+					small Custom Web Content Filtering Per Computer
+			+price-terms(price, period, unit)
+			p.tagline= tagline
+			ul
+				li Complete Computer Cleanup
+				li Unlimited Remote Support
+				li Free Hardware Installation
+				block
+
+
+
+
+<h6 class="datasaver"><span class="fa fa-cloud-upload"></span>DATASAVER<small>50GB AUTOMATIC Online Backup</small></h6>
+<h6 class="web-protect"><span class="fa fa-globe"></span>WEB PROTECT<small>Custom Web content filtering per computer</small></h6>
