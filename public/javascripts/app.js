@@ -1,10 +1,12 @@
 define(['marionette', 
 				'_vent',
-				'init'
+				'init',
+				'_views/layout/signup'
 				],
 function(Marionette,
 				 vent,
-				 init
+				 init,
+				 SignupLayout
 				 ) { 'use strict';
 
 	// Declare the new Marionette application
@@ -12,7 +14,7 @@ function(Marionette,
 
 	// Set up regions
 	app.addRegions({
-		content: '#content>section'
+		content: '#content'
 	});
 
 	app.addInitializer(function() {
@@ -22,7 +24,8 @@ function(Marionette,
 	// -------------------------------------------------
 	// SIGN UP!!!!!
 	vent.on('nav:sign-up', function() {
-		console.log('SIGN UP!');
+		var signupLayout = new SignupLayout();
+		app.content.show( signupLayout );
 	});
 
 	// FINALLY... RETURN THE APP!!!!

@@ -2,7 +2,7 @@ define(['bootstrap',
         'WebFont',
         'slabText'
         ],
-function() { 'use-strict';
+function() { 'use strict';
   return function() {
 
     // Load web fonts! ---------------------
