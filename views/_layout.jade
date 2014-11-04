@@ -6,7 +6,10 @@ html(lang="en", xmlns:fb="http://ogp.me/ns/fb#")
     meta(name="viewport", content="width=device-width, initial-scale=1")
     
     //- Title
-    title #{title} | Atlanta Computerman! Your Family's Friendly Neighborhood I.T. & Computer Support Guardian.
+    if title == 'Home'
+        title Atlanta Computerman! Your Family's Friendly Neighborhood I.T. & Computer Support Guardian.
+    else
+        title #{title} | Atlanta Computerman! Your Family's Friendly Neighborhood I.T. & Computer Support Guardian.
     
     //- Main Stylesheet
     link(href="/stylesheets/style.css", rel="stylesheet")
