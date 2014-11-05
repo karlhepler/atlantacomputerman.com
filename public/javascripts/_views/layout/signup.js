@@ -1,5 +1,5 @@
-define(['marionette', '_vent'],
-function(Marionette, vent, ComputersView) { 'use strict';
+define(['marionette', '_vent', 'iCheck'],
+function(Marionette, vent) { 'use strict';
 	return Backbone.Marionette.LayoutView.extend({
 
 		tagName: 'section',
@@ -13,6 +13,11 @@ function(Marionette, vent, ComputersView) { 'use strict';
 
 		onShow: function() {
 			console.log('Signup Layout View');
+
+			$('input[name="num-computers"]').iCheck({
+				checkboxClass: 'icheckbox_flat-blue',
+		    radioClass: 'iradio_flat-blue'
+			});			
 		}
 
 	});

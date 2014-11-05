@@ -11,7 +11,8 @@ require.config({
 
     'WebFont':              '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont',
     'slabText':             '/vendor/slabText/js/jquery.slabtext.min',
-    'flowType':             '/vendor/FlowType.JS/flowtype.js'
+    'flowType':             '/vendor/FlowType.JS/flowtype.js',
+    'iCheck':               '/vendor/iCheck/icheck.min'
   },
   shim: {
     bootstrap: {
@@ -27,6 +28,10 @@ require.config({
     marionette: {
       deps: ['jquery', 'underscore', 'backbone'],
       exports: 'Marionette'
+    },
+    iCheck: {
+      deps: ['jquery'],
+      exports: 'iCheck'
     }
   }
 });
