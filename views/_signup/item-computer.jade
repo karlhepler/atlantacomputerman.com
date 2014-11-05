@@ -1,32 +1,9 @@
-button.close(type="button")
-  span.fa.fa-remove
-  span.sr-only Delete
-.computer-type
-  img.img-responsive(src="/images/computer.png")
-fieldset
-  h3 Who uses this computer?
-  ul.user-list
-  button.button.add-user Add User
-  hr
-  .left
-    .gb-data-computer
-      .input-group
-        span.input-group-btn
-          button.btn.btn-default.minus(type="button")
-            span.fa.fa-minus
-        input.gb-amount.form-control(type="text", maxlength="3", readonly)
-        span.input-group-btn
-          button.btn.btn-default.plus(type="button")
-            span.fa.fa-plus
-      label.control-label
-        small GB
-        | OF FILES
-  .right
-    .invincibility.checkbox
-      label
-        input(type="checkbox", value="invincibility")
-        | Invincibility!
-    .web-filtering.checkbox
-      label
-        input(type="checkbox", value="web-filtering")
-        | Web Protect
+.col-sm-3
+  img(src="/images/computer.png")
+.col-sm-3
+  button.btn.btn-default
+    i.fa.fa-square-o
+    | &nbsp;INVINCIBILITY
+  button.btn.btn-default
+    i.fa.fa-square-o
+    | &nbsp;WEB PROTECT

@@ -4,6 +4,8 @@ function(Marionette, vent) { 'use strict';
 
 		tagName: 'li',
 
+		className: 'computer',
+
 		template: '#item-computer',
 
 		onShow: function() {

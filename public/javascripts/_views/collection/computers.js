@@ -4,7 +4,7 @@ function(Marionette, vent, Computers, ComputerView) { 'use strict';
 
 		tagName: 'ul',
 
-		className: 'computer-list',
+		id: 'computer-list',
 
 		childView: ComputerView,
 
