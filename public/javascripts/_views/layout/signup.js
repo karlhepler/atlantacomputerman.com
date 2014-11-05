@@ -1,6 +1,6 @@
 define(['marionette', '_vent'],
-function(Marionette, vent) { 'use strict';
-	return Marionette.LayoutView.extend({
+function(Marionette, vent, ComputersView) { 'use strict';
+	return Backbone.Marionette.LayoutView.extend({
 
 		tagName: 'section',
 
@@ -12,7 +12,7 @@ function(Marionette, vent) { 'use strict';
 		},
 
 		onShow: function() {
-
+			console.log('Signup Layout View');
 		}
 
 	});

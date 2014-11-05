@@ -14,11 +14,19 @@ require.config({
     'flowType':             '/vendor/FlowType.JS/flowtype.js'
   },
   shim: {
-    'bootstrap': {
+    bootstrap: {
       deps: ['jquery']
     },
-    'slabText': {
+    slabText: {
       deps: ['jquery']
+    },
+    backbone : {
+      deps : ['jquery', 'underscore'],
+      exports : 'Backbone'
+    },
+    marionette: {
+      deps: ['jquery', 'underscore', 'backbone'],
+      exports: 'Marionette'
     }
   }
 });
