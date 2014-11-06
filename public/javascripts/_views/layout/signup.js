@@ -1,4 +1,4 @@
-define(['marionette', '_vent', 'iCheck'],
+define(['marionette', '_vent', 'radiosToSlider'],
 function(Marionette, vent) { 'use strict';
 	return Backbone.Marionette.LayoutView.extend({
 
@@ -14,10 +14,7 @@ function(Marionette, vent) { 'use strict';
 		onShow: function() {
 			console.log('Signup Layout View');
 
-			$('input[name="num-computers"]').iCheck({
-				checkboxClass: 'icheckbox_flat-blue',
-		    radioClass: 'iradio_flat-blue'
-			});			
+			$('#num-computers').radiosToSlider();
 		}
 
 	});

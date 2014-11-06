@@ -1,7 +1,15 @@
-// Import for checkboxes
-@import '/vendor/iCheck/skins/line/blue.css';
-// Import for radios
-@import '/vendor/iCheck/skins/flat/blue.css';
+@import (less) '/javascripts/functions/radios-to-slider/radios-to-slider.css';
+@import (less) '/vendor/labelauty/source/jquery-labelauty.css';
+/* Add a background to (un)checked images */
+input.labelauty + label > span.labelauty-unchecked-image
+{
+	background-image: url( /vendor/labelauty/source/images/input-unchecked.png );
+}
+
+input.labelauty + label > span.labelauty-checked-image
+{
+	background-image: url( /vendor/labelauty/source/images/input-checked.png );
+}
 
 #page-sign-up {
 
@@ -38,6 +46,42 @@
 			padding: 15px 0;
 			.box-shadow(0 0 5px @lightest-grey);
 			border-radius: 5px;
+
+			img {
+				margin-bottom: 0.5em;
+				width: 50%;
+			}
+
+			.data-saver {
+				position: relative;
+				width: 100%;
+
+				input.data-saver-gb {
+					margin-top: 30px !important;
+				}
+
+				.bigtext {
+					position: absolute;
+					top: 80px;
+					text-align: center;
+					width: 50%;
+					left: 25%;
+				}
+
+				button {
+					position: absolute;
+					top: 55%;
+					padding: 8px !important;
+					border-radius: 0 !important;
+
+					&.minus {
+						left: 0;
+					}
+					&.plus {
+						right: 0;
+					}
+				}
+			}
 		}
 	}
 }

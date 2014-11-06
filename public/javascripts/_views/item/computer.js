@@ -1,4 +1,4 @@
-define(['marionette', '_vent'],
+define(['marionette', '_vent', 'labelauty', 'knob'],
 function(Marionette, vent) { 'use strict';
 	return Backbone.Marionette.ItemView.extend({
 
@@ -11,17 +11,15 @@ function(Marionette, vent) { 'use strict';
 		onShow: function() {
 			console.log('Computer Item View');
 
-			this.$el.find('input:checkbox').each(function() {
-				var self = $(this),
-			      label = self.next(),
-			      label_text = label.text();
+			this.$el.find(':checkbox').labelauty({
+				minimum_width: "100%"
+			});
 
-			    label.remove();
-			    self.iCheck({
-			      checkboxClass: 'icheckbox_line-blue',
-			      radioClass: 'iradio_line-blue',
-			      insert: '<div class="icheck_line-icon"></div>' + label_text
-			    });
+			this.$el.find('.data-saver-gb').knob({
+				step: 5,
+				width: '100%',
+				angleOffset: 270,
+				angleArc: 180
 			});
 		}
 

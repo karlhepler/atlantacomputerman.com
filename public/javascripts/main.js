@@ -12,7 +12,9 @@ require.config({
     'WebFont':              '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont',
     'slabText':             '/vendor/slabText/js/jquery.slabtext.min',
     'flowType':             '/vendor/FlowType.JS/flowtype.js',
-    'iCheck':               '/vendor/iCheck/icheck.min'
+    'radiosToSlider':       '/javascripts/functions/radios-to-slider/jquery.radios-to-slider',
+    'labelauty':            '/vendor/labelauty/source/jquery-labelauty',
+    'knob':                 '/vendor/jquery-knob/dist/jquery.knob.min'
   },
   shim: {
     bootstrap: {
@@ -29,9 +31,13 @@ require.config({
       deps: ['jquery', 'underscore', 'backbone'],
       exports: 'Marionette'
     },
-    iCheck: {
+    radiosToSlider: {
       deps: ['jquery'],
-      exports: 'iCheck'
+      exports: 'radiosToSlider'
+    },
+    labelauty: {
+      deps: ['jquery'],
+      exports: 'labelauty'
     }
   }
 });

@@ -1,7 +1,12 @@
 .col-sm-3
   img(src="/images/computer.png")
-.col-sm-3
-  input(type="checkbox")
-  label INVINCIBILITY
-  input(type="checkbox")
-  label WEB PROTECT
+  input(type="checkbox", data-labelauty="INVINCIBLE")
+  input(type="checkbox", data-labelauty="WEB PROTECT")
+.col-sm-3  
+  .data-saver
+    input.data-saver-gb(type="text", value="0")
+    div.bigtext GIGABYTES DOCUMENTS, PHOTOS, & MUSIC
+    button.minus.btn.btn-danger
+      span.fa.fa-minus
+    button.plus.btn.btn-success
+      span.fa.fa-plus  
