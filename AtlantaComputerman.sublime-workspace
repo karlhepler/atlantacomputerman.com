@@ -1,0 +1,1387 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"knob",
+				"KNOB_WIDTH"
+			],
+			[
+				"b",
+				"bearer"
+			],
+			[
+				"num",
+				"numOptions"
+			],
+			[
+				"radios",
+				"radios_to_slider"
+			],
+			[
+				"compue",
+				"computersView"
+			],
+			[
+				"computers",
+				"computersView"
+			],
+			[
+				"btn",
+				"btn-default"
+			],
+			[
+				"input-gro",
+				"input-group-btn"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"pos",
+				"pos-a	position: absolute;"
+			],
+			[
+				"boxs",
+				"box-shadow"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"backgc",
+				"background-color"
+			],
+			[
+				"background",
+				"background"
+			],
+			[
+				"backgrouc",
+				"background-color"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"bacc",
+				"background-color"
+			],
+			[
+				"headre",
+				"header-height"
+			],
+			[
+				"footer",
+				"footer-height"
+			],
+			[
+				"header",
+				"header-height"
+			],
+			[
+				"margin-o",
+				"margin-bottom"
+			],
+			[
+				"padding-",
+				"padding-left"
+			],
+			[
+				"fontfam",
+				"font-family-sans-serif"
+			],
+			[
+				"lighgre",
+				"light-grey"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"fontfa",
+				"font-family-sans-serif"
+			],
+			[
+				"computer-list-item",
+				"computer-list-item-select-user"
+			],
+			[
+				"numFa",
+				"numFamilyGuardian"
+			],
+			[
+				"numFamily",
+				"numFamilyGuardianWebProtect"
+			],
+			[
+				"familygu",
+				"family_guardian"
+			],
+			[
+				"numin",
+				"numInvincibileWebProtect"
+			],
+			[
+				"pc_g",
+				"pc_guardian"
+			],
+			[
+				"web_pr",
+				"web_protect"
+			],
+			[
+				"pri",
+				"pricing"
+			],
+			[
+				"numIn",
+				"numInvincibleWebProtect"
+			],
+			[
+				"numfam",
+				"numFamilyGuardianWebProtect"
+			],
+			[
+				"numf",
+				"numFamilyGuardianWebProtect"
+			],
+			[
+				"numfa",
+				"numFamilyGuardian"
+			],
+			[
+				"in",
+				"invincibility"
+			],
+			[
+				"trans",
+				"transparent"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"datas",
+				"datasaver"
+			],
+			[
+				"estim",
+				"estimate_body"
+			],
+			[
+				"datasaver",
+				"datasaver_template"
+			],
+			[
+				"estimate",
+				"estimate_body"
+			],
+			[
+				"invi",
+				"pc_invincibility_template"
+			],
+			[
+				"estima",
+				"estimate_body"
+			],
+			[
+				"familwe",
+				"family_guardian_web_protect"
+			],
+			[
+				"family",
+				"familyWebProtect"
+			],
+			[
+				"familg",
+				"familyGuardian"
+			],
+			[
+				"wepr",
+				"webProtect"
+			],
+			[
+				"calc",
+				"calculateFinalPrice"
+			],
+			[
+				"final",
+				"finalPrice"
+			],
+			[
+				"famigu",
+				"familyGuardian"
+			],
+			[
+				"for",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"parent",
+				"parents"
+			],
+			[
+				"font-fa",
+				"font-family-sans-serif"
+			],
+			[
+				"listst",
+				"list-style"
+			],
+			[
+				"border-lef",
+				"border-left"
+			],
+			[
+				"backgro",
+				"background-color"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
+				"import",
+				"important"
+			],
+			[
+				"min-",
+				"min-width"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"backg",
+				"background"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"list",
+				"list-n	list-style-type: none;"
+			],
+			[
+				"paddin",
+				"padding-bottom"
+			],
+			[
+				"text-",
+				"text-transform"
+			],
+			[
+				"dark-g",
+				"dark-grey"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"fonts",
+				"font-style"
+			],
+			[
+				"bol",
+				"bolder"
+			],
+			[
+				"color-lig",
+				"color-lightlightgrey"
+			],
+			[
+				"bodrco",
+				"border-color"
+			],
+			[
+				"light",
+				"color-lightgrey"
+			],
+			[
+				"last-",
+				"last-child"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"liste",
+				"listenTo"
+			],
+			[
+				"delet",
+				"deleteMyBanks"
+			],
+			[
+				"scroll",
+				"scroll-stopper"
+			],
+			[
+				"balance",
+				"balanceContainer"
+			],
+			[
+				"sidebar",
+				"sidebarContainer"
+			],
+			[
+				"bankList",
+				"bankListItems"
+			],
+			[
+				"future",
+				"futureBalances"
+			],
+			[
+				"futureB",
+				"futureBalances"
+			],
+			[
+				"sumFut",
+				"sumFutureIncomes"
+			],
+			[
+				"past",
+				"pastExpenses"
+			],
+			[
+				"futu",
+				"futureIncome"
+			],
+			[
+				"amount",
+				"amountLeft"
+			],
+			[
+				"find",
+				"findOne"
+			],
+			[
+				"save",
+				"saveAndReturn"
+			],
+			[
+				"isVal",
+				"isValidExpenseDate"
+			],
+			[
+				"banktype",
+				"bankTypeaheadRegion"
+			],
+			[
+				"banktyp",
+				"bankTypeaheadRegion"
+			],
+			[
+				"bankTyp",
+				"bankTypeaheadRegion"
+			],
+			[
+				"opening",
+				"openingBalance"
+			],
+			[
+				"bankincom",
+				"bankIncomeTotals"
+			],
+			[
+				"thisbudget",
+				"thisBudgetBank"
+			],
+			[
+				"bankincomto",
+				"bankIncomeTotalsIndex"
+			],
+			[
+				"thisb",
+				"thisBudget"
+			],
+			[
+				"fillb",
+				"fillBudgetBalances"
+			],
+			[
+				"valid",
+				"validDueDateBudgets"
+			],
+			[
+				"transaction",
+				"transaction_collection"
+			],
+			[
+				"this",
+				"thisTransaction"
+			],
+			[
+				"same",
+				"sameCount"
+			],
+			[
+				"thisM",
+				"thisModel"
+			],
+			[
+				"first",
+				"firstBank"
+			],
+			[
+				"thisbu",
+				"thisBudget"
+			],
+			[
+				"thisbud",
+				"thisBudgetBank"
+			],
+			[
+				"goal",
+				"goalChanged"
+			],
+			[
+				"bala",
+				"balance"
+			],
+			[
+				"dueDate",
+				"dueDateChanged"
+			],
+			[
+				"dateB",
+				"dateBtnClicked"
+			],
+			[
+				"limit",
+				"limitChanged"
+			],
+			[
+				"toggle",
+				"toggleActive"
+			],
+			[
+				"thisB",
+				"thisBudget"
+			],
+			[
+				"thisBudg",
+				"thisBudget"
+			],
+			[
+				"bankI",
+				"bankIncomeTotals"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"selected_items":
+		[
+			[
+				"prett",
+				"HTMLPrettify"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"jade",
+				"Set Syntax: Jade"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pret",
+				"HTMLPrettify"
+			],
+			[
+				"brow",
+				"SFTP: Browse Server…"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"date",
+				"Jekyll: Insert current datetime"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown (Jekyll)"
+			],
+			[
+				"syntax mar",
+				"Set Syntax: Markdown (Jekyll)"
+			],
+			[
+				"post",
+				"Jekyll: New post"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"todo",
+				"SimpleTODO: Add TODO"
+			],
+			[
+				"add",
+				"Git: Add Current File"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"set syntax: html",
+				"Set Syntax: HTML"
+			],
+			[
+				"tasks",
+				"Tasks: New document"
+			],
+			[
+				"task",
+				"Tasks: New"
+			],
+			[
+				"git br",
+				"Git: Change Branch"
+			],
+			[
+				"git ",
+				"Git: Gui"
+			],
+			[
+				"git bran",
+				"Git: New Branch"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"gitcom",
+				"Git: Commit history"
+			],
+			[
+				"git commit",
+				"Git: Commit history"
+			],
+			[
+				"git",
+				"Git: Status"
+			],
+			[
+				"gitstat",
+				"Git: Status"
+			],
+			[
+				"browse",
+				"SFTP: Browse Remote…"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"javac",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"browser",
+				"SFTP: Browse Server…"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"javascrip",
+				"Javascript Beautify"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"pretty",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"fold",
+				"BracketHighlighter: Fold Bracket Content"
+			],
+			[
+				"browse ser",
+				"SFTP: Browse Server…"
+			],
+			[
+				"htmlpre",
+				"HTMLPrettify"
+			],
+			[
+				"sftp",
+				"SFTP: Browse Server…"
+			],
+			[
+				"instll",
+				"Package Control: Install Package"
+			],
+			[
+				"server",
+				"SFTP: Setup Server…"
+			],
+			[
+				"terminal",
+				"Preferences: Terminal Key Bindings – Default"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 583.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"git status;",
+			"git status",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Karl/Sites/atlantacomputerman.com"
+	],
+	"file_history":
+	[
+		"/Users/Karl/Sites/atlantacomputerman.com/public/javascripts/main.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/.bower.json",
+		"/Users/Karl/Sites/atlantacomputerman.com/bower.json",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/vendor/radios-to-slider/js/jquery.radios-to-slider.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/_price-table.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/javascripts/_views/collection/computers.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/optimist/node_modules/wordwrap/test/wrap.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/optimist/node_modules/wordwrap/test/break.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/optimist/node_modules/wordwrap/README.markdown",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/optimist/test/_/argv.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/optimist/example/line_count_wrap.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/test/compress/concat-strings.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/test/compress/drop-unused.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/optimist/example/short.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/test/compress/arrays.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/optimist/example/string.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/optimist/test/parse.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/uglify-to-browserify/README.md",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/test/compress/debugger.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/test/compress/properties.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/OLD/node_modules/express/node_modules/connect/node_modules/formidable/test/legacy/simple/test-multipart-parser.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/OLD/node_modules/express/node_modules/connect/node_modules/formidable/test/legacy/integration/test-multipart-parser.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/optimist/node_modules/wordwrap/example/center.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/express/node_modules/connect/node_modules/formidable/test/legacy/simple/test-multipart-parser.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/express/node_modules/connect/node_modules/formidable/test/legacy/integration/test-multipart-parser.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/source-map/node_modules/amdefine/intercept.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/source-map/test/source-map/test-source-map-generator.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/source-map/test/source-map/test-source-map-consumer.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/source-map/test/source-map/test-binary-search.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/source-map/test/source-map/test-source-node.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/OLD/node_modules/express/node_modules/connect/node_modules/formidable/benchmark/bench-multipart-parser.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/source-map/test/source-map/test-array-set.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/express/node_modules/connect/node_modules/formidable/benchmark/bench-multipart-parser.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/source-map/build/test-prefix.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/OLD/node_modules/express/node_modules/connect/node_modules/formidable/lib/multipart_parser.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/OLD/node_modules/express/node_modules/connect/node_modules/formidable/test/legacy/simple/test-querystring-parser.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/source-map/test/run-tests.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/optimist/example/reflect.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/express/node_modules/connect/node_modules/formidable/lib/multipart_parser.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/express/node_modules/connect/node_modules/formidable/test/legacy/simple/test-querystring-parser.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/OLD/public/vendor/marionette/src/marionette.approuter.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/test/run-tests.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/vendor/marionette/src/marionette.approuter.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/source-map/.tern-port",
+		"/Users/Karl/Sites/atlantacomputerman.com/OLD/atlantacomputerman.sublime-project",
+		"/Users/Karl/Sites/atlantacomputerman.com/OLD/views/partials/computer-list-item-select-user.ejs",
+		"/Users/Karl/Sites/atlantacomputerman.com/OLD/views/partials/computer-list-item.ejs",
+		"/Users/Karl/Sites/atlantacomputerman.com/OLD/views/partials/computer-list-item-add-user.ejs",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/test/compress/labels.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/node-zendesk/examples/check-oauth-token.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/component.json",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/index.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/jade/lib/inline-tags.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/less-middleware/node_modules/less/test/less/import/import-test-e.less",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/vendor/bootstrap/less/mixins/text-emphasis.less",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/sign-up.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/javascripts/_views/item/computer.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/_signup/item-computer.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/javascripts/_views/layout/signup.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/javascripts/app.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/stylesheets/_nav.less",
+		"/Users/Karl/Sites/atlantacomputerman.com/OLD/views/sign-up.ejs",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/stylesheets/_signup.less",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/stylesheets/style.less",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/javascripts/_models/computer.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/javascripts/_collections/computers.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/OLD/public/stylesheets/style.less",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/_signup/collection-computer.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/_layout.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/_signup/layout-signup.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/javascripts/_views/collection/computer.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/_sign-up/layout-signup.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/javascripts/init.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/javascripts/_router.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/javascripts/_controller.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/stylesheets/_fonts.less",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/stylesheets/_layout.less",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/contact-us.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/stylesheets/_contact-us.less",
+		"/Users/Karl/Sites/atlantacomputerman.com/OLD/views/services-students.ejs",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/services-students.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/services-seniors.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/OLD/views/services-seniors.ejs",
+		"/Users/Karl/Sites/atlantacomputerman.com/OLD/views/services-families.ejs",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/services-families.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/stylesheets/_price-table.less",
+		"/Users/Karl/Sites/atlantacomputerman.com/OLD/views/services.ejs",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/services.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/_price-terms.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/stylesheets/_defaults.less",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/_product-box.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/stylesheets/_index.less",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/stylesheets/_ui.less",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/stylesheets/_product-box.less",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/_contact-box.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/stylesheets/_contact-box.less",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/stylesheets/_bubble.less",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/_contact-form.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/routes/index.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/less-middleware/node_modules/less/test/less/errors/import-no-semi.less",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/stylesheets/_social.less",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/_nav.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/_footer.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/javascripts/_vent.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/images/left-arrow.svg",
+		"/Users/Karl/Sites/atlantacomputerman.com/node_modules/express/LICENSE",
+		"/Users/Karl/Sites/atlantacomputerman.com/app.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/OLD/views/partials/contact-box.ejs",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/stylesheets/_colors.less",
+		"/Users/Karl/Sites/atlantacomputerman.com/OLD/views/index.ejs",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/_header.jade",
+		"/Users/Karl/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/stylesheets/index.less",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/stylesheets/__bootstrap.less",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/_content.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/package.json",
+		"/Users/Karl/Sites/atlantacomputerman.com/public/javascripts/index.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/OLD/app.js",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/partials/header.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/partials/head.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/our-story.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/explanation-of-our-services.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/onsite-cost-calculator.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/privacy-statement.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/terms-of-service.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/partials/foot.jade",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/our-story.ejs",
+		"/Users/Karl/Sites/atlantacomputerman.com/views/partials/estimate-lines/wp.ejs"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"",
+			"/views",
+			"",
+			"*.ejs",
+			"",
+			"/Users/Karl/Sites/budgetblox3/app/dev/scripts/views",
+			"",
+			"/Users/Karl/Sites/budgetblox3/app/dev/scripts/views,/Users/Karl/Sites/budgetblox3/app/dev/styles,/Users/Karl/Sites/budgetblox3/app/dev/templates",
+			"/Users/Karl/Sites/budgetblox3/app/dev/scripts/views,/Users/Karl/Sites/budgetblox3/app/dev/styles",
+			"",
+			"/Users/Karl/Sites/budgetblox3/app/dev/scripts/vendor/bootstrap/less",
+			"/Users/Karl/Sites/budgetblox3/app/dev/scripts",
+			"server/",
+			"server",
+			"app/dev/scripts/views, app/dev/templates",
+			"app/dev/scripts/views",
+			"app/dev/views",
+			"server/routes/months_banks.js",
+			"app/dev/scripts/views",
+			"server/routes/months.js",
+			"server/routes/budgets.js",
+			"app/dev/scripts/views",
+			"app/scripts/views",
+			"app/dev/scripts/collections/months.js,app/dev/scripts/models/month.js",
+			"server/routes/months.js",
+			"app/dev/scripts,-app/dev/scripts/vendor/*,-app/dev/scripts/main.js,-app/dev/scripts/app.js,-app/dev/scripts/custom_helpers/parseFloatRound.js",
+			"app/dev/scripts,-app/dev/scripts/vendor/*,-app/dev/scripts/main.js,-app/dev/scripts/app.js",
+			"app/dev/scripts,-app/dev/scripts/vendor/*",
+			"app/dev/scripts/*,-app/dev/vendor/*",
+			"+app/dev/scripts/*,-app/dev/vendor/*",
+			"app/dev/scripts,-app/dev/vendor/*",
+			"app/dev/scripts,-app/dev/vendor",
+			"app/dev/scripts",
+			"!app/dev/scripts",
+			"app/dev/scripts",
+			"scripts",
+			"goals.js",
+			"banks.js",
+			"js/",
+			"",
+			"budget-definitions.js",
+			"",
+			"transactions.js"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"/media/oldtimeguitarguy/FAB43751B437101D",
+			"self",
+			"this",
+			"kn",
+			"knob_mar",
+			"knob_margin",
+			"animation",
+			"red",
+			"amd",
+			"glyphicon",
+			"md",
+			"if datasaver == true",
+			"tag-line",
+			"header",
+			"@header-height",
+			".col-xs",
+			".product-box",
+			"product-box",
+			".left .features",
+			".product-box",
+			"price",
+			"slabtext",
+			"price",
+			"pric",
+			"span.",
+			"...",
+			"div",
+			"amd",
+			"jquery",
+			"amd",
+			"//",
+			"amd",
+			"include",
+			"amd",
+			"'vendor",
+			" '",
+			"'",
+			"menuItem",
+			"input",
+			".form-control",
+			"First",
+			"skrollable",
+			"@{bootstrap-dir}",
+			"@{bootstrap-dir}/",
+			"@import \"",
+			"\"/",
+			"@import \"",
+			"include",
+			"| <%= include",
+			"include",
+			"| <%= include",
+			"include",
+			"| <%= include",
+			"include",
+			"| <% include",
+			"| <%= include",
+			"<%= include",
+			"| <% include",
+			"<% include",
+			"| <%= include",
+			"| <% include",
+			"| <%= include",
+			"| <% include",
+			"cc-number",
+			"cc-",
+			"billing",
+			"footer",
+			"form-factor",
+			"small",
+			"msall",
+			".form-group",
+			".user",
+			"user-select",
+			"select",
+			"grey",
+			"billing-info",
+			"glyphicon glyphicon-chevron-right",
+			"legend",
+			"sm-",
+			"i",
+			"cc-number",
+			"<form ",
+			"<form",
+			"glyphicon glyphicon-ban-circle",
+			"glyphicon glyphicon-info-sign",
+			"glyphicon glyphicon-user",
+			"envelopee",
+			"glyphicon glyphicon-time",
+			"glyphicon glyphicon-envelop",
+			"glyphicon glyphicon-earphone",
+			"<span class=\"fa-stack fa-lg\"><i class=\"fa fa-life-buoy fa-stack-2x\"></i><i class=\"fa fa-hdd-o fa-stack-1x\"></i></span>",
+			"<span class=\"fa-stack fa-lg\"><span class=\"fa fa-check fa-stack-1x\"></span><span class=\"fa fa-hdd-o fa-stack-1x\"></span></span>",
+			"<span class=\"fa-stack fa-lg\"><i class=\"fa fa-check fa-stack-1x\"></i><i class=\"fa fa-hdd-o fa-stack-1x\"></i></span>",
+			"<span class=\"fa-stack fa-lg\"><i class=\"fa fa-life-check fa-stack-1x\"></i><i class=\"fa fa-hdd-o fa-stack-1x\"></i></span>",
+			"<span class=\"fa-stack fa-lg\"><i class=\"fa fa-life-buoy fa-stack-2x\"></i><i class=\"fa fa-hdd-o fa-stack-1x\"></i></span>",
+			"<span class=\"glyphicon glyphicon-floppy-saved\"></span>",
+			"hdd",
+			"glyphicon glyphicon-floppy-saved",
+			"glyphicon-floppy-saved",
+			".glyphicon-floppy-disk",
+			"floppy",
+			".glyphicon",
+			"glyphicon glyphicon-globe",
+			"glyphicon glyphicon-glob",
+			" />",
+			"required=\"true\" ",
+			"\"phone",
+			"size=\"30\" ",
+			"billing",
+			"size=\"30\"",
+			"required=\"true\"",
+			"/>",
+			"required=\"true\"",
+			"size=\"30\"",
+			"<div class=\"inner-addon left-addon\">",
+			"for=\"",
+			"id=\"",
+			"<div class=\"inner-addon left-addon\">",
+			"for=\"",
+			"container",
+			"numWebProtect",
+			"finalPrice",
+			"data",
+			"webProtect",
+			"pcGuardian",
+			"familyGuardian - familyWebProtect",
+			"familyWebProtect",
+			"data"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"include",
+			"fa fa-chevron-right",
+			"<form novalidate ",
+			"fa fa-ban",
+			"fa fa-info-circle",
+			"fa fa-user",
+			"envelope",
+			"fa fa-clock-o",
+			"fa fa-envelope",
+			"fa fa-phone",
+			"<span class=\"fa fa-cloud-upload\"></span>",
+			"<span class=\"fa-stack fa-lg\"><i class=\"fa fa-life-buoy fa-stack-2x\"></i><i class=\"fa fa-hdd-o fa-stack-1x\"></i></span>",
+			"<span class=\"fa-stack fa-lg\"><span class=\"fa fa-check fa-stack-1x\"></span><span class=\"fa fa-hdd-o fa-stack-1x\"></span></span>",
+			"<span class=\"fa-stack fa-lg\"><i class=\"fa fa-check fa-stack-1x\"></i><i class=\"fa fa-hdd-o fa-stack-1x\"></i></span>",
+			"<span class=\"fa-stack fa-lg\"><i class=\"fa fa-life-buoy fa-stack-2x\"></i><i class=\"fa fa-hdd-o fa-stack-1x\"></i></span>",
+			"fa fa-globe",
+			">",
+			"",
+			"Explanation of Our Services",
+			"explanationOfOurServices",
+			"explanation-of-our-services",
+			"Explanation of Services",
+			"explanation-of-services",
+			"explanationOfServices",
+			"aShortExplanation",
+			"A Short Explanation",
+			"a-short-explanation",
+			"10GB",
+			"25GB",
+			"DATASAVER",
+			"GB Data Saver\nAutomated Maintenance",
+			"Automated Maintenance",
+			"25GB AUTOMATIC",
+			"#sidebar",
+			"maskMoney()",
+			"maskMoney({allowZero:true})",
+			"Months_Banks",
+			"months_banks",
+			"",
+			"months",
+			"Months",
+			"budgets",
+			"Budgets",
+			"month",
+			"Month",
+			"month",
+			"parseFloatRound",
+			"goals",
+			"banks",
+			"\nbutton.btn-add",
+			"ItemView_MonthYear",
+			"itemView_MonthYear",
+			"budget-definition_",
+			"budget-definition",
+			"budgetDefinition",
+			"budget-definition_",
+			"'budget-definition_'",
+			"budgetDefinitionSchema",
+			"BudgetDefinition",
+			"Transaction",
+			"transaction",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 252.0
+	},
+	"output.sftp":
+	{
+		"height": 112.0
+	},
+	"project": "AtlantaComputerman.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"bower",
+				".bower.json"
+			],
+			[
+				"computerjade",
+				"views/_signup/item-computer.jade"
+			],
+			[
+				"index.jad",
+				"views/index.jade"
+			],
+			[
+				"s",
+				"public/stylesheets/style.less"
+			],
+			[
+				"_inde",
+				"public/stylesheets/_index.less"
+			],
+			[
+				"index",
+				"views/index.jade"
+			],
+			[
+				"_font",
+				"public/stylesheets/_fonts.less"
+			],
+			[
+				"layout",
+				"views/_layout.jade"
+			],
+			[
+				"",
+				".bower.json"
+			],
+			[
+				"style.",
+				"public/stylesheets/style.less"
+			],
+			[
+				"contac",
+				"views/partials/contact-box.ejs"
+			],
+			[
+				"contact",
+				"views/contact-us.ejs"
+			],
+			[
+				"sign",
+				"views/sign-up.ejs"
+			],
+			[
+				"styl",
+				"public/stylesheets/style.less"
+			],
+			[
+				"style.l",
+				"public/stylesheets/style.less"
+			],
+			[
+				"computer",
+				"views/partials/computer-list-item-select-user.ejs"
+			],
+			[
+				"main",
+				"public/javascripts/main.js"
+			],
+			[
+				"sty",
+				"public/stylesheets/style.less"
+			],
+			[
+				"quick",
+				"views/partials/quick-contact-box.ejs"
+			],
+			[
+				"header",
+				"views/partials/header.ejs"
+			],
+			[
+				"ser",
+				"views/services-students.ejs"
+			],
+			[
+				"serv",
+				"views/services-seniors.ejs"
+			],
+			[
+				"famil",
+				"views/services-families.ejs"
+			],
+			[
+				"banklistcoll",
+				"app/dev/scripts/views/collection/BankList_CollectionView.js"
+			],
+			[
+				"style",
+				"app/dev/styles/style.less"
+			],
+			[
+				"collectionview",
+				"app/dev/scripts/views/collection/BudgetList_CollectionView.js"
+			],
+			[
+				"banklis",
+				"app/dev/scripts/views/item/BankListItem_ItemView.js"
+			],
+			[
+				"bankite",
+				"app/dev/templates/BankListItem_ItemView.tpl"
+			],
+			[
+				"budgetlistitem",
+				"app/dev/scripts/views/item/BudgetListItem_ItemView.js"
+			],
+			[
+				"icheck",
+				"app/dev/scripts/vendor/iCheck/icheck.js"
+			],
+			[
+				"main.js",
+				"app/dev/scripts/main.js"
+			],
+			[
+				"timeline",
+				"app/dev/scripts/views/layout/Timeline_Layout.js"
+			],
+			[
+				"style.ls",
+				"app/dev/styles/style.less"
+			],
+			[
+				"editbudget",
+				"app/dev/scripts/views/layout/EditBudget_Layout.js"
+			],
+			[
+				"public/js/bu",
+				"public/js/models/model_Budget.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Sites/ftpbrowser.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 217.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
