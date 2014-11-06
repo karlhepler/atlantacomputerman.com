@@ -1,12 +1,32 @@
-//- .col-sm-3
-//-   img(src="/images/computer.png")  
-.col-sm-3  
-  .data-saver
-    input.data-saver-gb(type="text", value="0")
-    div.bigtext GIGABYTES DOCUMENTS, PHOTOS, & MUSIC
-    button.minus.btn.btn-danger
-      span.fa.fa-minus
-    button.plus.btn.btn-success
+.row.computer-header
+  .col-md-1.col-sm-2.col-xs-2(style="padding-right:0;")
+    img(src="/images/computer.png")
+  .col-md-10.col-sm-9.col-xs-8
+    label.sr-only Name this computer
+    input.computer-name.form-control(type="text", placeholder="Name this computer")
+  .col-sm-1.col-xs-2
+    button.close(type="button")
+      span.fa.fa-close
+      span.sr-only Close
+.row
+  .col-lg-3.col-md-4
+    .data-saver
+      input.data-saver-gb(type="text", value="0")
+      div.bigtext
+        span.slabtext GIGABYTES
+        span.slabtext IMPORTANT
+        span.slabtext DOCUMENTS,
+        span.slabtext PHOTOS & MUSIC
+      button.minus.btn.btn-danger
+        span.fa.fa-minus
+      button.plus.btn.btn-success
+        span.fa.fa-plus
+      input.invincibility(type="checkbox", data-labelauty="INVINCIBILITY")
+      input.web-protect(type="checkbox", data-labelauty="WEB PROTECT")
+  .col-lg-9.col-md-8
+    h3 Who uses&nbsp;
+      span.computer-name this computer
+      | ?
+    #user-list
+    button.button Add User
       span.fa.fa-plus
-    input(type="checkbox", data-labelauty="INVINCIBLE")
-    input(type="checkbox", data-labelauty="WEB PROTECT")

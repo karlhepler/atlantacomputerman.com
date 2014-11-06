@@ -1,12 +1,10 @@
 define(['marionette', '_vent', 'labelauty', 'knob'],
 function(Marionette, vent) { 'use strict';
-	return Backbone.Marionette.ItemView.extend({
-
-		tagName: 'li',
-
-		className: 'computer',
+	return Backbone.Marionette.ItemView.extend({		
 
 		template: '#item-computer',
+
+		className: 'computer',
 
 		onShow: function() {
 			console.log('Computer Item View');
@@ -19,7 +17,8 @@ function(Marionette, vent) { 'use strict';
 				step: 5,
 				width: '100%',
 				angleOffset: 270,
-				angleArc: 180
+				angleArc: 180,
+				max: 10
 			});
 		}
 
