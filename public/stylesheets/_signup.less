@@ -1,15 +1,11 @@
 @import (less) '/javascripts/functions/radios-to-slider/radios-to-slider.css';
 @import (less) '/vendor/labelauty/source/jquery-labelauty.css';
-/* Add a background to (un)checked images */
-input.labelauty + label > span.labelauty-unchecked-image
-{
-	background-image: url( /vendor/labelauty/source/images/input-unchecked.png );
-}
-
-input.labelauty + label > span.labelauty-checked-image
-{
-	background-image: url( /vendor/labelauty/source/images/input-checked.png );
-}
+// Fix checked background images
+input.labelauty + label > span.labelauty-unchecked-image{background-image:url(/vendor/labelauty/source/images/input-unchecked.png );}
+input.labelauty + label > span.labelauty-checked-image{background-image:url(/vendor/labelauty/source/images/input-checked.png);}
+// Change background color of checkboxes
+input.labelauty:checked + label { background-color: lighten(@green,10%); }
+input.labelauty:checked:not([disabled]) + label:hover { background-color: lighten(@green,20%); }
 
 #page-sign-up {
 
@@ -18,6 +14,8 @@ input.labelauty + label > span.labelauty-checked-image
 		text-transform: uppercase;
 		line-height: 2;
 		margin-bottom: 1em;
+		.font-comic;
+		letter-spacing: 0.1em;
 
 		.circle {
 			width: 2em;
@@ -31,15 +29,43 @@ input.labelauty + label > span.labelauty-checked-image
 			display: block;
 			float: left;
 			margin-right: 0.5em;
+			position: absolute;
 		}
-	}
+	}	
+
+	#computer-counter {
+		padding: 15px;
+		background-color: white;
+		border-radius: 5px;
+		.box-shadow(0 5px 0 rgba(0,0,0,0.2));
+		margin-bottom: 30px;
+
+		h3 {
+			margin-bottom: 0.5em;
+			color: @light-grey;
+		}
+
+		#num-computers {
+			margin: 0;
+
+			.slider-label {
+				top: 0;
+				z-index: 3;
+				color: white;
+				font-size: 1.5em;
+			}
+			.slider-level {
+				background-color: lightgrey;
+			}		
+		}
+	}	
 
 	#computer-list {
 		.computer {
 			background: white;
-			margin-bottom: 15px;
+			margin-bottom: 30px;
 			padding: 0 15px 10px 15px;
-			.box-shadow(0 0 5px @lightest-grey);
+			.box-shadow(0 5px 0 rgba(0,0,0,0.2));
 			.border-bottom-radius(5px);
 
 			h3 {
