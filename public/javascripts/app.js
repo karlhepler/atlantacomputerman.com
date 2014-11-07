@@ -4,7 +4,9 @@ define(['marionette',
 				'_views/layout/signup',
 				'_views/collection/computers',
 				'_models/computer',
-				'_collections/computers'
+				'_collections/computers',
+				'_collections/users',
+				'_models/user'
 				],
 function(Marionette,
 				 vent,
@@ -12,7 +14,9 @@ function(Marionette,
 				 SignupLayout,
 				 ComputersView,
 				 Computer,
-				 Computers
+				 Computers,
+				 Users,
+				 User
 				 ) { 'use strict';
 
 	// Declare the new Marionette application
@@ -31,10 +35,12 @@ function(Marionette,
 	// SIGN UP!!!!!
 	vent.on('nav:sign-up', function() {
 		var computers = new Computers();
+		var allusers = new Users();
+		allusers.add( new User() );
 
 		// Initialize the signupLayout
 		var signupLayout = new SignupLayout();
-		var computersView = new ComputersView({ collection: computers });		
+		var computersView = new ComputersView({ collection: computers, allusers: allusers });		
 
 		// Show the signupLayout
 		app.content.show( signupLayout );

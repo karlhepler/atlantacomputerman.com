@@ -2,18 +2,21 @@ extends _layout
 
 //- Define Templates --------------------------
 block templates
-	//- Layout
+	//- Signup Layout
 	script#layout-signup(type="text/template")
 		include _signup/layout-signup
-	//- Computer
-	script#item-computer(type="text/template")
-		include _signup/item-computer
-	//- User select table composite view
-	script#composite-user-select-row(type="text/template")
-		include _signup/composite-user-select-table
-	//- User dropdown item
-	script#item-user-dropdown-item(type="text/template")
-		include _signup/item-user-dropdown-item
-	//- Create user form
-	script#item-create-user(type="text/template")
-		include _signup/item-create-user
+	//- Computer Composite View
+	script#composite-computer(type="text/template")
+		include _signup/composite-computer
+	//- Computer User Composite View: SELECT
+	script#composite-computer-user_select(type="text/template")
+		include _signup/composite-computer-user_select
+	//- Computer User Composite View: CREATE
+	script#composite-computer-user_create(type="text/template")
+		include _signup/composite-computer-user_create
+	//- User Select Composite View
+	script#composite-user-select(type="text/template")
+		include _signup/composite-user-select
+	//- User Select Item Item View
+	script#item-user-select-item(type="text/template")
+		include _signup/item-user-select-item
