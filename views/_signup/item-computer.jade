@@ -1,6 +1,6 @@
 .row.computer-header
   .col-md-1.col-sm-2.col-xs-2(style="padding-right:0;")
-    img(src="/images/computer.png")
+    img.computer-img(src="/images/computer.png")
   .col-md-10.col-sm-9.col-xs-8
     label.sr-only Name this computer
     input.computer-name.form-control(type="text", placeholder="Name this computer")
@@ -22,11 +22,11 @@
       button.plus.btn.btn-success
         span.fa.fa-plus
       input.invincibility(type="checkbox", data-labelauty="INVINCIBILITY")
-      input.web-protect(type="checkbox", data-labelauty="WEB PROTECT")
+      input.web-protect(type="checkbox", data-labelauty="WEB&nbsp;PROTECT")
   .col-lg-9.col-md-8
     h3 Who uses&nbsp;
       span.computer-name this computer
       | ?
     #user-list
-    button.button Add User
+    button.button.add-user Add User
       span.fa.fa-plus

@@ -124,7 +124,6 @@
 				var radioId = $(this).attr('data-radio');
 				slider.bearer.find('#' + radioId).prop('checked', true);
 				slider.setSlider();
-
 			});
 
 			this.bearer.find('input[type=radio]').change(function(){

@@ -9,7 +9,8 @@ define(['backbone'], function(Backbone) {
 		defaults: {
 			gb: 0,
 			invincibility: false,
-			webProtect: false
+			webProtect: false,
+			computerName: 'This Computer'
 		}
 
 	});
