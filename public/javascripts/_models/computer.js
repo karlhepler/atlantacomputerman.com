@@ -10,7 +10,8 @@ define(['backbone'], function(Backbone) {
 			gb: 0,
 			invincibility: false,
 			webProtect: false,
-			computerName: 'This Computer'
+			computerName: '',
+			users: []
 		}
 
 	});

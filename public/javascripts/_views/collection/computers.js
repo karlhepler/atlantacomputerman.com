@@ -1,5 +1,5 @@
-define(['marionette', '_vent', '_collections/computers', '_views/item/computer'],
-function(Marionette, vent, Computers, ComputerView) { 'use strict';
+define(['marionette', '_vent', '_views/item/computer'],
+function(Marionette, vent, ComputerView) { 'use strict';
 	return Backbone.Marionette.CollectionView.extend({
 
 		id: 'computer-list',

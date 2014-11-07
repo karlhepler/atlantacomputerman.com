@@ -1,5 +1,5 @@
-define(['marionette', '_vent', 'labelauty', 'knob'],
-function(Marionette, vent) { 'use strict';
+define(['marionette', '_vent', '_views/layout/user-select', 'labelauty', 'knob'],
+function(Marionette, vent, UserSelectLayoutView) { 'use strict';
 	return Backbone.Marionette.ItemView.extend({		
 
 		template: '#item-computer',
@@ -10,6 +10,7 @@ function(Marionette, vent) { 'use strict';
 			dataSaverGB: '.data-saver-gb',
 			checkboxes: ':checkbox',
 			bigText: '.bigtext',
+			userListTable: 'table.user-list>tbody',
 
 			invincibilityCheckbox: ':checkbox.invincibility',
 			webProtectCheckbox: ':checkbox.webProtect',
@@ -43,8 +44,7 @@ function(Marionette, vent) { 'use strict';
 			// Update the computer name label
 			this.listenTo(this.model, 'change:computerName', function(model,value) {
 				if ( value == '' ) {
-					this.model.set('computerName', 'This Computer');
-					this.ui.computerNameLabel.text( this.model.get('computerName') );
+					this.ui.computerNameLabel.text( 'This Computer' );
 				}
 				else {
 					this.ui.computerNameLabel.text( value );
@@ -106,6 +106,13 @@ function(Marionette, vent) { 'use strict';
 		removeThisComputer: function(e) {
 			e.preventDefault();
 			this.trigger('removeThisComputer');
+		},
+
+		addUserRow: function(e) {
+			e.preventDefault();
+			var userSelectRow = new UserSelectTableCompositeView();
+			this.ui.userListTable.append(userSelectRow.$el);
+			userSelectRow.render();
 		}
 
 	});

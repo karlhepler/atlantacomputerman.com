@@ -13,10 +13,10 @@ form.contact-form(novalidate)
     .form-group
       .col-sm-6
         label.sr-only Email Address
-        input(type="text", placeholder="Email Address", name="email", required)
+        input(type="email", placeholder="Email Address", name="email", required)
       .col-sm-6
         label.sr-only Phone Number
-        input(type="text", placeholder="Phone Number", name="phone", required)
+        input.phone(placeholder="Phone Number", name="phone", type="text", pattern="\\d*", required)
     .form-group
       .col-sm-6
         p.info We will send you an email confirmation immediately & contact you within 24 hours.
