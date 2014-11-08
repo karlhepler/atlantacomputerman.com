@@ -2,7 +2,11 @@ define(['marionette', '_vent'],
 function(Marionette, vent) { 'use strict';
 	return Backbone.Marionette.ItemView.extend({
 
-		tagName: 'tr',		
+		tagName: 'form',
+
+		attributes: {
+			'novalidate': 'novalidate'
+		},
 
 		template: '#item-create-user',
 

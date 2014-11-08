@@ -1,0 +1,24 @@
+.form-group
+  .col-sm-6
+    label.sr-only First Name
+    | <input placeholder="First Name" name="fname" type="text" value="<%if(typeof fname!=='undefined'){%><%=fname%><%}%>" required autofocus>
+  .col-sm-6
+    label.sr-only Last Name
+    | <input placeholder="Last Name" name="lname" type="text" value="<%if(typeof lname!=='undefined'){%><%=lname%><%}%>" required>
+.form-group
+  .col-xs-12
+    label.sr-only Email Address
+    | <input placeholder="Email Address" name="email" type="email" value="<%if(typeof email!=='undefined'){%><%=email%><%}%>" required>
+.form-group
+  .col-xs-12
+    label.sr-only Phone Number
+    | <input placeholder="Phone Number" name="phone" type="text" pattern="\d*" value="<%if(typeof phone!=='undefined'){%><%=phone%><%}%>" required>
+.form-group
+  .col-sm-6
+    .alert.alert-danger.hide Please fill in all fields
+  .col-sm-6
+    .row
+      .col-sm-6
+        button.button.cancel-btn(type="button") Cancel
+      .col-sm-6
+        button.button.save-btn(type="submit") Save

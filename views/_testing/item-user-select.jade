@@ -1,0 +1,7 @@
+option.select-option-label(disabled, selected) — Select or Create New User —
+option.select-option-label(disabled) ___________________
+option(value="create-new-user") CREATE NEW USER »
+option.select-option-label(disabled) ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+| <% _.each(items, function(item){ %>
+| 	<option value="<%=item.fname%>|<%=item.lname%>"><%=item.fname%> <%=item.lname%></option>
+| <% }); %>
