@@ -17,7 +17,7 @@ function(Marionette, vent) { 'use strict';
 		},
 
 		onShow: function() {
-			console.log('User Select ItemView');
+			console.log('Select User ItemView');
 		},
 
 		modelAdded: function(model, collection, event) {
@@ -31,7 +31,7 @@ function(Marionette, vent) { 'use strict';
 			else {
 				// Trigger call to edit user and return the user to edit
 				var name = this.$el.val().split('|');
-				this.trigger( 'edit:user', this.collection.findWhere({ fname: name[0], lname: name[1] }) );
+				this.trigger( 'select:user', this.collection.findWhere({ fname: name[0], lname: name[1] }) );
 			}
 		}
 

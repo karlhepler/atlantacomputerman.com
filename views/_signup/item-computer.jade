@@ -3,9 +3,9 @@
     img.computer-img(src="/images/computer.png")
   .col-md-10.col-sm-9.col-xs-8
     label.sr-only Name this computer
-    input.computer-name.form-control(type="text", placeholder="Name this computer")
+    input.computer-name.form-control(type="text", placeholder="Name this computer", autofocus)
   .col-sm-1.col-xs-2
-    button.close(type="button")
+    button.close.remove-computer(type="button")
       span.fa.fa-close
       span.sr-only Close
 .row
@@ -27,7 +27,7 @@
     h3 Who uses&nbsp;
       span.computer-name this computer
       | ?
-    table.computer-user-list
+    table.user-list
       tbody
     button.button.add-user Add User
       span.fa.fa-plus

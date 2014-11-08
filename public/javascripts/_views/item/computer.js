@@ -1,5 +1,5 @@
-define(['marionette', '_vent', '_views/layout/user-select', 'labelauty', 'knob'],
-function(Marionette, vent, UserSelectLayoutView) { 'use strict';
+define(['marionette', '_vent', '_views/layout/computer_user_row',  'labelauty', 'knob'],
+function(Marionette, vent, ComputerUserRowLayoutView) { 'use strict';
 	return Backbone.Marionette.ItemView.extend({		
 
 		template: '#item-computer',
@@ -10,14 +10,14 @@ function(Marionette, vent, UserSelectLayoutView) { 'use strict';
 			dataSaverGB: '.data-saver-gb',
 			checkboxes: ':checkbox',
 			bigText: '.bigtext',
-			userListTable: 'table.user-list>tbody',
+			userList: 'table.user-list>tbody',
 
 			invincibilityCheckbox: ':checkbox.invincibility',
 			webProtectCheckbox: ':checkbox.webProtect',
 			minusGbBtn: 'button.minus',
 			plusGbBtn: 'button.plus',
 			addUserBtn: 'button.add-user',
-			removeBtn: 'button.close',
+			removeBtn: 'button.close.remove-computer',
 			computerNameInput: 'input.computer-name',
 			computerNameLabel: 'span.computer-name',
 			computerImg: 'img.computer-img'			
@@ -29,34 +29,39 @@ function(Marionette, vent, UserSelectLayoutView) { 'use strict';
 			'click @ui.minusGbBtn': 'minusGb',
 			'click @ui.plusGbBtn': 'plusGb',
 			'click @ui.addUserBtn': 'addUserRow',
-			'click @ui.removeBtn': 'removeThisComputer',
 			'change @ui.computerNameInput': 'updateComputerName'
 		},
 
-		initialize: function() {
-			// Update the knob
-			this.listenTo(this.model, 'change:gb', function(model,value) {
+		triggers: {
+			'click @ui.removeBtn': 'remove'
+		},
+
+		modelEvents: {
+			'change:gb': function(model, value) {
 				// First update all with a trigger to the collection view
 				this.trigger('updateGB');
 				// Now do the deed
-				this.ui.dataSaverGB.val( value ).trigger('change');				
-			});
-			// Update the computer name label
-			this.listenTo(this.model, 'change:computerName', function(model,value) {
+				this.ui.dataSaverGB.val( value ).trigger('change');
+			},
+			'change:computerName': function(model, value) {
 				if ( value == '' ) {
 					this.ui.computerNameLabel.text( 'This Computer' );
 				}
 				else {
 					this.ui.computerNameLabel.text( value );
 				}
-			});
-			// Update the computer img if invincible
-			this.listenTo(this.model, 'change:invincibility', function(model, isInvincible) {
+			},
+			'change:invincibility': function(model, isInvincible) {
 				if ( isInvincible )
 					this.ui.computerImg.attr('src', '/images/invincible_computer.png');
 				else
 					this.ui.computerImg.attr('src', '/images/computer.png');
-			});
+			}
+		},
+
+		initialize: function() {
+			// Create a place to store the userRows
+			this.userRows = [];
 		},
 
 		onShow: function() {
@@ -76,9 +81,6 @@ function(Marionette, vent, UserSelectLayoutView) { 'use strict';
 			});
 
 			this.ui.bigText.slabText();
-
-			// Focus on the computer name input box
-			// this.ui.computerNameInput.focus();
 		},
 
 		updateComputerName: function(e) {
@@ -103,16 +105,21 @@ function(Marionette, vent, UserSelectLayoutView) { 'use strict';
 			this.model.set('gb', this.model.get('gb') > 0 ? this.model.get('gb') - 5 : 0);
 		},
 
-		removeThisComputer: function(e) {
-			e.preventDefault();
-			this.trigger('removeThisComputer');
-		},
-
 		addUserRow: function(e) {
 			e.preventDefault();
-			var userSelectRow = new UserSelectTableCompositeView();
-			this.ui.userListTable.append(userSelectRow.$el);
-			userSelectRow.render();
+
+			var userRow = new ComputerUserRowLayoutView({ users: this.options.users });
+
+			// Push to userRows
+			this.userRows.push( userRow );
+
+			// Append the userRow's $el
+			this.ui.userList.append( userRow.$el );
+
+			// Render the userRow
+			userRow.render();
+			
+			console.log(this.model);
 		}
 
 	});

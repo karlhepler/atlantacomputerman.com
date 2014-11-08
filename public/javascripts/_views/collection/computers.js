@@ -1,21 +1,22 @@
-define(['marionette', '_vent', '_views/composite/computer'],
-function(Marionette, vent, ComputerCompositeView) { 'use strict';
+define(['marionette', '_vent', '_views/item/computer'],
+function(Marionette, vent, ComputerItemView) { 'use strict';
 	return Backbone.Marionette.CollectionView.extend({
 
 		id: 'computer-list',
 
 		className: 'col-xs-12',
 
-		childView: ComputerCompositeView,
+		childView: ComputerItemView,
 
 		childViewOptions: function(model,index) {
 			return {
-				allusers: this.options.allusers
+				users: this.options.users,
+				model: model
 			};
 		},
 
 		childEvents: {
-			'removeThisComputer': function(computerView) {
+			'remove': function(computerView) {
 				// Don't remove it if it's the last one left
 				if ( this.collection.length > 1 )
 					this.collection.remove( computerView.model );

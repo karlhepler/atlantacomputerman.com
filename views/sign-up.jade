@@ -6,8 +6,8 @@ block templates
 	script#layout-signup(type="text/template")
 		include _signup/layout-signup
 	//- Computer Composite View
-	script#composite-computer(type="text/template")
-		include _signup/composite-computer
+	script#item-computer(type="text/template")
+		include _signup/item-computer
 	//- Computer User Composite View: SELECT
 	script#composite-computer-user_select(type="text/template")
 		include _signup/composite-computer-user_select
@@ -25,3 +25,5 @@ block templates
 		include _testing/item-user-select
 	script#item-create-user(type="text/template")
 		include _testing/item-create-user
+	script#layout-computer-user-row(type="text/template")
+		include _signup/layout-computer-user-row
