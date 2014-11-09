@@ -1,17 +1,18 @@
-define(['marionette', '_vent', '_views/layout/computer'],
-function(Marionette, vent, ComputerLayoutView) { 'use strict';
+define(['marionette', '_vent', '_views/composite/computer', '_collections/users'],
+function(Marionette, vent, ComputerCompositeView, Users) { 'use strict';
 	return Backbone.Marionette.CollectionView.extend({
 
 		id: 'computer-list',
 
 		className: 'col-xs-12',
 
-		childView: ComputerLayoutView,
+		childView: ComputerCompositeView,
 
 		childViewOptions: function(model,index) {
 			return {
 				users: this.options.users,
-				model: model
+				model: model,
+				collection: new Users()
 			};
 		},
 

@@ -1,36 +1,41 @@
-define(['marionette', '_vent', '_collections/users', '_models/user', '_views/collection/computer_users', 'labelauty', 'knob'],
-function(Marionette, vent, Users, User, ComputerUsersCollectionView) { 'use strict';
+define(['marionette', '_vent', '_views/layout/computer_user_row', '_models/user', 'labelauty', 'knob'],
+function(Marionette, vent, ComputerUserRowLayoutView, User) { 'use strict';
 	return Backbone.Marionette.CompositeView.extend({		
 
 		template: '#composite-computer',
 
 		className: 'computer',
 
-		childView: ComputerUsersCollectionView,
+		childView: ComputerUserRowLayoutView,
+
+		childViewContainer: 'table.user-list',
 
 		childViewOptions: function(model,index) {
-			// Put the users collection into the users collection view
 			return {
-				model: model,
-				collection: model.collection,
-				allusers: this.options.allusers
+				users: this.options.users,
+				collection: this.collection
 			};
 		},
 
-		childViewContainer: 'table.computer-user-list>tbody',
+		childEvents: {
+			'remove:user': function(childView) {
+				// Remove the model from the collection
+				this.collection.remove( childView.model );
+			}
+		},
 
 		ui: {
 			dataSaverGB: '.data-saver-gb',
 			checkboxes: ':checkbox',
 			bigText: '.bigtext',
-			userListTable: 'table.computer-user-list>tbody',
+			userList: 'table.user-list>tbody',
 
 			invincibilityCheckbox: ':checkbox.invincibility',
 			webProtectCheckbox: ':checkbox.webProtect',
 			minusGbBtn: 'button.minus',
 			plusGbBtn: 'button.plus',
 			addUserBtn: 'button.add-user',
-			removeBtn: 'button.close',
+			removeBtn: 'button.close.remove-computer',
 			computerNameInput: 'input.computer-name',
 			computerNameLabel: 'span.computer-name',
 			computerImg: 'img.computer-img'			
@@ -42,8 +47,11 @@ function(Marionette, vent, Users, User, ComputerUsersCollectionView) { 'use stri
 			'click @ui.minusGbBtn': 'minusGb',
 			'click @ui.plusGbBtn': 'plusGb',
 			'click @ui.addUserBtn': 'addUserRow',
-			'click @ui.removeBtn': 'removeThisComputer',
 			'change @ui.computerNameInput': 'updateComputerName'
+		},
+
+		triggers: {
+			'click @ui.removeBtn': 'remove'
 		},
 
 		modelEvents: {
@@ -54,10 +62,12 @@ function(Marionette, vent, Users, User, ComputerUsersCollectionView) { 'use stri
 				this.ui.dataSaverGB.val( value ).trigger('change');
 			},
 			'change:computerName': function(model, value) {
-				if ( value == '' )
+				if ( value == '' ) {
 					this.ui.computerNameLabel.text( 'This Computer' );
-				else
+				}
+				else {
 					this.ui.computerNameLabel.text( value );
+				}
 			},
 			'change:invincibility': function(model, isInvincible) {
 				if ( isInvincible )
@@ -68,12 +78,12 @@ function(Marionette, vent, Users, User, ComputerUsersCollectionView) { 'use stri
 		},
 
 		initialize: function() {
-			// Create new collection of users associated specifically with this view
-			this.collection = new Users();
+			// Create a place to store the userRows
+			this.numUsers = 0;
 		},
 
 		onShow: function() {
-			console.log('Computer Composite View');
+			console.log('Computer Layout View');
 
 			this.ui.checkboxes.labelauty({
 				minimum_width: "100%"
@@ -89,9 +99,6 @@ function(Marionette, vent, Users, User, ComputerUsersCollectionView) { 'use stri
 			});
 
 			this.ui.bigText.slabText();
-
-			// Focus on the computer name input box
-			// this.ui.computerNameInput.focus();
 		},
 
 		updateComputerName: function(e) {
@@ -116,15 +123,9 @@ function(Marionette, vent, Users, User, ComputerUsersCollectionView) { 'use stri
 			this.model.set('gb', this.model.get('gb') > 0 ? this.model.get('gb') - 5 : 0);
 		},
 
-		removeThisComputer: function(e) {
-			e.preventDefault();
-			this.trigger('removeThisComputer');
-		},
-
 		addUserRow: function(e) {
 			e.preventDefault();
-			console.log('ADD COMPUTER USER');
-			// Add a new user to the collection
+
 			this.collection.add( new User() );
 		}
 
