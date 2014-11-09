@@ -120,47 +120,62 @@ function(Marionette, vent, ComputerUserSelectRowLayoutView, CreateUserItemView) 
 			var thisRegion = this.addRegion(regionName, 'tr.'+regionName);
 
 			// Create the views
-			var selectUserView = new ComputerUserSelectRowLayoutView({ users: this.options.users });			
-			var createUserView = new CreateUserItemView();
+			// var selectUserView = new ComputerUserSelectRowLayoutView({ users: this.options.users });			
+			// var createUserView = new CreateUserItemView();
 
-			selectUserView.thisRegion = thisRegion;
-			selectUserView.createUserView = createUserView;
-			createUserView.thisRegion = thisRegion;
-			createUserView.createUserView = createUserView;
+			// selectUserView.thisRegion = thisRegion;
+			// selectUserView.createUserView = createUserView;
+			// createUserView.thisRegion = thisRegion;
+			// createUserView.createUserView = createUserView;
+			
+			// thisRegion.show( new ComputerUserSelectRowLayoutView({ users: this.options.users }) );
 
+			// thisRegion.currentView.on('create:user', function() {
+			// 	thisRegion.show( new CreateUserItemView() );
+			// });
+			// thisRegion.currentView.on('cancel:user', function() {
+			// 	console.log('cancel')
+			// });
 			
 			// Show the userSelectRow in the region
-			thisRegion.show( selectUserView );
+			// thisRegion.show( new ComputerUserSelectRowLayoutView({ users: this.options.users, thisRegion: thisRegion }) );
 
-			var self = this;
+			// var self = this;
+
+			// this[regionName].currentView.on('create:user', function() {
+			// 	this.options.thisRegion.show( new CreateUserItemView({ thisRegion: this.options.thisRegion }) );
+			// });
+			// this[regionName].currentView.on('cancel:user', function() {
+			// 	this.options.thisRegion.show( new ComputerUserSelectRowLayoutView({ users: self.options.users, thisRegion: this.options.thisRegion }) );
+			// });
 
 			// EVENTS ---------------------------------------------------------
-			selectUserView.on('create:user', function() {
-				// Show the create user form
-				this.thisRegion.show( this.createUserView );
-			});
-			selectUserView.on('edit:user', function(user) {
-				createUserView.model = user;
-				// Show the edit user form
-				this.thisRegion.show( this.createUserView );
-			});
-			selectUserView.on('remove:user', function() {
-				// Remove the region!
-				this.removeRegion( this.thisRegion.el.className );
-				// Remove the tr
-				self.ui.userList.find('tr.'+thisRegion.el.className).remove();
-			});
-			selectUserView.on('select:user', function(user) {
-				console.log('USER SELECTED!', user);
-			});
-			createUserView.on('save:user', function(user) {
-				console.log('SAVE USER!!!', user);
-			});
-			createUserView.on('cancel:user', function(user) {
-				this.selectUserView = new ComputerUserSelectRowLayoutView({ users: self.options.users });
-				this.thisRegion.show( this.selectUserView );
-				// console.log('CANCEL BTN PRESSED!', user);
-			});
+			// selectUserView.on('create:user', function() {
+			// 	// Show the create user form
+			// 	this.thisRegion.show( this.createUserView );
+			// });
+			// selectUserView.on('edit:user', function(user) {
+			// 	createUserView.model = user;
+			// 	// Show the edit user form
+			// 	this.thisRegion.show( this.createUserView );
+			// });
+			// selectUserView.on('remove:user', function() {
+			// 	// Remove the region!
+			// 	this.removeRegion( this.thisRegion.el.className );
+			// 	// Remove the tr
+			// 	self.ui.userList.find('tr.'+thisRegion.el.className).remove();
+			// });
+			// selectUserView.on('select:user', function(user) {
+			// 	console.log('USER SELECTED!', user);
+			// });
+			// createUserView.on('save:user', function(user) {
+			// 	console.log('SAVE USER!!!', user);
+			// });
+			// createUserView.on('cancel:user', function(user) {
+			// 	this.selectUserView = new ComputerUserSelectRowLayoutView({ users: self.options.users });
+			// 	this.thisRegion.show( this.selectUserView );
+			// 	// console.log('CANCEL BTN PRESSED!', user);
+			// });
 
 		}
 
