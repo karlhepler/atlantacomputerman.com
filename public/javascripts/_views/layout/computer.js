@@ -108,8 +108,6 @@ function(Marionette, vent, ComputerUserSelectRowLayoutView, CreateUserItemView) 
 		addUserRow: function(e) {
 			e.preventDefault();
 
-			console.log('*** THIS ***', this);
-
 			// Name the region and the class based on the userRows length
 			var regionName = 'userRow' + (this.numUsers++);
 
@@ -117,7 +115,7 @@ function(Marionette, vent, ComputerUserSelectRowLayoutView, CreateUserItemView) 
 			this.ui.userList.append('<tr class="' + regionName + '"></tr>');
 
 			// Create the region and save its reference to a variable
-			var thisRegion = this.addRegion(regionName, 'tr.'+regionName);
+			var thisRegion = this.addRegion(regionName, 'tr.'+regionName);			
 
 			// Create the views
 			// var selectUserView = new ComputerUserSelectRowLayoutView({ users: this.options.users });			
@@ -128,7 +126,7 @@ function(Marionette, vent, ComputerUserSelectRowLayoutView, CreateUserItemView) 
 			// createUserView.thisRegion = thisRegion;
 			// createUserView.createUserView = createUserView;
 			
-			// thisRegion.show( new ComputerUserSelectRowLayoutView({ users: this.options.users }) );
+			thisRegion.show( new ComputerUserSelectRowLayoutView({ users: this.options.users }) );
 
 			// thisRegion.currentView.on('create:user', function() {
 			// 	thisRegion.show( new CreateUserItemView() );
