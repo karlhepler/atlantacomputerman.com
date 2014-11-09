@@ -108,6 +108,8 @@ function(Marionette, vent, ComputerUserSelectRowLayoutView, CreateUserItemView) 
 		addUserRow: function(e) {
 			e.preventDefault();
 
+			console.log('*** THIS ***', this);
+
 			// Name the region and the class based on the userRows length
 			var regionName = 'userRow' + (this.numUsers++);
 
@@ -116,33 +118,38 @@ function(Marionette, vent, ComputerUserSelectRowLayoutView, CreateUserItemView) 
 
 			// Create the region and save its reference to a variable
 			var thisRegion = this.addRegion(regionName, 'tr.'+regionName);
+
+			// Create the views
+			var selectUserView = new ComputerUserSelectRowLayoutView({ users: this.options.users });
+			var createUserView = new CreateUserItemView();
 			
 			// Show the userSelectRow in the region
-			thisRegion.show( new ComputerUserSelectRowLayoutView({ users: this.options.users }) );
+			thisRegion.show( selectUserView );
 
 			// EVENTS ---------------------------------------------------------
-			thisRegion.currentView.on('create:user', function() {
+			selectUserView.on('create:user', function() {
 				// Show the create user form
-				thisRegion.show( new CreateUserItemView() );
+				thisRegion.show( createUserView );
 			});
-			thisRegion.currentView.on('edit:user', function(user) {
+			selectUserView.on('edit:user', function(user) {
+				createUserView.model = user;
 				// Show the edit user form
-				thisRegion.show( new CreateUserItemView({ model: user }) );
+				thisRegion.show( createUserView );
 			});
-			thisRegion.currentView.on('remove:user', function() {
+			selectUserView.on('remove:user', function() {
 				// Remove the region!
 				this.removeRegion( thisRegion.el.className );
 				// Remove the tr
 				this.ui.userList.find('tr.'+thisRegion.el.className).remove();
 			}, this);
-			thisRegion.currentView.on('select:user', function(user) {
+			selectUserView.on('select:user', function(user) {
 				console.log('USER SELECTED!', user);
 			});
 			// Not working?!?!?!
-			thisRegion.currentView.on('save:user', function(user) {
+			createUserView.on('save:user', function(user) {
 				console.log('SAVE USER!!!', user);
 			});
-			thisRegion.currentView.on('cancel:user', function(user) {
+			createUserView.on('cancel:user', function(user) {
 				console.log('CANCEL BTN PRESSED!', user);
 			});
 

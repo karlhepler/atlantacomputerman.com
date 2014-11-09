@@ -41,7 +41,7 @@ function(Marinette, vent, SelectUserItemView, CreateUserItemView) { 'use strict'
 				}, this);
 		},
 
-		onRender: function() {
+		onShow: function() {
 			console.log('COMPUTER USER ROW!');
 
 			// Show the user item select
