@@ -1,12 +1,12 @@
-define(['marionette', '_vent', '_views/item/computer'],
-function(Marionette, vent, ComputerItemView) { 'use strict';
+define(['marionette', '_vent', '_views/layout/computer'],
+function(Marionette, vent, ComputerLayoutView) { 'use strict';
 	return Backbone.Marionette.CollectionView.extend({
 
 		id: 'computer-list',
 
 		className: 'col-xs-12',
 
-		childView: ComputerItemView,
+		childView: ComputerLayoutView,
 
 		childViewOptions: function(model,index) {
 			return {

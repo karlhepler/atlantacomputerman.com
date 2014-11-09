@@ -15,8 +15,11 @@ function(Marinette, vent, SelectUserItemView, CreateUserItemView) { 'use strict'
 			removeBtn: 'button.remove-btn'
 		},
 
+		triggers: {
+			'click @ui.removeBtn': 'remove:user'
+		},
+
 		events: {
-			'click @ui.removeBtn': 'removeUser',
 			'click @ui.editBtn': 'editUser'
 		},
 
@@ -28,18 +31,13 @@ function(Marinette, vent, SelectUserItemView, CreateUserItemView) { 'use strict'
 			this.selectUserItemView
 				// Listen for create
 				.on('create:user', function() {
-					// Remove the edit/remove button td
-					this.$el.find('td.user-container').next().hide();
-
-					// Show the create user view in the user container
-					var createUserItemView = new CreateUserItemView();
-					this.userContainer.show( createUserItemView );
-
-					// Listen for events
+					this.trigger('create:user');
 				}, this)
 				.on('select:user', function(user) {
 					// Make this user the layout's selected user
 					this.user = user;
+
+					this.trigger('select:user', user);
 				}, this);
 		},
 
@@ -50,19 +48,10 @@ function(Marinette, vent, SelectUserItemView, CreateUserItemView) { 'use strict'
 			this.userContainer.show( this.selectUserItemView );
 		},
 
-		removeUser: function(e) {
-			e.preventDefault();
-		},
-
 		editUser: function(e) {
 			e.preventDefault();
 
-			// Remove the edit/remove button td
-			this.$el.find('td.user-container').next().hide();
-
-			// Show the create user view in the user container
-			var createUserItemView = new CreateUserItemView({ model: this.user });
-			this.userContainer.show( createUserItemView );
+			this.trigger('edit:user', this.user);
 		}
 
 	});

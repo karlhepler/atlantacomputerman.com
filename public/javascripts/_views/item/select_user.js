@@ -6,7 +6,7 @@ function(Marionette, vent) { 'use strict';
 
 		className: 'user-select form-control',
 
-		template: '#item-user-select',
+		template: '#item-select-user',
 
 		collectionEvents: {
 			'add': 'modelAdded'

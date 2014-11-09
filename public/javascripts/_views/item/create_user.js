@@ -8,10 +8,30 @@ function(Marionette, vent) { 'use strict';
 			'novalidate': 'novalidate'
 		},
 
+		ui: {
+			saveBtn: 'button.save-btn',
+			cancelBtn: 'button.cancel-btn'
+		},
+
+		events: {
+			'click @ui.saveBtn': 'saveUser',
+			'click @ui.cancelBtn': 'cancelUser'
+		},
+
 		template: '#item-create-user',
 
-		onRender: function() {
+		onShow: function() {
 			console.log('Create User ItemView!');
+		},
+
+		saveUser: function(e) {
+			e.preventDefault();
+			this.trigger('save:user', this.model);
+		},
+
+		cancelUser: function(e) {
+			e.preventDefault();
+			this.trigger('cancel:user', this.model);
 		}
 
 	});
