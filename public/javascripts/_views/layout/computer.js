@@ -120,37 +120,46 @@ function(Marionette, vent, ComputerUserSelectRowLayoutView, CreateUserItemView) 
 			var thisRegion = this.addRegion(regionName, 'tr.'+regionName);
 
 			// Create the views
-			var selectUserView = new ComputerUserSelectRowLayoutView({ users: this.options.users });
+			var selectUserView = new ComputerUserSelectRowLayoutView({ users: this.options.users });			
 			var createUserView = new CreateUserItemView();
+
+			selectUserView.thisRegion = thisRegion;
+			selectUserView.createUserView = createUserView;
+			createUserView.thisRegion = thisRegion;
+			createUserView.createUserView = createUserView;
+
 			
 			// Show the userSelectRow in the region
 			thisRegion.show( selectUserView );
 
+			var self = this;
+
 			// EVENTS ---------------------------------------------------------
 			selectUserView.on('create:user', function() {
 				// Show the create user form
-				thisRegion.show( createUserView );
+				this.thisRegion.show( this.createUserView );
 			});
 			selectUserView.on('edit:user', function(user) {
 				createUserView.model = user;
 				// Show the edit user form
-				thisRegion.show( createUserView );
+				this.thisRegion.show( this.createUserView );
 			});
 			selectUserView.on('remove:user', function() {
 				// Remove the region!
-				this.removeRegion( thisRegion.el.className );
+				this.removeRegion( this.thisRegion.el.className );
 				// Remove the tr
-				this.ui.userList.find('tr.'+thisRegion.el.className).remove();
-			}, this);
+				self.ui.userList.find('tr.'+thisRegion.el.className).remove();
+			});
 			selectUserView.on('select:user', function(user) {
 				console.log('USER SELECTED!', user);
 			});
-			// Not working?!?!?!
 			createUserView.on('save:user', function(user) {
 				console.log('SAVE USER!!!', user);
 			});
 			createUserView.on('cancel:user', function(user) {
-				console.log('CANCEL BTN PRESSED!', user);
+				this.selectUserView = new ComputerUserSelectRowLayoutView({ users: self.options.users });
+				this.thisRegion.show( this.selectUserView );
+				// console.log('CANCEL BTN PRESSED!', user);
 			});
 
 		}

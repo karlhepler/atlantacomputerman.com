@@ -14,8 +14,8 @@ function(Marionette, vent) { 'use strict';
 		},
 
 		events: {
-			'click @ui.saveBtn': 'saveUser',
-			'click @ui.cancelBtn': 'cancelUser'
+			'click @ui.cancelBtn': 'cancelUser',
+			'submit': 'saveUser'
 		},
 
 		template: '#item-create-user',

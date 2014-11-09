@@ -4,7 +4,7 @@ function(Marinette, vent, SelectUserItemView, CreateUserItemView) { 'use strict'
 
 		tagName: 'tr',
 
-		template: '#layout-computer-user-row',
+		template: '#layout-computer-user-select-row',
 
 		regions: {
 			userContainer: 'td.user-container'
