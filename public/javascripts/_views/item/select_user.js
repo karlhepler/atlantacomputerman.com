@@ -30,7 +30,9 @@ function(Marionette, vent) { 'use strict';
 		},
 
 		modelChanged: function(model, collection, event) {
-			this.render();
+			this.$el.find('option[value="' + model.previousAttributes().fname + '|' + model.previousAttributes().lname + '"]')
+							.val( model.get('fname') + '|' + model.get('lname') )
+							.text( model.get('fname') + ' ' + model.get('lname') );
 		},
 
 		newSelection: function(e) {

@@ -22,18 +22,25 @@ function(Marionette, ComputerUserSelectLayoutView, CreateUserItemView) { 'use st
 
 			// Show create user form
 			currentView.on('create:user', function() {
+				// Show the create user item view
 				this.main.show( new CreateUserItemView() );
+
+				// Recurse
 				this.listenToEvents(this.main.currentView);
 			}, this);
 
 			// Show the edit user form
 			currentView.on('edit:user', function(user) {
+				// Show the create user item view, but implant a model to edit
 				this.main.show( new CreateUserItemView({ model: user }) );
+
+				// Recurse
 				this.listenToEvents(this.main.currentView);
 			}, this);
 
 			// A user was selected - save it as the model
 			currentView.on('select:user', function(user) {
+				// Clone the selected user to this model
 				this.cloneUser(user);
 			}, this);
 
@@ -55,12 +62,16 @@ function(Marionette, ComputerUserSelectLayoutView, CreateUserItemView) { 'use st
 
 			// The form was cancelled
 			currentView.on('cancel:user', function(user) {
+				// Show the user select and pre-select the user that was previously selected
 				this.main.show( new ComputerUserSelectLayoutView({ users: this.options.users, model: user }) );
+
+				// Recurse
 				this.listenToEvents(this.main.currentView);
 			}, this);
 
 			// This row has been selected to be removed
 			currentView.on('remove:user', function() {
+				// Trigger the parent to remove this user
 				this.trigger('remove:user');
 			}, this);	
 		},
