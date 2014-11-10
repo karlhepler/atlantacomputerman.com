@@ -34,7 +34,17 @@ function(Marionette, ComputerUserSelectLayoutView, CreateUserItemView) { 'use st
 
 			// A user was selected - save it as the model
 			currentView.on('select:user', function(user) {
-				this.model = user;
+				this.model.set({
+					fname:    user.get('fname'),
+					lname:    user.get('lname'),
+					phone:    user.get('phone'),
+					email:    user.get('email'),
+					address1: user.get('address1'),
+					address2: user.get('address2'),
+					city:     user.get('city'),
+					state:    user.get('state'),
+					zip:      user.get('zip')
+				});
 			}, this);
 
 			// A user was saved from the form
@@ -52,7 +62,7 @@ function(Marionette, ComputerUserSelectLayoutView, CreateUserItemView) { 'use st
 			// This row has been selected to be removed
 			currentView.on('remove:user', function() {
 				this.trigger('remove:user');
-			}, this);			
+			}, this);	
 		}
 
 	});
