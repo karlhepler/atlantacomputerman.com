@@ -28,34 +28,25 @@ function(Marionette, ComputerUserSelectLayoutView, CreateUserItemView) { 'use st
 
 			// Show the edit user form
 			currentView.on('edit:user', function(user) {
-				this.main.show( new CreateUserItemView({ model: this.model }) );
+				this.main.show( new CreateUserItemView({ model: user }) );
 				this.listenToEvents(this.main.currentView);
 			}, this);
 
 			// A user was selected - save it as the model
 			currentView.on('select:user', function(user) {
-				this.model.set({
-					fname:    user.get('fname'),
-					lname:    user.get('lname'),
-					phone:    user.get('phone'),
-					email:    user.get('email'),
-					address1: user.get('address1'),
-					address2: user.get('address2'),
-					city:     user.get('city'),
-					state:    user.get('state'),
-					zip:      user.get('zip')
-				});
+				this.cloneUser(user);
 			}, this);
 
 			// A user was saved from the form
 			currentView.on('save:user', function(user) {
-				this.main.show( new ComputerUserSelectLayoutView({ users: this.options.users }) );
+				this.cloneUser(user);
+				this.main.show( new ComputerUserSelectLayoutView({ users: this.options.users, model: user }) );
 				this.listenToEvents(this.main.currentView);
 			}, this);
 
 			// The form was cancelled
 			currentView.on('cancel:user', function(user) {
-				this.main.show( new ComputerUserSelectLayoutView({ users: this.options.users }) );
+				this.main.show( new ComputerUserSelectLayoutView({ users: this.options.users, model: user }) );
 				this.listenToEvents(this.main.currentView);
 			}, this);
 
@@ -63,6 +54,20 @@ function(Marionette, ComputerUserSelectLayoutView, CreateUserItemView) { 'use st
 			currentView.on('remove:user', function() {
 				this.trigger('remove:user');
 			}, this);	
+		},
+
+		cloneUser: function(user) {
+			this.model.set({
+				fname:    user.get('fname'),
+				lname:    user.get('lname'),
+				phone:    user.get('phone'),
+				email:    user.get('email'),
+				address1: user.get('address1'),
+				address2: user.get('address2'),
+				city:     user.get('city'),
+				state:    user.get('state'),
+				zip:      user.get('zip')
+			});
 		}
 
 	});

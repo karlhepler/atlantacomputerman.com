@@ -9,7 +9,9 @@ function(Marionette, vent) { 'use strict';
 		template: '#item-select-user',
 
 		collectionEvents: {
-			'add': 'modelAdded'
+			'add': 'modelAdded',
+			'change:fname': 'modelChanged',
+			'change:lname': 'modelChanged'
 		},
 
 		events: {
@@ -18,10 +20,17 @@ function(Marionette, vent) { 'use strict';
 
 		onShow: function() {
 			console.log('Select User ItemView');
+
+			if ( typeof this.options.user !== 'undefined' )
+				this.$el.find('option[value="' + this.options.user.get('fname') + '|' + this.options.user.get('lname') + '"]').prop('selected', true);
 		},
 
 		modelAdded: function(model, collection, event) {
 			this.$el.append('<option value="' + model.get('fname') + '|' + model.get('lname') + '">' + model.get('fname') + ' ' + model.get('lname') + '</option>');
+		},
+
+		modelChanged: function(model, collection, event) {
+			this.render();
 		},
 
 		newSelection: function(e) {

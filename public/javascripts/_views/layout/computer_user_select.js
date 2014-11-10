@@ -25,7 +25,7 @@ function(Marinette, vent, SelectUserItemView, CreateUserItemView) { 'use strict'
 
 		initialize: function() {
 			// Create the user item select
-			this.selectUserItemView = new SelectUserItemView({ collection: this.options.users });
+			this.selectUserItemView = new SelectUserItemView({ collection: this.options.users, user: this.model });
 			
 			// Select listeners
 			this.selectUserItemView

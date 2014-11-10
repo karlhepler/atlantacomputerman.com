@@ -1,5 +1,5 @@
-define(['marionette', '_vent'],
-function(Marionette, vent) { 'use strict';
+define(['marionette', '_vent', '_models/user'],
+function(Marionette, vent, User) { 'use strict';
 	return Backbone.Marionette.ItemView.extend({
 
 		tagName: 'form',
@@ -26,6 +26,23 @@ function(Marionette, vent) { 'use strict';
 
 		saveUser: function(e) {
 			e.preventDefault();
+
+			// Create the model if it doesn't exist
+			if ( typeof this.model === 'undefined' )
+				this.model = new User();
+
+			// Serialize the form
+			var values = this.$el.serializeArray();
+
+			// Set the model attributes
+			this.model.set({
+				fname: values[0].value,
+				lname: values[1].value,
+				phone: values[2].value,
+				email: values[3].value
+			});
+
+			// Trigger save user event and return the model
 			this.trigger('save:user', this.model);
 		},
 
