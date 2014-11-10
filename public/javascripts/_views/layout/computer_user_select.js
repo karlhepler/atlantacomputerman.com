@@ -1,10 +1,10 @@
-define(['marionette', '_vent', '_views/item/select_user', '_views/item/create_user'],
-function(Marinette, vent, SelectUserItemView, CreateUserItemView) { 'use strict';
+define(['marionette', '_vent', '_views/item/select_user'],
+function(Marinette, vent, SelectUserItemView) { 'use strict';
 	return Backbone.Marionette.LayoutView.extend({
 
 		tagName: 'tr',
 
-		template: '#layout-computer-user-select-row',
+		template: '#layout-computer-user-select',
 
 		regions: {
 			userContainer: 'td.user-container'

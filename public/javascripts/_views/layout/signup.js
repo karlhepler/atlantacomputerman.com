@@ -23,13 +23,6 @@ function(Marionette, vent, Users, ComputersCollectionView, Computer) { 'use stri
 			// Create users collection
 			this.users = new Users();
 
-			// TESTING...
-			this.users.add([
-				{ fname: 'Karl', lname: 'Hepler', phone: '8044821509', email: 'karl.hepler@gmail.com' },
-				{ fname: 'Cristen', lname: 'Hepler', phone: '7701234567', email: 'cristenhepler@gmail.com' },
-				{ fname: 'Karen', lname: 'Mabey', phone: '6781234567', email: '3mabeys@gmail.com' }
-			]);
-
 			// Create the computersCollectionView
 			this.computersCollectionView = new ComputersCollectionView({ collection: this.options.computers, users: this.users });
 

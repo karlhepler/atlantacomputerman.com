@@ -8,24 +8,15 @@ block templates
 	//- Computer Composite View
 	script#composite-computer(type="text/template")
 		include _signup/composite-computer
-	//- Computer User Composite View: SELECT
-	script#composite-computer-user_select(type="text/template")
-		include _signup/composite-computer-user_select
-	//- Computer User Composite View: CREATE
-	script#composite-computer-user_create(type="text/template")
-		include _signup/composite-computer-user_create
-	//- User Select Composite View
-	script#composite-user-select(type="text/template")
-		include _signup/composite-user-select
-	//- User Select Item Item View
-	script#item-user-select-item(type="text/template")
-		include _signup/item-user-select-item
-	//- TESTING -------------
-	script#item-select-user(type="text/template")
-		include _testing/item-select-user
-	script#item-create-user(type="text/template")
-		include _testing/item-create-user
-	script#layout-computer-user-select-row(type="text/template")
-		include _signup/layout-computer-user-select-row
+	//- Computer user row layout view
 	script#layout-computer-user-row(type="text/template")
 		include _signup/layout-computer-user-row
+	//- Create user item view
+	script#item-create-user(type="text/template")
+		include _signup/item-create-user
+	//- Select user item view
+	script#item-select-user(type="text/template")
+		include _signup/item-select-user
+	//- Computer user select layout view
+	script#layout-computer-user-select(type="text/template")
+		include _signup/layout-computer-user-select
