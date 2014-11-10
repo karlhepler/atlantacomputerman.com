@@ -35,7 +35,7 @@ function(Marinette, vent, SelectUserItemView, CreateUserItemView) { 'use strict'
 				}, this)
 				.on('select:user', function(user) {
 					// Make this user the layout's selected user
-					this.user = user;
+					this.model = user;
 
 					this.trigger('select:user', user);
 				}, this);
@@ -51,7 +51,7 @@ function(Marinette, vent, SelectUserItemView, CreateUserItemView) { 'use strict'
 		editUser: function(e) {
 			e.preventDefault();
 
-			this.trigger('edit:user', this.user);
+			this.trigger('edit:user', this.model);
 		}
 
 	});

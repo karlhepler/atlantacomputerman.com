@@ -39,8 +39,17 @@ function(Marionette, ComputerUserSelectLayoutView, CreateUserItemView) { 'use st
 
 			// A user was saved from the form
 			currentView.on('save:user', function(user) {
+				// If the user is a new user, then add it to the master collection
+				if ( typeof this.options.users.get(user) === 'undefined' )
+					this.options.users.add(user);
+
+				// Clone the user to this user
 				this.cloneUser(user);
+
+				// Show the user select layout
 				this.main.show( new ComputerUserSelectLayoutView({ users: this.options.users, model: user }) );
+
+				// Recurse
 				this.listenToEvents(this.main.currentView);
 			}, this);
 
