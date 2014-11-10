@@ -28,7 +28,7 @@ function(Marionette, ComputerUserSelectLayoutView, CreateUserItemView) { 'use st
 
 			// Show the edit user form
 			currentView.on('edit:user', function(user) {
-				this.main.show( new CreateUserItemView({ model: user }) );
+				this.main.show( new CreateUserItemView({ model: this.model }) );
 				this.listenToEvents(this.main.currentView);
 			}, this);
 
