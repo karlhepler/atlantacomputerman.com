@@ -15,19 +15,48 @@ nav.navbar.navbar-default(role="navigation")
     //- Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       ul.nav.navbar-nav
-        li
-          a(href="/") Home
-        li
-          a(href="/services") Services
+        if menuItem == 'home'
+          li.active
+            a(href="/") Home
+        else
+          li
+            a(href="/") Home
+
+        if menuItem == 'services'
+          li.active
+            a(href="/services") Services
+        else
+          li
+            a(href="/services") Services
+
         p.navbar-text.hidden-sm.fa.fa-chevron-right
-        li
-          a(href="/services/families") Families
-        li
-          a(href="/services/students") Students
-        li
-          a(href="/services/seniors") Seniors        
+
+        if menuItem == 'services-families'
+          li.active
+            a(href="/services/families") Families
+        else
+          li
+            a(href="/services/families") Families
+
+        if menuItem == 'services-students'
+          li.active
+            a(href="/services/students") Students
+        else
+          li
+            a(href="/services/students") Students
+
+        if menuItem == 'services-seniors' 
+          li.active
+            a(href="/services/seniors") Seniors
+        else
+          li
+            a(href="/services/seniors") Seniors
       
       //- NAVBAR RIGHT
       ul.nav.navbar-nav.navbar-right
-        li
-          a(href="/contact-us") Contact Us
+        if menuItem == 'contact-us'
+          li.active
+            a(href="/contact-us") Contact Us
+        else
+          li
+            a(href="/contact-us") Contact Us
